@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Logo from "./Logo";
-import { Studio, StudioRow } from "./Studio";
 import { NavBurger, NavDrawer } from "./Nav";
 import { CaretDown, ArrowRight, Clock } from "./icons";
 
@@ -13,22 +12,17 @@ import { CaretDown, ArrowRight, Clock } from "./icons";
    enough, and nothing that closed is swept out of sight. */
 
 type Stage = "applied" | "replied" | "interview" | "closed";
-
 /* The card had four things in it: a container, a second container for an
-   icon, the text, and an arrow. t-visual-noise-33 names that exactly —
+   icon, the text, and an arrow. t-visual-noise-33 names that exactly:
    "avoid excessive containers... build hierarchy through proportion and
-   restraint". The icon tile is gone in all four of these; a calendar
-   glyph never said anything the sentence did not already say
-   (t-iconography-06: label ambiguous meanings). What is left is what it
-   is, what to do, and where it came from. */
-type Need = "plain" | "labelled" | "actioned" | "sourced";
+   restraint". The icon tile went, and with it an ambiguous glyph that
+   said nothing the sentence had not (t-iconography-06).
 
-const NEEDS: [Need, string, string][] = [
-  ["plain", "Plain", "Name, the thing to do, one arrow. Nothing else."],
-  ["labelled", "Labelled", "Company as a small label, a real gap, then the line."],
-  ["actioned", "Actioned", "A named action instead of a bare arrow."],
-  ["sourced", "Sourced", "Says where it came from. Your inbox, your calendar."],
-];
+   Settled 25 Oct on the labelled form: the company is a small label, a
+   real gap below it, then the thing to do at full size.
+   t-spacing-label-value-20261004 is the reason for the gap, since a
+   difference in type size alone does not separate a label from what it
+   names. */
 
 /* The tinted card is gone. Nothing in the taste library supports it, and
    t-gradient-strong-to-white-20261014 scopes gradients to a page canvas
@@ -83,7 +77,6 @@ const HEAT = { warm: "Warm", cooling: "Cooling", cold: "Cold" } as const;
 
 export default function Pipeline() {
   const [menu, setMenu] = useState(false);
-  const [need, setNeed] = useState<Need>("plain");
   const [showClosed, setShowClosed] = useState(false);
 
   const needs = rows.filter((r) => r.needs);
@@ -144,19 +137,12 @@ export default function Pipeline() {
           <h2 className="j-sec">Waiting on you</h2>
           <div className="pl-list">
             {needs.map((r) => (
-              <article className="pl-row pl-row--needs" data-n={need} key={r.id}>
+              <article className="pl-row pl-row--needs" key={r.id}>
                 <span className="pl-txt">
                   <h3 className="pl-org">{r.org}</h3>
                   <p className="pl-need">{r.needs!.what}</p>
-                  {need === "sourced" && <p className="pl-from">{r.needs!.from}</p>}
-                  {need === "actioned" && (
-                    <p className="pl-act">
-                      {r.needs!.act}
-                      <ArrowRight size={14} weight="bold" aria-hidden="true" />
-                    </p>
-                  )}
                 </span>
-                {need !== "actioned" && <ArrowRight size={16} weight="bold" aria-hidden="true" />}
+                <ArrowRight size={16} weight="bold" aria-hidden="true" />
               </article>
             ))}
           </div>
@@ -191,10 +177,6 @@ export default function Pipeline() {
       </main>
 
       <NavDrawer open={menu} onClose={() => setMenu(false)} here="/pipeline" />
-
-      <Studio>
-        <StudioRow label="The card that needs you" options={NEEDS} value={need} onChange={setNeed} />
-      </Studio>
     </div>
   );
 }

@@ -411,7 +411,7 @@ button { font: inherit; color: inherit; }
 .alt-t { font-size: 15.5px; font-weight: 600; }
 .alt-s { font-size: 13.5px; color: var(--ink-4); }
 
-.flow-foot { margin-top: 26px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+.flow-foot { margin-top: 32px; display: flex; align-items: center; justify-content: center; gap: 12px; }
 .flow-note { margin: 18px 0 0; font-size: 13.5px; color: var(--ink-4); }
 
 .read-list { margin-top: 22px; text-align: left; display: flex; flex-direction: column; }
@@ -490,6 +490,8 @@ input, textarea, select { font-size: 16px; }   /* anything smaller zooms iOS */
 
   .flow-foot { gap: 10px; }
   .flow-foot .btn { flex: 1 1 0; min-width: 0; padding: 0 12px; font-size: 15px; }
+  .field { width: 104px; height: 48px; }
+  .unit { height: 48px; padding: 0 13px; font-size: 14.5px; }
 
   /* the label column becomes a line above the value rather than a squeeze */
   .read-row { flex-wrap: wrap; gap: 4px 12px; padding: 12px 2px; }
@@ -717,6 +719,60 @@ input, textarea, select { font-size: 16px; }   /* anything smaller zooms iOS */
   margin: 6px 0 4px; font-size: 13px; color: var(--ink-4);
 }
 .opts .opt-or::before, .opts .opt-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* ====================================================================
+   The gap question: the amount, the skip, and what it knows after.
+   Restored 25 Oct. These rules were lost when the stylesheet was
+   truncated to clear duplicate blocks, which left the done state
+   rendering as bare ticks and text with no rows and no spacing.
+   ==================================================================== */
+.amount { margin-top: 24px; }
+.amount-row { display: flex; align-items: center; gap: 9px; justify-content: center; }
+.field {
+  width: 118px; height: 50px; padding: 0 14px; border: 0; border-radius: var(--r);
+  background: var(--paper-2); color: var(--ink);
+  font-size: 17px; font-weight: 700; text-align: center;
+  box-shadow: var(--inset), inset 0 0 0 1px var(--line);
+}
+.field::placeholder { color: var(--ink-4); font-weight: 500; }
+.field:focus { outline: none; box-shadow: var(--inset), inset 0 0 0 1.5px var(--brand); }
+.unit {
+  height: 50px; padding: 0 15px; border: 0; border-radius: var(--r);
+  font-size: 15px; font-weight: 600; color: var(--ink-3); cursor: pointer;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line), 0 1px 2px rgba(var(--ink-ref), .05);
+}
+.unit[aria-pressed="true"] {
+  color: var(--brand-deep); background: var(--brand-50);
+  box-shadow: inset 0 0 0 1.5px var(--brand);
+}
+
+/* Skip is a quiet escape from the primary action, not a sibling of it.
+   At 14px it read as a second button crowding Finish. */
+.skip {
+  margin: 28px auto 0; display: block; border: 0; background: none;
+  font-size: 14.5px; font-weight: 600; color: var(--ink-4);
+  text-decoration: underline; text-underline-offset: 4px; cursor: pointer;
+  min-height: 44px; padding: 0 12px;
+}
+.skip:hover { color: var(--ink); }
+
+/* What it knows now. One tick per row was three ticks saying the same
+   thing; the rows are a list, so only the heading needs the mark. */
+.known {
+  margin-top: 26px; display: flex; flex-direction: column; text-align: left;
+  border-radius: var(--r-lg); background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line), 0 1px 2px rgba(var(--ink-ref), .05);
+}
+.known-row { display: flex; align-items: flex-start; gap: 12px; padding: 15px 16px; }
+.known-row + .known-row { border-top: 1px solid var(--line); }
+.known-tick {
+  width: 22px; height: 22px; border-radius: 50%; flex: none; margin-top: 1px;
+  display: grid; place-items: center; background: var(--brand); color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35);
+}
+.known-t { font-size: 14.5px; font-weight: 600; color: var(--ink); }
+.known-s { font-size: 13px; line-height: 1.45; color: var(--ink-4); }
 
 /* ====================================================================
    Today — the daily loop.
@@ -1182,35 +1238,23 @@ input, textarea, select { font-size: 16px; }   /* anything smaller zooms iOS */
   transition: background var(--d-1) var(--ease);
 }
 .pl-row--needs:active { background: #23273340; }
-.pl-row--needs .pl-org { color: #FFFFFF; font-size: 15px; }
+
+/* the company is a label; the thing to do is the line you read */
+.pl-row--needs .pl-org {
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(255, 255, 255, .62);
+}
 .pl-row--needs .pl-need {
-  margin: 3px 0 0; font-size: 13.5px; line-height: 1.45;
-  color: rgba(255, 255, 255, .7);
+  margin: 9px 0 0; font-size: 15px; font-weight: 500; line-height: 1.4;
+  letter-spacing: -.008em; color: #FFFFFF;
 }
 .pl-row--needs > svg { flex: none; color: rgba(255, 255, 255, .55); }
 
-/* 2. labelled: the company becomes a label, and t-spacing-label-value
-   asks for a deliberate gap rather than a size difference alone */
-.pl-row--needs[data-n="labelled"] .pl-org {
-  font-size: 10.5px; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: rgba(255, 255, 255, .55);
-}
-.pl-row--needs[data-n="labelled"] .pl-need {
-  margin-top: 9px; font-size: 15px; color: #FFFFFF; font-weight: 500;
-}
-
-/* 3. actioned: a named action instead of an arrow with no word on it */
-.pl-act {
-  display: inline-flex; align-items: center; gap: 6px; margin: 11px 0 0;
-  font-size: 13.5px; font-weight: 700; color: #FFFFFF;
-}
-.pl-act svg { flex: none; }
-
-/* 4. sourced: these items come out of a connected inbox and calendar,
-   so the row can say so, the way every draft names its sources */
-.pl-from {
-  margin: 8px 0 0; font-size: 11.5px; font-weight: 600;
-  letter-spacing: .04em; color: rgba(255, 255, 255, .4);
+/* On a 430px screen the sentence wraps to two lines, so the arrow has to
+   stop stealing width from it and the padding has to come in. */
+@media (max-width: 560px) {
+  .pl-row--needs { gap: 10px; padding: 15px 14px 15px 16px; }
+  .pl-row--needs .pl-need { font-size: 14.5px; }
 }
 
 /* ---- how far along it is -------------------------------------------- */
