@@ -42,8 +42,11 @@ Port 3100. Registered in the workspace `.claude/launch.json` as `odysseus`.
 - **One accent.** `#FF9602`, and nothing else. The panel is cut into the page,
   so nothing is raised and nothing casts a shadow.
 - **Icons come from the central set** via `components/icons.ts`, which re-exports
-  the symlinked canonical folder at `icons/`. Never copy icons into the project;
-  add new ones to `~/Desktop/Design Sorcery/icons/work.ts` and update its README.
+  `icons/`. Those files are **generated, not authored**: run `scripts/sync-icons.sh`
+  to pull them from `~/Desktop/Design Sorcery/icons`, which stays the source of
+  truth. Add new icons there, then sync. Never hand-edit anything in `icons/`.
+  It was a symlink until 25 Oct; that only built on one machine and Vercel failed
+  with `ENOENT ... stat '/vercel/path0/icons'`.
   This design uses almost none — the reference draws its marks instead.
 - **The left column is the loop**, on every screen: find → tailor → reach →
   track. It is what makes this a system rather than a job board.
