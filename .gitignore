@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+tsconfig.tsbuildinfo
+
+# environment
+.env
+.env.*
+!.env.example
+
+# os
+.DS_Store
+*.log

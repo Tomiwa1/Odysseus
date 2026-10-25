@@ -1,0 +1,323 @@
+/* Odysseus — design tokens.
+   Extracted from the Octant application-flow reference (Figma 5pvfrrno…,
+   node 29:13004). Values sampled from the rendered frames, not guessed.
+   See docs/design-language.md. */
+
+:root {
+  /* Ground. The page is the lighter surface; the working panel is recessed
+     into it. Nothing is ever raised on a card. */
+  --page:      #171717;
+  --panel:     #0D0D0D;
+  --raise:     #252524;   /* buttons, the only surface above the page */
+
+  /* Line */
+  --grid:      #343433;   /* ornament grid */
+  --line:      #2B2B29;   /* control and divider hairlines */
+  --line-2:    #3A3A37;   /* hover */
+
+  /* Ink. Warm off-white, never pure #FFF. */
+  --ink:       #FEFDF4;   /* display */
+  --ink-2:     #E6E5DD;   /* body */
+  --ink-3:     #A3A29B;   /* muted — 7.6:1 on panel */
+  --ink-4:     #8F8F8A;   /* faint — 6.0:1 on panel */
+  --ink-5:     #6E6D6A;   /* non-text only: rings, disabled glyphs */
+
+  /* The single accent. Spent on marks, state and the live edge. */
+  --mark:      #FF9602;
+  --mark-dim:  rgba(255, 150, 2, .14);
+  --jade:      #7AB648;   /* second stop in the live border only */
+  --red:       #E5563A;
+
+  /* Module. The ornament grid, the panel and every inset are multiples of 8;
+     the grid cell itself is 80. */
+  --cell:      80px;
+  --panel-w:   880px;     /* 11 cells */
+  --panel-w-wide: 1280px; /* 16 cells */
+  --nav-h:     88px;
+  --left-w:    320px;
+
+  /* Radius stays small and even. This language is drawn, not rounded. */
+  --r:         4px;
+  --r-lg:      6px;
+
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 340ms;
+  --ease:     cubic-bezier(.2, .7, .3, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--page);
+  color: var(--ink-2);
+  font-family: var(--font-ui), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { margin: 0; font-weight: 500; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; color: inherit; }
+::placeholder { color: var(--ink-5); }
+
+:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ====================================================================
+   The frame. Every screen is the same object: a navbar, a ruled grid
+   band, a recessed panel pinned to it by two crosshairs, a grid band.
+   ==================================================================== */
+
+.screen { min-height: 100vh; display: flex; flex-direction: column; }
+
+.navbar {
+  height: var(--nav-h); flex: none;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 60px;
+}
+.wordmark { display: flex; align-items: center; gap: 12px; }
+.wordmark-mark {
+  width: 40px; height: 40px; border-radius: 11px; flex: none;
+  background: var(--ink); color: var(--panel);
+  display: grid; place-items: center;
+}
+.wordmark-name { font-size: 25px; font-weight: 700; letter-spacing: -.02em; color: var(--ink); }
+
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-2);
+  transition: color var(--dur-1) var(--ease);
+}
+.nav-link:hover { color: var(--mark); }
+.nav-link[aria-current="page"] { color: var(--mark); }
+.nav-sep { width: 1px; height: 20px; background: var(--line); }
+
+.stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 0 48px; }
+
+.ornament {
+  width: var(--panel-w); height: var(--cell);
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: var(--cell) var(--cell);
+  border-right: 1px solid var(--grid);
+  border-bottom: 1px solid var(--grid);
+}
+.ornament--bottom { border-bottom: 0; border-top: 1px solid var(--grid); background-position: 0 1px; }
+
+.panel {
+  width: var(--panel-w); height: 485px; position: relative;
+  background: var(--panel);
+  display: grid; grid-template-columns: var(--left-w) 1px minmax(0, 1fr);
+}
+.wide .ornament, .wide .panel { width: var(--panel-w-wide); }
+.wide .panel { height: 560px; }
+
+/* The two crosshairs that pin the panel to the grid */
+.panel::before, .panel::after {
+  content: ""; position: absolute; width: 11px; height: 11px;
+  background:
+    linear-gradient(var(--grid), var(--grid)) center/11px 1px no-repeat,
+    linear-gradient(var(--grid), var(--grid)) center/1px 11px no-repeat;
+}
+.panel::before { top: -6px; left: -6px; }
+.panel::after  { bottom: -6px; right: -6px; }
+
+.panel-rule { background: var(--line); }
+
+/* ---- Left container: the word, the caption, the four steps ---------- */
+.panel-left {
+  padding: 44px 32px 36px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center;
+}
+.word {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400; font-size: 58px; line-height: 1;
+  color: var(--ink); position: relative; white-space: nowrap;
+}
+.word-caption {
+  margin-top: 14px; font-size: 14px; font-weight: 500;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--ink-2);
+  text-align: center;
+}
+.word-rule { width: 56px; height: 1px; background: var(--line-2); margin-top: 22px; }
+
+.spark { position: absolute; color: var(--mark); }
+.spark--l { left: -34px; top: 18px; }
+.spark--r { right: -30px; top: -6px; }
+.spark--r2 { right: -16px; top: 26px; transform: scale(.72); }
+
+.steps { margin-top: auto; width: 100%; display: flex; flex-direction: column; gap: 10px; }
+.step { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--ink-4); }
+.step-ring {
+  width: 18px; height: 18px; border-radius: 50%; flex: none;
+  border: 1.5px solid var(--ink-5);
+  display: grid; place-items: center;
+}
+.step--done { color: var(--ink-4); }
+.step--done .step-ring { background: var(--ink-5); border-color: var(--ink-5); color: var(--panel); }
+.step--now { color: var(--ink); }
+.step--now .step-ring { border-color: var(--ink); border-width: 2px; }
+
+/* ---- Right container ------------------------------------------------ */
+/* The panel never grows. Dense screens scroll inside the right container,
+   the way the reference does — the frame stays put. */
+.panel-right {
+  padding: 40px 32px; min-width: 0; display: flex; flex-direction: column;
+  overflow-y: auto; overscroll-behavior: contain;
+}
+/* When a screen has a forward action, the body scrolls and the action stays
+   put. The live edge is never below the fold. */
+.panel-right:has(> .pane-foot) { padding: 0; overflow: hidden; }
+.pane-body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 40px 32px 20px; }
+.pane-foot { flex: none; padding: 16px 32px 20px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 10px; }
+.pane-body::-webkit-scrollbar { width: 6px; }
+.pane-body::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 3px; }
+.pane-body::-webkit-scrollbar-track { background: transparent; }
+.panel-right::-webkit-scrollbar { width: 6px; }
+.panel-right::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 3px; }
+.panel-right::-webkit-scrollbar-track { background: transparent; }
+.panel-right--flush { padding: 0; }
+
+/* ---- Form language -------------------------------------------------- */
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field-label {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 16px; color: var(--ink-2);
+}
+.field-label small { font-size: 14px; color: var(--ink-4); }
+.hint {
+  width: 16px; height: 16px; border-radius: 50%; flex: none;
+  border: 1px solid var(--ink-5); color: var(--ink-4);
+  font-size: 10px; display: grid; place-items: center; cursor: help;
+}
+
+.control {
+  height: 48px; width: 100%;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 0 14px; color: var(--ink-2);
+  transition: border-color var(--dur-1) var(--ease);
+}
+textarea.control { height: auto; padding: 12px 14px; resize: vertical; line-height: 1.5; }
+.control:hover { border-color: var(--line-2); }
+.control:focus { outline: none; border-color: var(--mark); }
+
+/* A group of controls sharing one outline, split by hairlines */
+.control-group { border: 1px solid var(--line); border-radius: var(--r); display: grid; overflow: hidden; }
+.control-group > * { border: 0; border-radius: 0; box-shadow: 0 0 0 .5px var(--line); }
+
+/* ---- Buttons --------------------------------------------------------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  height: 48px; padding: 0 22px; border-radius: var(--r);
+  background: var(--raise); border: 1px solid var(--line); color: var(--ink-2);
+  font-size: 15px; cursor: pointer; white-space: nowrap;
+  transition: border-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease), background var(--dur-1) var(--ease);
+}
+.btn:hover { border-color: var(--line-2); color: var(--ink); }
+.btn:disabled { color: var(--ink-5); cursor: not-allowed; }
+.btn-sm { height: 36px; padding: 0 14px; font-size: 14px; }
+.btn-quiet { background: none; }
+.btn-label-italic { font-family: var(--font-display), Georgia, serif; font-style: italic; font-size: 17px; }
+
+/* The live edge. One per screen, on the action that moves you forward. */
+.btn-live {
+  position: relative; background: var(--raise); border: 0;
+  padding: 0; border-radius: var(--r-lg);
+}
+.btn-live > span {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  height: 48px; padding: 0 26px; margin: 1.5px; white-space: nowrap;
+  background: var(--raise); border-radius: 4.5px; color: var(--ink);
+}
+.btn-live::before {
+  content: ""; position: absolute; inset: 0; border-radius: var(--r-lg);
+  background: linear-gradient(100deg, var(--mark) 0%, var(--mark) 28%, var(--jade) 52%, var(--mark) 76%, var(--mark) 100%);
+}
+.btn-live > span { position: relative; }
+.btn-live:hover > span { background: #2E2E2C; }
+
+/* ---- Rows ------------------------------------------------------------ */
+.rows { display: flex; flex-direction: column; }
+.row {
+  display: grid; align-items: center; gap: 16px;
+  padding: 14px 0; border-top: 1px solid var(--line);
+  transition: background var(--dur-1) var(--ease);
+}
+.row:first-child { border-top: 0; }
+.row-link { cursor: pointer; }
+.row-link:hover { background: rgba(255,255,255,.022); }
+.row-head { padding: 0 0 10px; border-top: 0; }
+.row-head:hover { background: none; }
+
+.label {
+  font-size: 12px; font-weight: 500; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-4);
+}
+.muted { color: var(--ink-3); }
+.faint { color: var(--ink-4); }
+.mark  { color: var(--mark); }
+.num   { font-variant-numeric: tabular-nums; }
+.serif { font-family: var(--font-display), Georgia, serif; font-weight: 400; }
+
+/* ---- Tags ------------------------------------------------------------ */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border: 1px solid var(--line); border-radius: var(--r);
+  font-size: 13px; color: var(--ink-3);
+}
+.tag--mark { border-color: rgba(255,150,2,.4); color: var(--mark); }
+.tag--gap  { border-color: rgba(229,86,58,.4); color: var(--red); }
+
+/* A selectable answer */
+.choice {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 40px; padding: 0 16px; border-radius: var(--r);
+  background: none; border: 1px solid var(--line); color: var(--ink-3);
+  font-size: 14px; cursor: pointer;
+  transition: all var(--dur-1) var(--ease);
+}
+.choice:hover { border-color: var(--line-2); color: var(--ink-2); }
+.choice[aria-pressed="true"] { border-color: var(--mark); color: var(--mark); background: var(--mark-dim); }
+
+/* ---- Generated output ------------------------------------------------ */
+.draft { border: 1px solid var(--line); border-left: 2px solid var(--mark); border-radius: var(--r); }
+.draft-body { padding: 18px 20px; color: var(--ink-2); line-height: 1.55; }
+.draft-source { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.draft-foot { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 12px 16px; border-top: 1px solid var(--line); }
+
+/* ---- Measure --------------------------------------------------------- */
+.meter { height: 2px; background: var(--line); }
+.meter > i { display: block; height: 100%; background: var(--mark); }
+
+/* ---- Utility --------------------------------------------------------- */
+.stack { display: flex; flex-direction: column; }
+.inline { display: flex; align-items: center; }
+.wrap { flex-wrap: wrap; }
+.grow { flex: 1; min-width: 0; }
+.between { justify-content: space-between; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sep { color: var(--ink-5); }
+.scroll { overflow-y: auto; }
+.scroll::-webkit-scrollbar { width: 6px; }
+.scroll::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 3px; }
+.scroll::-webkit-scrollbar-track { background: transparent; }
+
+.enter { animation: enter var(--dur-3) var(--ease-out) both; }
+@keyframes enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+
+.pane-head { flex: none; padding: 32px 32px 0; }
