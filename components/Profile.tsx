@@ -25,6 +25,36 @@ const accounts = [
   { Ic: Calendar, t: "Calendar", s: "So interviews show up on Today", on: true },
 ];
 
+/* What you are looking for. The fourth input, and the one the overnight
+   search actually runs against: without it the product matches you to
+   everything it can read.
+
+   The probe says supply is not the problem. 253 companies returned 269
+   unique design roles in one day, so the daily promise of three things
+   depends entirely on filtering. This block is that filter.
+
+   Same picker control as the skills, because it is the same gesture:
+   nothing to add, nothing to delete, only on or off. */
+const WANT = {
+  "Roles": [
+    "Product design", "Design systems", "Brand design", "UX research",
+    "Design management", "Motion", "Front of house",
+  ],
+  "Seniority": ["Mid", "Senior", "Staff", "Lead", "Manager", "Head of"],
+  "Where": [
+    "Remote worldwide", "Remote Europe", "United Kingdom", "Ireland",
+    "Netherlands", "Germany", "Hybrid, London", "Will relocate",
+  ],
+  "Not for you": [
+    "Agencies", "Crypto", "Gambling", "Defence", "Under 10 people", "On site five days",
+  ],
+};
+const WANT_ON = [
+  "Product design", "Design systems", "Senior", "Staff",
+  "Remote worldwide", "Remote Europe", "United Kingdom",
+  "Gambling", "On site five days",
+];
+
 /* One list, not two. Yours are on, the rest are off, and the whole set
    is the same tap. Nothing is added or removed, only switched. */
 const allSkills = [
@@ -37,9 +67,13 @@ const fromCv = allSkills.slice(0, 9);
 export default function Profile() {
   const [menu, setMenu] = useState(false);
   const [have, setHave] = useState<string[]>(fromCv);
+  const [want, setWant] = useState<string[]>(WANT_ON);
 
   const toggle = (s: string) =>
     setHave((v) => (v.includes(s) ? v.filter((x) => x !== s) : [...v, s]));
+  const toggleWant = (s: string) =>
+    setWant((v) => (v.includes(s) ? v.filter((x) => x !== s) : [...v, s]));
+  const [floor, setFloor] = useState("85");
 
   return (
     <div className="flow pr-prof" data-menu={menu}>
@@ -104,6 +138,54 @@ export default function Profile() {
                 {s}
               </button>
             ))}
+          </div>
+
+          <h2 className="j-sec">What you are looking for</h2>
+          <p className="pr-hint">
+            This is what the overnight search runs against. Without it, everything
+            matches.
+          </p>
+
+          <div className="pr-want">
+            {Object.entries(WANT).map(([group, opts]) => (
+              <div className="pr-want-g" key={group}>
+                <h3 className="pr-want-h" data-no={group === "Not for you"}>{group}</h3>
+                <div className="pr-skills">
+                  {opts.map((o) => (
+                    <button
+                      className="pr-skill"
+                      type="button"
+                      key={o}
+                      data-no={group === "Not for you"}
+                      aria-pressed={want.includes(o)}
+                      onClick={() => toggleWant(o)}
+                    >
+                      {want.includes(o) && <Check size={11} weight="bold" aria-hidden="true" />}
+                      {o}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div className="pr-want-g">
+              <h3 className="pr-want-h">Salary floor</h3>
+              <div className="pr-floor">
+                <span className="pr-floor-cur">£</span>
+                <input
+                  className="field pr-floor-f"
+                  inputMode="numeric"
+                  value={floor}
+                  onChange={(e) => setFloor(e.target.value.replace(/[^0-9]/g, ""))}
+                  aria-label="Salary floor, thousands"
+                />
+                <span className="pr-floor-k">thousand</span>
+              </div>
+              <p className="pr-floor-n">
+                Roles that do not say are still shown, and say so. Nothing is
+                filtered out on a number nobody published.
+              </p>
+            </div>
           </div>
 
           <p className="flow-note pr-foot">

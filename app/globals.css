@@ -1527,6 +1527,37 @@ html, body { overflow-x: clip; }
   box-shadow: inset 0 0 0 1.5px var(--brand);
 }
 
+/* ---- what you are looking for ---------------------------------------
+   The filter the overnight search runs against. Grouped, because a flat
+   wall of pills cannot say that "Senior" and "Remote Europe" are
+   different kinds of answer. Rule-outs are a group too, not a separate
+   mechanic: the same tap, read the other way.
+   -------------------------------------------------------------------- */
+.pr-want { display: flex; flex-direction: column; gap: 20px; }
+.pr-want-g { display: flex; flex-direction: column; gap: 9px; }
+.pr-want-h {
+  font-size: 11px; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--ink-4);
+}
+
+/* a rule-out that is on is a thing you are avoiding, so it cannot wear
+   the same blue as a thing you want */
+.pr-skill[data-no="true"][aria-pressed="true"] {
+  color: var(--ink-2); background: var(--paper-2);
+  box-shadow: inset 0 0 0 1.5px var(--line-2);
+  text-decoration: line-through;
+  text-decoration-color: var(--ink-4);
+}
+
+.pr-floor { display: flex; align-items: center; gap: 9px; }
+.pr-floor-cur { font-size: 19px; font-weight: 700; color: var(--ink-3); }
+.pr-floor-f { width: 112px; text-align: left; padding: 0 14px; }
+.pr-floor-k { font-size: 14px; color: var(--ink-4); }
+.pr-floor-n {
+  margin: 10px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--ink-4);
+  max-width: 40ch;
+}
+
 .pr-foot { margin-top: 24px; text-align: center; }
 
 /* ── the studio shell ───────────────────────────────────────────────── */
