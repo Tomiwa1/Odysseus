@@ -1,0 +1,5977 @@
+{
+  "ranAt": "2026-10-26T00:27:37.372Z",
+  "count": 266,
+  "jobs": [
+    {
+      "id": "amplitude-72a1c1d6-5605-4a10-b2f2-94f2f5cb6704",
+      "company": "Amplitude",
+      "companySlug": "amplitude",
+      "title": "Head of Product Design",
+      "titleKey": "head of product design",
+      "locations": [
+        "Remote-NAMER"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-07-07T16:09:42.212+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/amplitude/72a1c1d6-5605-4a10-b2f2-94f2f5cb6704"
+        }
+      ]
+    },
+    {
+      "id": "amplitude-a637163b-d8b4-4709-867b-21e4a2bfee49",
+      "company": "Amplitude",
+      "companySlug": "amplitude",
+      "title": "Principal Product Designer, Agentic Workflows",
+      "titleKey": "principal product designer agentic workflows",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-29T16:19:34.927+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/amplitude/a637163b-d8b4-4709-867b-21e4a2bfee49"
+        }
+      ]
+    },
+    {
+      "id": "amplitude-54d5b37c-9c8f-4804-a655-df8a54e03892",
+      "company": "Amplitude",
+      "companySlug": "amplitude",
+      "title": "Learning Experience Designer",
+      "titleKey": "learning experience designer",
+      "locations": [
+        "Remote-NAMER"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$114K – $189K • Offers Equity • Offers Bonus • Multiple Ranges",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-20T19:23:13.763+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/amplitude/54d5b37c-9c8f-4804-a655-df8a54e03892"
+        }
+      ]
+    },
+    {
+      "id": "1password-c0843e63-51ce-4c21-8ac0-55a6219c6ab6",
+      "company": "1Password",
+      "companySlug": "1password",
+      "title": "Learning Design and Enablement Manager",
+      "titleKey": "learning design and enablement manager",
+      "locations": [
+        "Remote (United States or Canada)"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-09T14:20:01.775+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/1password/c0843e63-51ce-4c21-8ac0-55a6219c6ab6"
+        }
+      ]
+    },
+    {
+      "id": "airbnb-7978040",
+      "company": "Airbnb",
+      "companySlug": "airbnb",
+      "title": "Sr. Staff Experience Designer",
+      "titleKey": "sr staff experience designer",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T19:44:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.airbnb.com/positions/7978040?gh_jid=7978040"
+        }
+      ]
+    },
+    {
+      "id": "airbnb-8052792",
+      "company": "Airbnb",
+      "companySlug": "airbnb",
+      "title": "Staff Experience Designer",
+      "titleKey": "staff experience designer",
+      "locations": [
+        "London, England"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T19:43:39-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.airbnb.com/positions/8052792?gh_jid=8052792"
+        }
+      ]
+    },
+    {
+      "id": "airbnb-8121074",
+      "company": "Airbnb",
+      "companySlug": "airbnb",
+      "title": "Staff Experience Designer, International",
+      "titleKey": "staff experience designer international",
+      "locations": [
+        "Singapore"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-29T20:00:54-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.airbnb.com/positions/8121074?gh_jid=8121074"
+        }
+      ]
+    },
+    {
+      "id": "airbnb-8112572",
+      "company": "Airbnb",
+      "companySlug": "airbnb",
+      "title": "Staff Experience Researcher, Incubations (Mixed Methods)",
+      "titleKey": "staff experience researcher incubations mixed methods",
+      "locations": [
+        "United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T13:18:13-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.airbnb.com/positions/8112572?gh_jid=8112572"
+        }
+      ]
+    },
+    {
+      "id": "airbnb-8240421",
+      "company": "Airbnb",
+      "companySlug": "airbnb",
+      "title": "Staff UX Writer, AI",
+      "titleKey": "staff ux writer ai",
+      "locations": [
+        "United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-01T13:25:51-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.airbnb.com/positions/8240421?gh_jid=8240421"
+        }
+      ]
+    },
+    {
+      "id": "adyen-8227082",
+      "company": "Adyen",
+      "companySlug": "adyen",
+      "title": "Manager, Product Experience Design",
+      "titleKey": "manager product experience design",
+      "locations": [
+        "Chicago"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T13:50:56-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/8227082"
+        }
+      ]
+    },
+    {
+      "id": "adyen-8214546",
+      "company": "Adyen",
+      "companySlug": "adyen",
+      "title": "Senior Designer, Digital",
+      "titleKey": "senior designer digital",
+      "locations": [
+        "New York",
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T19:17:55-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/8214546"
+        }
+      ]
+    },
+    {
+      "id": "adyen-8242349",
+      "company": "Adyen",
+      "companySlug": "adyen",
+      "title": "Senior Digital Designer",
+      "titleKey": "senior digital designer",
+      "locations": [
+        "Amsterdam"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T10:54:56-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/8242349"
+        }
+      ]
+    },
+    {
+      "id": "adyen-8045285",
+      "company": "Adyen",
+      "companySlug": "adyen",
+      "title": "Senior Product Experience Designer",
+      "titleKey": "senior product experience designer",
+      "locations": [
+        "Chicago"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T13:19:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/8045285"
+        }
+      ]
+    },
+    {
+      "id": "adyen-8227085",
+      "company": "Adyen",
+      "companySlug": "adyen",
+      "title": "Senior Product Experience Designer, Developer Experience",
+      "titleKey": "senior product experience designer developer experience",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T11:32:37-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/8227085"
+        }
+      ]
+    },
+    {
+      "id": "asana-8244380",
+      "company": "Asana",
+      "companySlug": "asana",
+      "title": "Experience Researcher, PLG",
+      "titleKey": "experience researcher plg",
+      "locations": [
+        "Vancouver, BC"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-09T13:41:59-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.asana.com/jobs/apply/8244380?gh_jid=8244380"
+        }
+      ]
+    },
+    {
+      "id": "asana-8227150",
+      "company": "Asana",
+      "companySlug": "asana",
+      "title": "Global Design & Project Manager",
+      "titleKey": "global design project manager",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-24T11:05:49-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.asana.com/jobs/apply/8227150?gh_jid=8227150"
+        }
+      ]
+    },
+    {
+      "id": "asana-8024052",
+      "company": "Asana",
+      "companySlug": "asana",
+      "title": "Product Designer",
+      "titleKey": "product designer",
+      "locations": [
+        "Vancouver, BC",
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-15T14:00:37-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.asana.com/jobs/apply/8024052?gh_jid=8024052"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.asana.com/jobs/apply/7952123?gh_jid=7952123"
+        }
+      ]
+    },
+    {
+      "id": "asana-7587002",
+      "company": "Asana",
+      "companySlug": "asana",
+      "title": "Product Designer, Coordinate",
+      "titleKey": "product designer coordinate",
+      "locations": [
+        "Warsaw"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-15T16:40:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.asana.com/jobs/apply/7587002?gh_jid=7587002"
+        }
+      ]
+    },
+    {
+      "id": "clickup-7fb8d11f-7ff7-4f6d-a41e-46e2d12e8774",
+      "company": "ClickUp",
+      "companySlug": "clickup",
+      "title": "Lead Brand Designer",
+      "titleKey": "lead brand designer",
+      "locations": [
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$110K – $169K",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-08-21T05:42:46.122+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/clickup/7fb8d11f-7ff7-4f6d-a41e-46e2d12e8774"
+        }
+      ]
+    },
+    {
+      "id": "chime-8342899002",
+      "company": "Chime",
+      "companySlug": "chime",
+      "title": "Principal Product Designer, Lending",
+      "titleKey": "principal product designer lending",
+      "locations": [
+        "New York, NY, USA",
+        "San Francisco, CA, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-01T18:59:01-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/chime/jobs/8342899002?gh_jid=8342899002"
+        }
+      ]
+    },
+    {
+      "id": "chime-8525325002",
+      "company": "Chime",
+      "companySlug": "chime",
+      "title": "Principal Product Designer, Spending",
+      "titleKey": "principal product designer spending",
+      "locations": [
+        "New York, NY, USA",
+        "San Francisco, CA, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-07T13:19:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/chime/jobs/8525325002?gh_jid=8525325002"
+        }
+      ]
+    },
+    {
+      "id": "chime-8842932002",
+      "company": "Chime",
+      "companySlug": "chime",
+      "title": "Sr. Instructional Designer, Learning Operations",
+      "titleKey": "sr instructional designer learning operations",
+      "locations": [
+        "Remote, USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-08T12:06:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/chime/jobs/8842932002?gh_jid=8842932002"
+        }
+      ]
+    },
+    {
+      "id": "cleo-4744339005",
+      "company": "Cleo",
+      "companySlug": "cleo",
+      "title": "Senior UX Designer",
+      "titleKey": "senior ux designer",
+      "locations": [
+        "San Francisco Bay Area"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T11:24:51-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/cleo/jobs/4744339005"
+        }
+      ]
+    },
+    {
+      "id": "brex-8782450002",
+      "company": "Brex",
+      "companySlug": "brex",
+      "title": "Senior Brand Designer",
+      "titleKey": "senior brand designer",
+      "locations": [
+        "San Francisco, California, United States",
+        "New York, New York, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-03T13:50:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8782450002?gh_jid=8782450002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8782440002?gh_jid=8782440002"
+        }
+      ]
+    },
+    {
+      "id": "brex-8782403002",
+      "company": "Brex",
+      "companySlug": "brex",
+      "title": "Staff Brand Designer",
+      "titleKey": "staff brand designer",
+      "locations": [
+        "San Francisco, California, United States",
+        "New York, New York, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-03T13:36:24-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8782403002?gh_jid=8782403002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8782405002?gh_jid=8782405002"
+        }
+      ]
+    },
+    {
+      "id": "brex-8782404002",
+      "company": "Brex",
+      "companySlug": "brex",
+      "title": "Staff Brand Designer, Interactive",
+      "titleKey": "staff brand designer interactive",
+      "locations": [
+        "San Francisco, California, United States",
+        "New York, New York, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-03T13:37:10-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8782404002?gh_jid=8782404002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8782407002?gh_jid=8782407002"
+        }
+      ]
+    },
+    {
+      "id": "brex-8777938002",
+      "company": "Brex",
+      "companySlug": "brex",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "New York, New York, United States",
+        "San Francisco, California, United States",
+        "Seattle, Washington, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-02T13:28:19-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8777938002?gh_jid=8777938002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8777949002?gh_jid=8777949002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8777953002?gh_jid=8777953002"
+        }
+      ]
+    },
+    {
+      "id": "brex-8616214002",
+      "company": "Brex",
+      "companySlug": "brex",
+      "title": "Staff Product Designer, AI",
+      "titleKey": "staff product designer ai",
+      "locations": [
+        "San Francisco, California, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-09T10:41:54-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.brex.com/careers/8616214002?gh_jid=8616214002"
+        }
+      ]
+    },
+    {
+      "id": "checkr-8232233",
+      "company": "Checkr",
+      "companySlug": "checkr",
+      "title": "Lead Brand Designer, Web",
+      "titleKey": "lead brand designer web",
+      "locations": [
+        "San Francisco, California, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-29T15:53:27-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/checkr/jobs/8232233"
+        }
+      ]
+    },
+    {
+      "id": "checkr-8301225",
+      "company": "Checkr",
+      "companySlug": "checkr",
+      "title": "Operations Process Design Specialist",
+      "titleKey": "operations process design specialist",
+      "locations": [
+        "Nashville, Tennessee, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T12:55:41-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/checkr/jobs/8301225"
+        }
+      ]
+    },
+    {
+      "id": "checkr-8301230",
+      "company": "Checkr",
+      "companySlug": "checkr",
+      "title": "Senior Product Designer, Verifications",
+      "titleKey": "senior product designer verifications",
+      "locations": [
+        "Denver, Colorado, United States",
+        "San Francisco, California, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T12:57:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/checkr/jobs/8301230"
+        }
+      ]
+    },
+    {
+      "id": "checkr-8163475",
+      "company": "Checkr",
+      "companySlug": "checkr",
+      "title": "Sr. Designer, Motion Graphics",
+      "titleKey": "sr designer motion graphics",
+      "locations": [
+        "San Francisco, California, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-24T15:56:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/checkr/jobs/8163475"
+        }
+      ]
+    },
+    {
+      "id": "contentful-8223747",
+      "company": "Contentful",
+      "companySlug": "contentful",
+      "title": "Senior Manager, Product Design (f/m/d)",
+      "titleKey": "senior manager product design f m d",
+      "locations": [
+        "London, England, United Kingdom"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-22T13:24:21-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/contentful/jobs/8223747"
+        }
+      ]
+    },
+    {
+      "id": "customerio-7931819",
+      "company": "Customerio",
+      "companySlug": "customerio",
+      "title": "Principal Product Designer",
+      "titleKey": "principal product designer",
+      "locations": [
+        "Americas Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T18:35:42-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/customerio/jobs/7931819"
+        }
+      ]
+    },
+    {
+      "id": "descript-8003605003",
+      "company": "Descript",
+      "companySlug": "descript",
+      "title": "Brand Design Lead",
+      "titleKey": "brand design lead",
+      "locations": [
+        "San Francisco, CA",
+        "Remote, US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "currency": "USD",
+        "low": 140000,
+        "high": 185000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-10-07T15:12:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/descript/jobs/8003605003?gh_jid=8003605003"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8206037",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Junior Designer - Kuwaiti National Only",
+      "titleKey": "junior designer kuwaiti national only",
+      "locations": [
+        "Kuwait, Kuwait"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-06T15:48:11-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8206037"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8284786",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Principal Product Designer (Ventures)",
+      "titleKey": "principal product designer ventures",
+      "locations": [
+        "London, United Kingdom - Deliveroo"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T08:35:45-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8284786"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8317865",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Staff Conversation Designer (Support)",
+      "titleKey": "staff conversation designer support",
+      "locations": [
+        "London, United Kingdom - Deliveroo"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T08:47:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8317865"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8202562",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "London, England"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T08:43:02-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8202562"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8258301",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Staff Product Designer (Motion)",
+      "titleKey": "staff product designer motion",
+      "locations": [
+        "London, United Kingdom - Deliveroo"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T06:24:58-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8258301"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8258559",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Staff Product Designer (Retail)",
+      "titleKey": "staff product designer retail",
+      "locations": [
+        "London, United Kingdom - Deliveroo"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T06:24:25-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8258559"
+        }
+      ]
+    },
+    {
+      "id": "deliveroo-8284768",
+      "company": "Deliveroo",
+      "companySlug": "deliveroo",
+      "title": "Staff Product Designer (Ventures)",
+      "titleKey": "staff product designer ventures",
+      "locations": [
+        "London, United Kingdom - Deliveroo"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T06:28:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/deliveroo/jobs/8284768"
+        }
+      ]
+    },
+    {
+      "id": "docplanner-37b73df0-6fc5-4bbe-9bfe-69a4e4d6a474",
+      "company": "Docplanner",
+      "companySlug": "docplanner",
+      "title": "Senior Product Designer - Feegow (100% remote friendly in Brazil)",
+      "titleKey": "senior product designer feegow 100 remote friendly in brazil",
+      "locations": [
+        "Rio de Janeiro",
+        "Curitiba",
+        "São Paulo"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-24T13:58:20.117+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/docplanner/37b73df0-6fc5-4bbe-9bfe-69a4e4d6a474"
+        }
+      ]
+    },
+    {
+      "id": "discord-8879502002",
+      "company": "Discord",
+      "companySlug": "discord",
+      "title": "Product Designer, Player Experiences",
+      "titleKey": "product designer player experiences",
+      "locations": [
+        "San Francisco Bay Area"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T20:00:31-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/discord/jobs/8879502002"
+        }
+      ]
+    },
+    {
+      "id": "discord-8731898002",
+      "company": "Discord",
+      "companySlug": "discord",
+      "title": "Senior Product Designer, Consumer Revenue",
+      "titleKey": "senior product designer consumer revenue",
+      "locations": [
+        "San Francisco Bay Area"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T14:40:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/discord/jobs/8731898002"
+        }
+      ]
+    },
+    {
+      "id": "discord-8846330002",
+      "company": "Discord",
+      "companySlug": "discord",
+      "title": "Senior Product Designer, Design Systems",
+      "titleKey": "senior product designer design systems",
+      "locations": [
+        "San Francisco Bay Area"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T20:05:24-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/discord/jobs/8846330002"
+        }
+      ]
+    },
+    {
+      "id": "discord-8595014002",
+      "company": "Discord",
+      "companySlug": "discord",
+      "title": "Senior Product Designer, Developer Success",
+      "titleKey": "senior product designer developer success",
+      "locations": [
+        "San Francisco Bay Area"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T14:55:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/discord/jobs/8595014002"
+        }
+      ]
+    },
+    {
+      "id": "discord-8780263002",
+      "company": "Discord",
+      "companySlug": "discord",
+      "title": "Senior Product Design Manager, Growth",
+      "titleKey": "senior product design manager growth",
+      "locations": [
+        "San Francisco Bay Area"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T14:32:42-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/discord/jobs/8780263002"
+        }
+      ]
+    },
+    {
+      "id": "coinbase-8175339",
+      "company": "Coinbase",
+      "companySlug": "coinbase",
+      "title": "Product Design Intern",
+      "titleKey": "product design intern",
+      "locations": [
+        "Hybrid - San Francisco, CA"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-13T19:48:48-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.coinbase.com/careers/positions/8175339?gh_jid=8175339"
+        }
+      ]
+    },
+    {
+      "id": "coinbase-8114474",
+      "company": "Coinbase",
+      "companySlug": "coinbase",
+      "title": "Senior Product Designer, Coinbase One",
+      "titleKey": "senior product designer coinbase one",
+      "locations": [
+        "Remote - USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T19:45:23-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.coinbase.com/careers/positions/8114474?gh_jid=8114474"
+        }
+      ]
+    },
+    {
+      "id": "coinbase-8301285",
+      "company": "Coinbase",
+      "companySlug": "coinbase",
+      "title": "Senior Product Designer, Developer Foundations",
+      "titleKey": "senior product designer developer foundations",
+      "locations": [
+        "Remote - USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T13:49:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.coinbase.com/careers/positions/8301285?gh_jid=8301285"
+        }
+      ]
+    },
+    {
+      "id": "coinbase-8280149",
+      "company": "Coinbase",
+      "companySlug": "coinbase",
+      "title": "Senior Product Designer, Platform",
+      "titleKey": "senior product designer platform",
+      "locations": [
+        "Remote - USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T13:44:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.coinbase.com/careers/positions/8280149?gh_jid=8280149"
+        }
+      ]
+    },
+    {
+      "id": "coinbase-8318555",
+      "company": "Coinbase",
+      "companySlug": "coinbase",
+      "title": "Staff User Researcher",
+      "titleKey": "staff user researcher",
+      "locations": [
+        "Remote - USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T14:27:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.coinbase.com/careers/positions/8318555?gh_jid=8318555"
+        }
+      ]
+    },
+    {
+      "id": "dropbox-8296377",
+      "company": "Dropbox",
+      "companySlug": "dropbox",
+      "title": "Learning Experience Designer",
+      "titleKey": "learning experience designer",
+      "locations": [
+        "Remote - Ireland"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T10:22:11-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://jobs.dropbox.com/listing/8296377?gh_jid=8296377"
+        }
+      ]
+    },
+    {
+      "id": "databricks-8787352002",
+      "company": "Databricks",
+      "companySlug": "databricks",
+      "title": "Product Design Intern (2027 Start)",
+      "titleKey": "product design intern 2027 start",
+      "locations": [
+        "San Francisco, California",
+        "Seattle, Washington"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-09T23:16:11-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8787352002"
+        }
+      ]
+    },
+    {
+      "id": "databricks-8843577002",
+      "company": "Databricks",
+      "companySlug": "databricks",
+      "title": "Product Design New Grad (2027 Start)",
+      "titleKey": "product design new grad 2027 start",
+      "locations": [
+        "San Francisco, California",
+        "Seattle, Washington"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-09T23:16:13-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8843577002"
+        }
+      ]
+    },
+    {
+      "id": "databricks-8429978002",
+      "company": "Databricks",
+      "companySlug": "databricks",
+      "title": "Sr. Product Designer, AI/BI",
+      "titleKey": "sr product designer ai bi",
+      "locations": [
+        "Mountain View, California",
+        "San Francisco, California",
+        "Seattle, Washington"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-06T06:17:53-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8429978002"
+        }
+      ]
+    },
+    {
+      "id": "databricks-8854693002",
+      "company": "Databricks",
+      "companySlug": "databricks",
+      "title": "Staff Product Designer, Agentic Coding",
+      "titleKey": "staff product designer agentic coding",
+      "locations": [
+        "Mountain View, California",
+        "San Francisco, California",
+        "Seattle, Washington"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-06T07:42:03-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8854693002"
+        }
+      ]
+    },
+    {
+      "id": "databricks-8584704002",
+      "company": "Databricks",
+      "companySlug": "databricks",
+      "title": "Staff Product Designer, AI Products",
+      "titleKey": "staff product designer ai products",
+      "locations": [
+        "New York City, New York"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-06T06:35:06-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8584704002"
+        }
+      ]
+    },
+    {
+      "id": "duolingo-8722385002",
+      "company": "Duolingo",
+      "companySlug": "duolingo",
+      "title": "Senior Learning Designer, Indian Languages",
+      "titleKey": "senior learning designer indian languages",
+      "locations": [
+        "Pittsburgh, PA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-18T11:06:47-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.duolingo.com/jobs/8722385002?gh_jid=8722385002"
+        }
+      ]
+    },
+    {
+      "id": "duolingo-8675713002",
+      "company": "Duolingo",
+      "companySlug": "duolingo",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "Beijing, China",
+        "New York, NY",
+        "Pittsburgh, PA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-04T09:42:33-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.duolingo.com/jobs/8675713002?gh_jid=8675713002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.duolingo.com/jobs/8489189002?gh_jid=8489189002"
+        }
+      ]
+    },
+    {
+      "id": "duolingo-8729596002",
+      "company": "Duolingo",
+      "companySlug": "duolingo",
+      "title": "Staff Product Designer, Monetization",
+      "titleKey": "staff product designer monetization",
+      "locations": [
+        "New York, NY",
+        "Pittsburgh, PA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-03T12:59:58-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.duolingo.com/jobs/8729596002?gh_jid=8729596002"
+        }
+      ]
+    },
+    {
+      "id": "duolingo-8750456002",
+      "company": "Duolingo",
+      "companySlug": "duolingo",
+      "title": "Staff Product Researcher",
+      "titleKey": "staff product researcher",
+      "locations": [
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-02T09:51:47-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.duolingo.com/jobs/8750456002?gh_jid=8750456002"
+        }
+      ]
+    },
+    {
+      "id": "fastly-8208191",
+      "company": "Fastly",
+      "companySlug": "fastly",
+      "title": "Staff Product Manager, UX & IAM",
+      "titleKey": "staff product manager ux iam",
+      "locations": [
+        "San Francisco, CA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T14:38:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.fastly.com/about/jobs/apply?gh_jid=8208191"
+        }
+      ]
+    },
+    {
+      "id": "faire-8445630002",
+      "company": "Faire",
+      "companySlug": "faire",
+      "title": "Lead Product Designer",
+      "titleKey": "lead product designer",
+      "locations": [
+        "New York City, NY",
+        "San Francisco, CA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-15T20:05:39-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/faire/jobs/8445630002?gh_jid=8445630002"
+        }
+      ]
+    },
+    {
+      "id": "faire-8445628002",
+      "company": "Faire",
+      "companySlug": "faire",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "New York City, NY",
+        "San Francisco, CA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-19T13:16:25-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/faire/jobs/8445628002?gh_jid=8445628002"
+        }
+      ]
+    },
+    {
+      "id": "datadog-8262004",
+      "company": "Datadog",
+      "companySlug": "datadog",
+      "title": "Senior Design Manager - AI Monitoring & Management",
+      "titleKey": "senior design manager ai monitoring management",
+      "locations": [
+        "New York, New York, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-09T11:46:25-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/8262004/?gh_jid=8262004"
+        }
+      ]
+    },
+    {
+      "id": "datadog-8223855",
+      "company": "Datadog",
+      "companySlug": "datadog",
+      "title": "Senior Design Manager - Design Systems",
+      "titleKey": "senior design manager design systems",
+      "locations": [
+        "New York, New York, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-29T13:18:57-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/8223855/?gh_jid=8223855"
+        }
+      ]
+    },
+    {
+      "id": "datadog-8221667",
+      "company": "Datadog",
+      "companySlug": "datadog",
+      "title": "Senior Group Manager, Experience Design",
+      "titleKey": "senior group manager experience design",
+      "locations": [
+        "New York, New York, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T09:47:30-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/8221667/?gh_jid=8221667"
+        }
+      ]
+    },
+    {
+      "id": "datadog-8281102",
+      "company": "Datadog",
+      "companySlug": "datadog",
+      "title": "Senior Manager, Product Design - Security",
+      "titleKey": "senior manager product design security",
+      "locations": [
+        "New York, New York, USA",
+        "Madrid, Spain",
+        "Paris, France"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T12:05:53-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/8281102/?gh_jid=8281102"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/8279650/?gh_jid=8279650"
+        }
+      ]
+    },
+    {
+      "id": "datadog-8100001",
+      "company": "Datadog",
+      "companySlug": "datadog",
+      "title": "Senior Staff Product Designer, Design Lab",
+      "titleKey": "senior staff product designer design lab",
+      "locations": [
+        "New York, New York, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-06T10:59:31-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/8100001/?gh_jid=8100001"
+        }
+      ]
+    },
+    {
+      "id": "datadog-7989348",
+      "company": "Datadog",
+      "companySlug": "datadog",
+      "title": "Staff Product Designer, APM",
+      "titleKey": "staff product designer apm",
+      "locations": [
+        "New York, New York, USA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-29T13:18:57-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.datadoghq.com/detail/7989348/?gh_jid=7989348"
+        }
+      ]
+    },
+    {
+      "id": "fivetran-7656004003",
+      "company": "Fivetran",
+      "companySlug": "fivetran",
+      "title": "Principal Product Designer",
+      "titleKey": "principal product designer",
+      "locations": [
+        "Oakland, California, United States, AMER"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-02T17:56:37-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.fivetran.com/careers/job?gh_jid=7656004003"
+        }
+      ]
+    },
+    {
+      "id": "fivetran-7822456003",
+      "company": "Fivetran",
+      "companySlug": "fivetran",
+      "title": "Senior Product Design Manager",
+      "titleKey": "senior product design manager",
+      "locations": [
+        "Denver, Colorado, United States, AMER",
+        "Oakland, California, United States, AMER"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T10:02:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.fivetran.com/careers/job?gh_jid=7822456003"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.fivetran.com/careers/job?gh_jid=7808191003"
+        }
+      ]
+    },
+    {
+      "id": "fivetran-7990835003",
+      "company": "Fivetran",
+      "companySlug": "fivetran",
+      "title": "Senior UX Researcher",
+      "titleKey": "senior ux researcher",
+      "locations": [
+        "Denver, Colorado, United States, AMER",
+        "Oakland, California, United States, AMER",
+        "USA - New York"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T11:27:50-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.fivetran.com/careers/job?gh_jid=7990835003"
+        }
+      ]
+    },
+    {
+      "id": "figma-6216211004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Brand Designer, Web",
+      "titleKey": "brand designer web",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T14:24:57-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6216211004?gh_jid=6216211004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6203089004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Designer Advocate (Berlin, Germany)",
+      "titleKey": "designer advocate berlin germany",
+      "locations": [
+        "Berlin, Germany"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-24T14:11:41-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6203089004?gh_jid=6203089004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6201114004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Director, Product Design - AI & Context",
+      "titleKey": "director product design ai context",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-22T19:04:41-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6201114004?gh_jid=6201114004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6180053004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Early Career, Product Designer (2027)",
+      "titleKey": "early career product designer 2027",
+      "locations": [
+        "San Francisco, CA • New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-22T20:27:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6180053004?gh_jid=6180053004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6135656004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Manager, Design - Systems & Infrastructure",
+      "titleKey": "manager design systems infrastructure",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-14T12:47:44-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6135656004?gh_jid=6135656004"
+        }
+      ]
+    },
+    {
+      "id": "figma-5711913004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Product Designer, AI Models",
+      "titleKey": "product designer ai models",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-07-22T05:37:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/5711913004?gh_jid=5711913004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6126976004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Product Designer, CMS",
+      "titleKey": "product designer cms",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-03T14:29:30-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6126976004?gh_jid=6126976004"
+        }
+      ]
+    },
+    {
+      "id": "figma-5711468004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Product Designer, Design, Dev, & AI Tools",
+      "titleKey": "product designer design dev ai tools",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-07-22T05:37:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/5711468004?gh_jid=5711468004"
+        }
+      ]
+    },
+    {
+      "id": "figma-5711595004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Product Designer, Growth & Monetization",
+      "titleKey": "product designer growth monetization",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-07-22T05:37:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/5711595004?gh_jid=5711595004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6193686004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Product Designer, Roundtripping (London, United Kingdom)",
+      "titleKey": "product designer roundtripping london united kingdom",
+      "locations": [
+        "London, England"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-16T16:07:42-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6193686004?gh_jid=6193686004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6180005004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Product Design Intern (2027)",
+      "titleKey": "product design intern 2027",
+      "locations": [
+        "San Francisco, CA • New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-14T13:36:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6180005004?gh_jid=6180005004"
+        }
+      ]
+    },
+    {
+      "id": "figma-5651744004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Researcher, Figma Agentic Experiences",
+      "titleKey": "researcher figma agentic experiences",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-26T10:10:45-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/5651744004?gh_jid=5651744004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6212642004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Researcher, Figma Design",
+      "titleKey": "researcher figma design",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-05T19:19:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6212642004?gh_jid=6212642004"
+        }
+      ]
+    },
+    {
+      "id": "figma-6204360004",
+      "company": "Figma",
+      "companySlug": "figma",
+      "title": "Researcher - Rapid Research",
+      "titleKey": "researcher rapid research",
+      "locations": [
+        "San Francisco, CA • New York, NY • United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-25T12:00:50-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/figma/jobs/6204360004?gh_jid=6204360004"
+        }
+      ]
+    },
+    {
+      "id": "getyourguide-8158781",
+      "company": "GetYourGuide",
+      "companySlug": "getyourguide",
+      "title": "Senior Brand Designer B2B",
+      "titleKey": "senior brand designer b2b",
+      "locations": [
+        "Berlin"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-26T10:01:53-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/getyourguide/jobs/8158781"
+        }
+      ]
+    },
+    {
+      "id": "getyourguide-8278560",
+      "company": "GetYourGuide",
+      "companySlug": "getyourguide",
+      "title": "Senior Design Systems Manager",
+      "titleKey": "senior design systems manager",
+      "locations": [
+        "Zurich",
+        "Berlin"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T11:07:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278560"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/getyourguide/jobs/8278320"
+        }
+      ]
+    },
+    {
+      "id": "getyourguide-7860461",
+      "company": "GetYourGuide",
+      "companySlug": "getyourguide",
+      "title": "Senior Product Designer (B2C)",
+      "titleKey": "senior product designer b2c",
+      "locations": [
+        "Berlin"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T17:39:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/getyourguide/jobs/7860461"
+        }
+      ]
+    },
+    {
+      "id": "getyourguide-8275034",
+      "company": "GetYourGuide",
+      "companySlug": "getyourguide",
+      "title": "UX Manager, Growth",
+      "titleKey": "ux manager growth",
+      "locations": [
+        "Berlin"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T16:40:57-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/getyourguide/jobs/8275034"
+        }
+      ]
+    },
+    {
+      "id": "gitlab-8716179002",
+      "company": "GitLab",
+      "companySlug": "gitlab",
+      "title": "AI Transformation Owner, Product & Design",
+      "titleKey": "ai transformation owner product design",
+      "locations": [
+        "Remote, Canada",
+        "Remote, United Kingdom",
+        "Remote, United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T15:24:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gitlab/jobs/8716179002"
+        }
+      ]
+    },
+    {
+      "id": "gitlab-8731718002",
+      "company": "GitLab",
+      "companySlug": "gitlab",
+      "title": "Principal Security Researcher",
+      "titleKey": "principal security researcher",
+      "locations": [
+        "Remote, Canada",
+        "Remote, Israel",
+        "Remote, United Kingdom",
+        "Remote, United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T15:24:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gitlab/jobs/8731718002"
+        }
+      ]
+    },
+    {
+      "id": "gitlab-8782153002",
+      "company": "GitLab",
+      "companySlug": "gitlab",
+      "title": "Staff Security Researcher",
+      "titleKey": "staff security researcher",
+      "locations": [
+        "Remote, Canada",
+        "Remote, Israel",
+        "Remote, United Kingdom",
+        "Remote, United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T15:24:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gitlab/jobs/8782153002"
+        }
+      ]
+    },
+    {
+      "id": "hex-954a640c-47f8-4186-b6cc-79f1c6ebe255",
+      "company": "Hex",
+      "companySlug": "hex",
+      "title": "Web Designer",
+      "titleKey": "web designer",
+      "locations": [
+        "Remote - US",
+        "San Francisco",
+        "New York"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$170K – $240K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2025-12-08T04:03:28.335+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/hex/954a640c-47f8-4186-b6cc-79f1c6ebe255"
+        }
+      ]
+    },
+    {
+      "id": "hex-50ca3b21-52f0-44bd-88b8-a285a45e38ed",
+      "company": "Hex",
+      "companySlug": "hex",
+      "title": "Brand Designer",
+      "titleKey": "brand designer",
+      "locations": [
+        "Remote - US",
+        "San Francisco",
+        "New York"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$142K – $190K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-06T16:31:24.834+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/hex/50ca3b21-52f0-44bd-88b8-a285a45e38ed"
+        }
+      ]
+    },
+    {
+      "id": "graphcore-8491411002",
+      "company": "Graphcore",
+      "companySlug": "graphcore",
+      "title": "Director, Silicon Logical Design",
+      "titleKey": "director silicon logical design",
+      "locations": [
+        "Bristol, UK",
+        "Cambridge, UK"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T11:40:55-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8491411002"
+        }
+      ]
+    },
+    {
+      "id": "graphcore-8894797002",
+      "company": "Graphcore",
+      "companySlug": "graphcore",
+      "title": "UX Design Summer Intern 2027",
+      "titleKey": "ux design summer intern 2027",
+      "locations": [
+        "Bristol, UK"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T08:10:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894797002"
+        }
+      ]
+    },
+    {
+      "id": "intercom-7862050",
+      "company": "Intercom",
+      "companySlug": "intercom",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "Dublin, Ireland",
+        "London, England"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-16T13:43:47-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/intercom/jobs/7862050"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/intercom/jobs/7861866"
+        }
+      ]
+    },
+    {
+      "id": "intercom-8242627",
+      "company": "Intercom",
+      "companySlug": "intercom",
+      "title": "Senior Web Designer, Growth",
+      "titleKey": "senior web designer growth",
+      "locations": [
+        "London, England"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T08:59:34-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/intercom/jobs/8242627"
+        }
+      ]
+    },
+    {
+      "id": "intercom-7862038",
+      "company": "Intercom",
+      "companySlug": "intercom",
+      "title": "Staff/Principal Product Designer",
+      "titleKey": "staff principal product designer",
+      "locations": [
+        "Dublin, Ireland",
+        "London, England"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-16T13:43:47-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/intercom/jobs/7862038"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/intercom/jobs/7862042"
+        }
+      ]
+    },
+    {
+      "id": "gusto-8168903",
+      "company": "Gusto",
+      "companySlug": "gusto",
+      "title": "Senior Product Design Manager, Banking",
+      "titleKey": "senior product design manager banking",
+      "locations": [
+        "Denver, CO - Hybrid",
+        "New York, NY - Hybrid",
+        "San Francisco, CA - Hybrid"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-16T09:49:52-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gusto/jobs/8168903"
+        }
+      ]
+    },
+    {
+      "id": "gusto-7254336",
+      "company": "Gusto",
+      "companySlug": "gusto",
+      "title": "Senior Product Design Manager, Payroll",
+      "titleKey": "senior product design manager payroll",
+      "locations": [
+        "Denver, CO - Hybrid",
+        "New York, NY - Hybrid",
+        "San Francisco, CA - Hybrid",
+        "Toronto, Ontario - Remote"
+      ],
+      "remote": true,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-05T13:22:28-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gusto/jobs/7254336"
+        }
+      ]
+    },
+    {
+      "id": "gusto-8168907",
+      "company": "Gusto",
+      "companySlug": "gusto",
+      "title": "Senior Staff UX Researcher, Quantitative",
+      "titleKey": "senior staff ux researcher quantitative",
+      "locations": [
+        "Denver, CO - Hybrid",
+        "New York, NY - Hybrid",
+        "San Francisco, CA - Hybrid"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-05T13:22:28-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gusto/jobs/8168907"
+        }
+      ]
+    },
+    {
+      "id": "gusto-8281363",
+      "company": "Gusto",
+      "companySlug": "gusto",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "Denver, CO - Hybrid",
+        "New York, NY - Hybrid",
+        "San Francisco, CA - Hybrid"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-20T15:23:30-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gusto/jobs/8281363"
+        }
+      ]
+    },
+    {
+      "id": "gusto-8279911",
+      "company": "Gusto",
+      "companySlug": "gusto",
+      "title": "Staff Recruiter, Design & Specialized Tech",
+      "titleKey": "staff recruiter design specialized tech",
+      "locations": [
+        "San Francisco, CA - Hybrid"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-19T12:25:27-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/gusto/jobs/8279911"
+        }
+      ]
+    },
+    {
+      "id": "lendable-42176bd7-78f8-422a-9187-f97131806ab2",
+      "company": "Lendable",
+      "companySlug": "lendable",
+      "title": "Creative Designer",
+      "titleKey": "creative designer",
+      "locations": [
+        "London"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-07-23T14:30:03.087+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/lendable/42176bd7-78f8-422a-9187-f97131806ab2"
+        }
+      ]
+    },
+    {
+      "id": "lendable-207bb4cf-b1ae-4298-bb17-19dbcdcfa20a",
+      "company": "Lendable",
+      "companySlug": "lendable",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "London"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-15T14:15:44.521+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/lendable/207bb4cf-b1ae-4298-bb17-19dbcdcfa20a"
+        }
+      ]
+    },
+    {
+      "id": "instacart-8249753",
+      "company": "Instacart",
+      "companySlug": "instacart",
+      "title": "Senior Design Program Manager II",
+      "titleKey": "senior design program manager ii",
+      "locations": [
+        "Canada - Remote (ON, AB, BC, or NS Only)",
+        "United States - Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T10:13:23-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8249753"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8249751"
+        }
+      ]
+    },
+    {
+      "id": "instacart-8191765",
+      "company": "Instacart",
+      "companySlug": "instacart",
+      "title": "Senior Product Designer II - Lifecycle & Growth",
+      "titleKey": "senior product designer ii lifecycle growth",
+      "locations": [
+        "Canada - Remote (ON, AB, BC, or NS Only)",
+        "United States - Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-10T13:28:47-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8191765"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8191763"
+        }
+      ]
+    },
+    {
+      "id": "instacart-8084089",
+      "company": "Instacart",
+      "companySlug": "instacart",
+      "title": "Staff Experience Designer",
+      "titleKey": "staff experience designer",
+      "locations": [
+        "United States - Remote",
+        "Canada - Remote (ON, AB, BC, or NS Only)"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-24T13:15:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8084089"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8084090"
+        }
+      ]
+    },
+    {
+      "id": "instacart-8141483",
+      "company": "Instacart",
+      "companySlug": "instacart",
+      "title": "Staff User Researcher - Consumer",
+      "titleKey": "staff user researcher consumer",
+      "locations": [
+        "Canada - Remote (ON, AB, BC, or NS Only)",
+        "United States - Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-24T13:15:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8141483"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://instacart.careers/job/?gh_jid=8141481"
+        }
+      ]
+    },
+    {
+      "id": "hellofresh-8092455",
+      "company": "HelloFresh",
+      "companySlug": "hellofresh",
+      "title": "Director UX, Growth",
+      "titleKey": "director ux growth",
+      "locations": [
+        "Toronto, Ontario, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T10:25:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.hellofresh.com/global/en/job/8092455?gh_jid=8092455"
+        }
+      ]
+    },
+    {
+      "id": "hellofresh-8147111",
+      "company": "HelloFresh",
+      "companySlug": "hellofresh",
+      "title": "Director, WMS Product Design/Development [OPERATIONS TECHNOLOGY]",
+      "titleKey": "director wms product design development operations technology",
+      "locations": [
+        "Aurora, IL, United States",
+        "Goodyear, AZ, United States",
+        "Irving, TX, United States",
+        "New York, NY, United States",
+        "Newark, NJ, United States",
+        "Phoenix, AZ, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T10:25:05-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.hellofresh.com/global/en/job/8147111?gh_jid=8147111"
+        }
+      ]
+    },
+    {
+      "id": "hellofresh-8300137",
+      "company": "HelloFresh",
+      "companySlug": "hellofresh",
+      "title": "Instructional Design Lead",
+      "titleKey": "instructional design lead",
+      "locations": [
+        "Manila, Manila, Philippines"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T06:23:30-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.hellofresh.com/global/en/job/8300137?gh_jid=8300137"
+        }
+      ]
+    },
+    {
+      "id": "hellofresh-8146772",
+      "company": "HelloFresh",
+      "companySlug": "hellofresh",
+      "title": "(Senior) Director UX, Operations",
+      "titleKey": "senior director ux operations",
+      "locations": [
+        "Berlin, Berlin, Germany"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T10:25:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.hellofresh.com/global/en/job/8146772?gh_jid=8146772"
+        }
+      ]
+    },
+    {
+      "id": "linear-a264869e-f058-487c-ab7f-9b77dffa427c",
+      "company": "Linear",
+      "companySlug": "linear",
+      "title": "Senior / Staff Product Designer",
+      "titleKey": "senior staff product designer",
+      "locations": [
+        "North America"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-04-23T21:39:39.618+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/linear/a264869e-f058-487c-ab7f-9b77dffa427c"
+        }
+      ]
+    },
+    {
+      "id": "linear-eac7f181-d658-4943-9430-51bae2bcd110",
+      "company": "Linear",
+      "companySlug": "linear",
+      "title": "Mobile Product Designer",
+      "titleKey": "mobile product designer",
+      "locations": [
+        "North America"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-03T19:57:33.020+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/linear/eac7f181-d658-4943-9430-51bae2bcd110"
+        }
+      ]
+    },
+    {
+      "id": "linear-5b9997fd-7507-4437-8fd7-14178c99ab5d",
+      "company": "Linear",
+      "companySlug": "linear",
+      "title": "Production Designer",
+      "titleKey": "production designer",
+      "locations": [
+        "Europe",
+        "North America"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-08-06T19:59:03.067+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/linear/5b9997fd-7507-4437-8fd7-14178c99ab5d"
+        },
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/linear/b32de590-06ce-47d4-8994-66b936df908d"
+        }
+      ]
+    },
+    {
+      "id": "lightspeed-4072228e-db2f-4515-99d0-8af82ebc64f1",
+      "company": "Lightspeed",
+      "companySlug": "lightspeed",
+      "title": "Residential Design & Preconstruction Specialist",
+      "titleKey": "residential design preconstruction specialist",
+      "locations": [
+        "Northbrook, IL",
+        "Chicago, IL"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-08T21:13:52.596+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/lightspeed/4072228e-db2f-4515-99d0-8af82ebc64f1"
+        }
+      ]
+    },
+    {
+      "id": "mixpanel-8207163",
+      "company": "Mixpanel",
+      "companySlug": "mixpanel",
+      "title": "Interactive Designer",
+      "titleKey": "interactive designer",
+      "locations": [
+        "San Francisco, US (Hybrid)"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-14T18:51:41-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/mixpanel/jobs/8207163"
+        }
+      ]
+    },
+    {
+      "id": "lyft-8817900002",
+      "company": "Lyft",
+      "companySlug": "lyft",
+      "title": "Content Design Intern (Summer 2027)",
+      "titleKey": "content design intern summer 2027",
+      "locations": [
+        "Toronto, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T18:43:36-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://app.careerpuck.com/job-board/lyft/job/8817900002?gh_jid=8817900002"
+        }
+      ]
+    },
+    {
+      "id": "lyft-8611874002",
+      "company": "Lyft",
+      "companySlug": "lyft",
+      "title": "Operations Technology Product Designer",
+      "titleKey": "operations technology product designer",
+      "locations": [
+        "Montreal, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T10:10:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://app.careerpuck.com/job-board/lyft/job/8611874002?gh_jid=8611874002"
+        }
+      ]
+    },
+    {
+      "id": "lyft-8908003002",
+      "company": "Lyft",
+      "companySlug": "lyft",
+      "title": "Senior Product Designer, Mapping",
+      "titleKey": "senior product designer mapping",
+      "locations": [
+        "Toronto, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T17:24:26-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://app.careerpuck.com/job-board/lyft/job/8908003002?gh_jid=8908003002"
+        }
+      ]
+    },
+    {
+      "id": "lyft-8896666002",
+      "company": "Lyft",
+      "companySlug": "lyft",
+      "title": "UX Researcher",
+      "titleKey": "ux researcher",
+      "locations": [
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T16:46:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://app.careerpuck.com/job-board/lyft/job/8896666002?gh_jid=8896666002"
+        }
+      ]
+    },
+    {
+      "id": "lyft-8797069002",
+      "company": "Lyft",
+      "companySlug": "lyft",
+      "title": "UX Research Intern (Summer 2027)",
+      "titleKey": "ux research intern summer 2027",
+      "locations": [
+        "Toronto, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T18:43:36-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://app.careerpuck.com/job-board/lyft/job/8797069002?gh_jid=8797069002"
+        }
+      ]
+    },
+    {
+      "id": "mongodb-8023944",
+      "company": "MongoDB",
+      "companySlug": "mongodb",
+      "title": "Senior Manager, Brand Design",
+      "titleKey": "senior manager brand design",
+      "locations": [
+        "United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T11:31:54-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.mongodb.com/careers/job/?gh_jid=8023944"
+        }
+      ]
+    },
+    {
+      "id": "mural-6b3b4a7a-12d7-460d-928f-087081a7fdf9",
+      "company": "Mural",
+      "companySlug": "mural",
+      "title": "Manager, Product Design, Growth (Upper Funnel)",
+      "titleKey": "manager product design growth upper funnel",
+      "locations": [
+        "United States Remote",
+        "Canada Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$169,435 – $211,794 • Multiple Ranges",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-09-22T17:08:47.041+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/mural/6b3b4a7a-12d7-460d-928f-087081a7fdf9"
+        }
+      ]
+    },
+    {
+      "id": "mercury-6230088004",
+      "company": "Mercury",
+      "companySlug": "mercury",
+      "title": "Risk UX Specialist",
+      "titleKey": "risk ux specialist",
+      "locations": [
+        "San Francisco, CA, New York, NY, Portland, OR,",
+        "Remote within United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T18:48:43-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/mercury/jobs/6230088004"
+        }
+      ]
+    },
+    {
+      "id": "mercury-6145886004",
+      "company": "Mercury",
+      "companySlug": "mercury",
+      "title": "Senior Design Manager - Core Experiences",
+      "titleKey": "senior design manager core experiences",
+      "locations": [
+        "San Francisco, CA, New York, NY, Portland, OR,",
+        "Remote within Canada",
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T01:02:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/mercury/jobs/6145886004"
+        }
+      ]
+    },
+    {
+      "id": "mercury-6143552004",
+      "company": "Mercury",
+      "companySlug": "mercury",
+      "title": "Senior Product Designer - Cards & Credit",
+      "titleKey": "senior product designer cards credit",
+      "locations": [
+        "San Francisco, CA, New York, NY, Portland, OR,",
+        "Remote within Canada",
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T01:02:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/mercury/jobs/6143552004"
+        }
+      ]
+    },
+    {
+      "id": "mercury-5995303004",
+      "company": "Mercury",
+      "companySlug": "mercury",
+      "title": "Staff Brand Designer",
+      "titleKey": "staff brand designer",
+      "locations": [
+        "San Francisco, CA, New York, NY, Portland, OR,",
+        "Remote within Canada",
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T01:01:54-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/mercury/jobs/5995303004"
+        }
+      ]
+    },
+    {
+      "id": "mercury-6196208004",
+      "company": "Mercury",
+      "companySlug": "mercury",
+      "title": "Staff Motion Designer - 3D",
+      "titleKey": "staff motion designer 3d",
+      "locations": [
+        "San Francisco, CA, New York, NY, Portland, OR,",
+        "Remote within Canada",
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T01:02:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/mercury/jobs/6196208004"
+        }
+      ]
+    },
+    {
+      "id": "monzo-7825424",
+      "company": "Monzo",
+      "companySlug": "monzo",
+      "title": "Director of Product Design",
+      "titleKey": "director of product design",
+      "locations": [
+        "Cardiff, London",
+        "Remote (UK)"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "currency": "GBP",
+        "low": 140000,
+        "high": 165000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-25T05:17:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/monzo/jobs/7825424"
+        }
+      ]
+    },
+    {
+      "id": "monzo-6758088",
+      "company": "Monzo",
+      "companySlug": "monzo",
+      "title": "Lead Product Designer",
+      "titleKey": "lead product designer",
+      "locations": [
+        "Cardiff, London",
+        "Remote (UK)"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "currency": "GBP",
+        "low": 90000,
+        "high": 120000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-25T05:17:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/monzo/jobs/6758088"
+        }
+      ]
+    },
+    {
+      "id": "notion-d177d052-ef57-4900-acf2-d58e9eded620",
+      "company": "Notion",
+      "companySlug": "notion",
+      "title": "Product Designer",
+      "titleKey": "product designer",
+      "locations": [
+        "San Francisco, California",
+        "New York, New York"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-07-02T17:18:41.823+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/notion/d177d052-ef57-4900-acf2-d58e9eded620"
+        }
+      ]
+    },
+    {
+      "id": "notion-59f2246d-9cb5-4e97-879e-46c902dc276a",
+      "company": "Notion",
+      "companySlug": "notion",
+      "title": "Brand Designer, Creative Studio",
+      "titleKey": "brand designer creative studio",
+      "locations": [
+        "New York, New York"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "currency": "USD",
+        "low": 200000,
+        "high": 250000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-03T22:43:17.055+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/notion/59f2246d-9cb5-4e97-879e-46c902dc276a"
+        }
+      ]
+    },
+    {
+      "id": "n26-8211088",
+      "company": "N26",
+      "companySlug": "n26",
+      "title": "Product Designer",
+      "titleKey": "product designer",
+      "locations": [
+        "Barcelona"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T03:53:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://n26.com/en-eu/careers/positions/8211088?gh_jid=8211088"
+        }
+      ]
+    },
+    {
+      "id": "pagerduty-6183981004",
+      "company": "PagerDuty",
+      "companySlug": "pagerduty",
+      "title": "Designer, Motion & Brand",
+      "titleKey": "designer motion brand",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T10:30:43-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/pagerduty/jobs/6183981004"
+        }
+      ]
+    },
+    {
+      "id": "posthog-4a8a1ee5-aa45-447e-a438-919b4577f14d",
+      "company": "PostHog",
+      "companySlug": "posthog",
+      "title": "Animator & Motion Graphics Designer",
+      "titleKey": "animator motion graphics designer",
+      "locations": [
+        "Remote",
+        "Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-14T12:30:03.809+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/posthog/4a8a1ee5-aa45-447e-a438-919b4577f14d"
+        }
+      ]
+    },
+    {
+      "id": "plaid-7b3df21a-1475-4d00-abe1-acf5d5b8844c",
+      "company": "Plaid",
+      "companySlug": "plaid",
+      "title": "Product Designer - Dashboard",
+      "titleKey": "product designer dashboard",
+      "locations": [
+        "San Francisco HQ",
+        "Seattle Office",
+        "New York City Office"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "note": "$164.4K – $210.3K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-23T15:47:45.519+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/plaid/7b3df21a-1475-4d00-abe1-acf5d5b8844c"
+        }
+      ]
+    },
+    {
+      "id": "okta-8281894",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Event & Experiences Designer",
+      "titleKey": "event experiences designer",
+      "locations": [
+        "Bellevue, Washington",
+        "New York, New York"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T13:17:57-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8281894?gh_jid=8281894"
+        }
+      ]
+    },
+    {
+      "id": "okta-8073082",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "GTM Compensation Strategy & Incentive Design Manager",
+      "titleKey": "gtm compensation strategy incentive design manager",
+      "locations": [
+        "Bellevue, Washington",
+        "Chicago, Illinois",
+        "San Francisco, California"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-21T12:43:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8073082?gh_jid=8073082"
+        }
+      ]
+    },
+    {
+      "id": "okta-8319247",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Manager, Product Design - Okta Research & Development",
+      "titleKey": "manager product design okta research development",
+      "locations": [
+        "Toronto, Ontario, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T16:07:30-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8319247?gh_jid=8319247"
+        }
+      ]
+    },
+    {
+      "id": "okta-8268997",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Motion Designer",
+      "titleKey": "motion designer",
+      "locations": [
+        "Bellevue, Washington",
+        "New York, New York"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T13:17:44-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8268997?gh_jid=8268997"
+        }
+      ]
+    },
+    {
+      "id": "okta-8132596",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Senior Manager, GTM Compensation Strategy & Incentive Design",
+      "titleKey": "senior manager gtm compensation strategy incentive design",
+      "locations": [
+        "Bellevue, Washington",
+        "Chicago, Illinois",
+        "San Francisco, California"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-21T12:43:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596"
+        }
+      ]
+    },
+    {
+      "id": "okta-8248278",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Senior Product Designer - Okta for AI Agents",
+      "titleKey": "senior product designer okta for ai agents",
+      "locations": [
+        "Bellevue, Washington",
+        "Chicago, Illinois",
+        "New York, New York",
+        "Washington, DC"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-02T16:56:48-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8248278?gh_jid=8248278"
+        }
+      ]
+    },
+    {
+      "id": "okta-8078764",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Staff Product Designer, Auth0",
+      "titleKey": "staff product designer auth0",
+      "locations": [
+        "Chicago, Illinois",
+        "New York, New York",
+        "San Francisco, California",
+        "Toronto, Ontario, Canada",
+        "Washington, DC"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-21T12:43:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8078764?gh_jid=8078764"
+        }
+      ]
+    },
+    {
+      "id": "okta-8137889",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Staff Product Designer, Login and MFA (Auth0)",
+      "titleKey": "staff product designer login and mfa auth0",
+      "locations": [
+        "Toronto, Ontario, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T15:20:30-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8137889?gh_jid=8137889"
+        }
+      ]
+    },
+    {
+      "id": "okta-8247059",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Staff Product Designer - Okta Identity Governance",
+      "titleKey": "staff product designer okta identity governance",
+      "locations": [
+        "Bellevue, Washington",
+        "Chicago, Illinois",
+        "New York, New York",
+        "Washington, DC"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-01T13:31:11-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8247059?gh_jid=8247059"
+        }
+      ]
+    },
+    {
+      "id": "okta-8229326",
+      "company": "Okta",
+      "companySlug": "okta",
+      "title": "Staff UX Researcher",
+      "titleKey": "staff ux researcher",
+      "locations": [
+        "Toronto, Ontario, Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-30T18:02:42-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.okta.com/company/careers/opportunity/8229326?gh_jid=8229326"
+        }
+      ]
+    },
+    {
+      "id": "preply-c856fb02-c557-4537-a689-5b4c40f9882c",
+      "company": "Preply",
+      "companySlug": "preply",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "London",
+        "Kyiv",
+        "Barcelona"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-05T16:23:27.150+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/preply/c856fb02-c557-4537-a689-5b4c40f9882c"
+        },
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/preply/ecef6699-977a-46c8-898a-147740811f05"
+        }
+      ]
+    },
+    {
+      "id": "preply-e592d94a-b6fe-4f76-be07-0c3f38a5029b",
+      "company": "Preply",
+      "companySlug": "preply",
+      "title": "Global Senior CRM & Lifecycle Designer",
+      "titleKey": "global senior crm lifecycle designer",
+      "locations": [
+        "London",
+        "Barcelona"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-07-06T12:51:25.268+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/preply/e592d94a-b6fe-4f76-be07-0c3f38a5029b"
+        }
+      ]
+    },
+    {
+      "id": "preply-ae1370db-6605-42fe-91a8-d152faf46d28",
+      "company": "Preply",
+      "companySlug": "preply",
+      "title": "Staff Product Designer [relocation to Barcelona/London]",
+      "titleKey": "staff product designer relocation to barcelona london",
+      "locations": [
+        "New York"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-05T16:35:47.294+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/preply/ae1370db-6605-42fe-91a8-d152faf46d28"
+        }
+      ]
+    },
+    {
+      "id": "raisin-5008476101",
+      "company": "Raisin",
+      "companySlug": "raisin",
+      "title": "Digital Designer",
+      "titleKey": "digital designer",
+      "locations": [
+        "New York, New York, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T04:00:35-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.eu.greenhouse.io/raisin/jobs/5008476101"
+        }
+      ]
+    },
+    {
+      "id": "raisin-4999592101",
+      "company": "Raisin",
+      "companySlug": "raisin",
+      "title": "Senior Motion Designer (m/f/d)",
+      "titleKey": "senior motion designer m f d",
+      "locations": [
+        "Berlin, Berlin, Germany",
+        "Hamburg"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-07T12:14:32-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.eu.greenhouse.io/raisin/jobs/4999592101"
+        }
+      ]
+    },
+    {
+      "id": "pinterest-8268336",
+      "company": "Pinterest",
+      "companySlug": "pinterest",
+      "title": "Designer",
+      "titleKey": "designer",
+      "locations": [
+        "Remote, US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-24T09:44:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8268336"
+        }
+      ]
+    },
+    {
+      "id": "pinterest-7684577",
+      "company": "Pinterest",
+      "companySlug": "pinterest",
+      "title": "Staff Qualitative UX Researcher, Monetization",
+      "titleKey": "staff qualitative ux researcher monetization",
+      "locations": [
+        "San Francisco, CA, US",
+        "Remote, US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-02T10:24:56-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7684577"
+        }
+      ]
+    },
+    {
+      "id": "replit-b386f0ef-41e1-48e4-abe3-d35ce627de95",
+      "company": "Replit",
+      "companySlug": "replit",
+      "title": "Director of Product Design",
+      "titleKey": "director of product design",
+      "locations": [
+        "Foster City, CA"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "note": "$275K – $350K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-08-25T20:12:57.839+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/replit/b386f0ef-41e1-48e4-abe3-d35ce627de95"
+        }
+      ]
+    },
+    {
+      "id": "render-0f0ccf3e-4caf-4586-9a66-411dbf49fcc5",
+      "company": "Render",
+      "companySlug": "render",
+      "title": "Senior Product Designer - Growth",
+      "titleKey": "senior product designer growth",
+      "locations": [
+        "Remote: United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$195K – $268K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-13T16:57:34.051+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/render/0f0ccf3e-4caf-4586-9a66-411dbf49fcc5"
+        }
+      ]
+    },
+    {
+      "id": "render-b847e042-6be5-4f8b-b36e-fe6a462cbb63",
+      "company": "Render",
+      "companySlug": "render",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "Remote: United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$218K – $300K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-07-13T21:14:17.595+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/render/b847e042-6be5-4f8b-b36e-fe6a462cbb63"
+        }
+      ]
+    },
+    {
+      "id": "render-05215536-110a-4c96-a03f-a4568c2176dc",
+      "company": "Render",
+      "companySlug": "render",
+      "title": "Staff/Principal Design Systems Lead",
+      "titleKey": "staff principal design systems lead",
+      "locations": [
+        "Remote: United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$218K – $307K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-22T22:44:42.281+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/render/05215536-110a-4c96-a03f-a4568c2176dc"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-8240638",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Product Designer, International",
+      "titleKey": "product designer international",
+      "locations": [
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T16:05:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/8240638?t=gh_src=&gh_jid=8240638"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-7489964",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Product Designer, Social",
+      "titleKey": "product designer social",
+      "locations": [
+        "Bellevue, WA",
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T16:05:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/7489964?t=gh_src=&gh_jid=7489964"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-8220730",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Senior Content Designer",
+      "titleKey": "senior content designer",
+      "locations": [
+        "Chicago, IL"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-02T18:39:48-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/8220730?t=gh_src=&gh_jid=8220730"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-6494244",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Senior Product Designer, Core Experience",
+      "titleKey": "senior product designer core experience",
+      "locations": [
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T15:33:48-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/6494244?t=gh_src=&gh_jid=6494244"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-8262776",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Senior Product Designer, Crypto",
+      "titleKey": "senior product designer crypto",
+      "locations": [
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T16:05:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/8262776?t=gh_src=&gh_jid=8262776"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-8159896",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Senior Product Designer, Sports",
+      "titleKey": "senior product designer sports",
+      "locations": [
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T16:05:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/8159896?t=gh_src=&gh_jid=8159896"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-8160668",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Senior Product Designer, Trading",
+      "titleKey": "senior product designer trading",
+      "locations": [
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T16:05:28-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/8160668?t=gh_src=&gh_jid=8160668"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-7804648",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Staff Product Designer, National Impact",
+      "titleKey": "staff product designer national impact",
+      "locations": [
+        "Menlo Park, CA",
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-14T19:03:26-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/7804648?t=gh_src=&gh_jid=7804648"
+        }
+      ]
+    },
+    {
+      "id": "robinhood-8080377",
+      "company": "Robinhood",
+      "companySlug": "robinhood",
+      "title": "Staff Quantitative Researcher",
+      "titleKey": "staff quantitative researcher",
+      "locations": [
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-02T19:02:32-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/robinhood/jobs/8080377?t=gh_src=&gh_jid=8080377"
+        }
+      ]
+    },
+    {
+      "id": "snyk-18909497-81c2-4a75-9b81-0c98d8cf7226",
+      "company": "Snyk",
+      "companySlug": "snyk",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "Portugal - Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-01T09:21:34.422+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/snyk/18909497-81c2-4a75-9b81-0c98d8cf7226"
+        }
+      ]
+    },
+    {
+      "id": "smartsheet-8273999",
+      "company": "Smartsheet",
+      "companySlug": "smartsheet",
+      "title": "Content Designer II (Remote Eligible - Costa Rica)",
+      "titleKey": "content designer ii remote eligible costa rica",
+      "locations": [
+        "San Jose, CR"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T12:01:21-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8273999"
+        }
+      ]
+    },
+    {
+      "id": "smartsheet-8191836",
+      "company": "Smartsheet",
+      "companySlug": "smartsheet",
+      "title": "Senior Product Designer I (Remote Eligible)",
+      "titleKey": "senior product designer i remote eligible",
+      "locations": [
+        "-REMOTE, USA-"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T14:21:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8191836"
+        }
+      ]
+    },
+    {
+      "id": "smartsheet-8238018",
+      "company": "Smartsheet",
+      "companySlug": "smartsheet",
+      "title": "Sr. Web UX Designer I (Remote Eligible - Costa Rica)",
+      "titleKey": "sr web ux designer i remote eligible costa rica",
+      "locations": [
+        "San Jose, CR"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T14:21:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8238018"
+        }
+      ]
+    },
+    {
+      "id": "smartsheet-8172203",
+      "company": "Smartsheet",
+      "companySlug": "smartsheet",
+      "title": "VP, User Experience and Design Innovation (Remote Eligible)",
+      "titleKey": "vp user experience and design innovation remote eligible",
+      "locations": [
+        "Bellevue, WA, USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T14:21:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8172203"
+        }
+      ]
+    },
+    {
+      "id": "samsara-8250008",
+      "company": "Samsara",
+      "companySlug": "samsara",
+      "title": "Associate Creative Director, Digital Design",
+      "titleKey": "associate creative director digital design",
+      "locations": [
+        "Remote - Canada",
+        "Remote - SF Bay Area"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-02T15:33:18-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8250008?gh_jid=8250008"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8205153?gh_jid=8205153"
+        }
+      ]
+    },
+    {
+      "id": "samsara-7839138",
+      "company": "Samsara",
+      "companySlug": "samsara",
+      "title": "Director, Product Design",
+      "titleKey": "director product design",
+      "locations": [
+        "Remote - US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-25T16:07:56-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/7839138?gh_jid=7839138"
+        }
+      ]
+    },
+    {
+      "id": "samsara-8018876",
+      "company": "Samsara",
+      "companySlug": "samsara",
+      "title": "Lead Product Designer",
+      "titleKey": "lead product designer",
+      "locations": [
+        "Remote - Canada",
+        "Remote - US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T17:19:15-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8018876?gh_jid=8018876"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8007939?gh_jid=8007939"
+        }
+      ]
+    },
+    {
+      "id": "samsara-8250348",
+      "company": "Samsara",
+      "companySlug": "samsara",
+      "title": "Senior Instructional Designer",
+      "titleKey": "senior instructional designer",
+      "locations": [
+        "Remote - US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T12:52:51-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8250348?gh_jid=8250348"
+        }
+      ]
+    },
+    {
+      "id": "samsara-8275253",
+      "company": "Samsara",
+      "companySlug": "samsara",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "Remote - Canada",
+        "Remote - US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T14:47:21-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8275253?gh_jid=8275253"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://www.samsara.com/company/careers/roles/8275248?gh_jid=8275248"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-53777cce-92ea-47dd-b9d3-7dc4c8db26ec",
+      "company": "Snowflake",
+      "companySlug": "snowflake",
+      "title": "Senior Product Designer, Observe by Snowflake",
+      "titleKey": "senior product designer observe by snowflake",
+      "locations": [
+        "US-CA-Menlo Park"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "note": "$173K – $248.4K",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-04-17T21:17:45.989+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/snowflake/53777cce-92ea-47dd-b9d3-7dc4c8db26ec"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-08614077-49b6-44a4-a659-3bda16b102d4",
+      "company": "Snowflake",
+      "companySlug": "snowflake",
+      "title": "Senior Manager, Programs & Event Design",
+      "titleKey": "senior manager programs event design",
+      "locations": [
+        "US-CA-Menlo Park"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": {
+        "note": "$182K – $238.3K",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-19T04:25:39.667+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/snowflake/08614077-49b6-44a4-a659-3bda16b102d4"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-c392f794-c8f9-42f9-baf1-75eb27c56574",
+      "company": "Snowflake",
+      "companySlug": "snowflake",
+      "title": "Post-Doctoral AI Researcher (2 year Fixed-Term)",
+      "titleKey": "post doctoral ai researcher 2 year fixed term",
+      "locations": [
+        "US-WA-Bellevue"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "note": "$160K – $220K",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-07-24T18:16:21.193+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/snowflake/c392f794-c8f9-42f9-baf1-75eb27c56574"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-e65f2ee8-c5a8-48bc-aca7-513fa99d6aef",
+      "company": "Snowflake",
+      "companySlug": "snowflake",
+      "title": "Senior User Researcher",
+      "titleKey": "senior user researcher",
+      "locations": [
+        "US-WA-Bellevue",
+        "US-CA-Menlo Park"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "note": "$173K – $248.4K",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-01T20:53:06.180+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/snowflake/e65f2ee8-c5a8-48bc-aca7-513fa99d6aef"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-eb9f1871-de71-4d76-8a7b-e885d491dd12",
+      "company": "Snowflake",
+      "companySlug": "snowflake",
+      "title": "Brand Designer",
+      "titleKey": "brand designer",
+      "locations": [
+        "US-CA-Menlo Park"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": {
+        "note": "$123K – $161.7K",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-09T16:56:54.879+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/snowflake/eb9f1871-de71-4d76-8a7b-e885d491dd12"
+        }
+      ]
+    },
+    {
+      "id": "sonder-9faf196b-1bb9-42ff-bb77-24d024abbfab",
+      "company": "Sonder",
+      "companySlug": "sonder",
+      "title": "Member of Technical Staff, Design",
+      "titleKey": "member of technical staff design",
+      "locations": [
+        "New York City"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-18T18:30:20.318+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/sonder/9faf196b-1bb9-42ff-bb77-24d024abbfab"
+        }
+      ]
+    },
+    {
+      "id": "reddit-7701558",
+      "company": "Reddit",
+      "companySlug": "reddit",
+      "title": "Staff Product Designer, Growth",
+      "titleKey": "staff product designer growth",
+      "locations": [
+        "Remote - United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T10:06:06-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/reddit/jobs/7701558"
+        }
+      ]
+    },
+    {
+      "id": "reddit-8120566",
+      "company": "Reddit",
+      "companySlug": "reddit",
+      "title": "Staff Product Designer, Presence",
+      "titleKey": "staff product designer presence",
+      "locations": [
+        "Remote - United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T10:06:06-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/reddit/jobs/8120566"
+        }
+      ]
+    },
+    {
+      "id": "strava-0a5d4116-f6af-4c2b-887f-dd5f9e82e8ac",
+      "company": "Strava",
+      "companySlug": "strava",
+      "title": "Director, Product Design",
+      "titleKey": "director product design",
+      "locations": [
+        "Strava SF"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "note": "$290K – $310K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-06-18T21:50:54.405+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/strava/0a5d4116-f6af-4c2b-887f-dd5f9e82e8ac"
+        }
+      ]
+    },
+    {
+      "id": "scaleai-4565768005",
+      "company": "Scale AI",
+      "companySlug": "scaleai",
+      "title": "Product Designer, Global Public Sector",
+      "titleKey": "product designer global public sector",
+      "locations": [
+        "Doha, Qatar",
+        "Dubai, UAE",
+        "London, UK"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T14:10:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4565768005"
+        }
+      ]
+    },
+    {
+      "id": "scaleai-4721008005",
+      "company": "Scale AI",
+      "companySlug": "scaleai",
+      "title": "Senior Product Design Manager, Enterprise",
+      "titleKey": "senior product design manager enterprise",
+      "locations": [
+        "New York, NY",
+        "London, UK"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T14:10:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4721008005"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4729620005"
+        }
+      ]
+    },
+    {
+      "id": "scaleai-4724276005",
+      "company": "Scale AI",
+      "companySlug": "scaleai",
+      "title": "Staff Product Designer",
+      "titleKey": "staff product designer",
+      "locations": [
+        "New York, NY",
+        "Washington, DC"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T14:10:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4724276005"
+        }
+      ]
+    },
+    {
+      "id": "scaleai-4718917005",
+      "company": "Scale AI",
+      "companySlug": "scaleai",
+      "title": "Staff Product Designer, Enterprise",
+      "titleKey": "staff product designer enterprise",
+      "locations": [
+        "New York, NY",
+        "London, UK"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T14:10:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4718917005"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4735360005"
+        }
+      ]
+    },
+    {
+      "id": "scaleai-4743989005",
+      "company": "Scale AI",
+      "companySlug": "scaleai",
+      "title": "Web Designer, Brand Web Experience",
+      "titleKey": "web designer brand web experience",
+      "locations": [
+        "San Francisco, CA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T14:10:38-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/scaleai/jobs/4743989005"
+        }
+      ]
+    },
+    {
+      "id": "sumup-8592596002",
+      "company": "SumUp",
+      "companySlug": "sumup",
+      "title": "Brand Marketing Designer",
+      "titleKey": "brand marketing designer",
+      "locations": [
+        "London, England, United Kingdom"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T12:10:52-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8592596002?gh_jid=8592596002"
+        }
+      ]
+    },
+    {
+      "id": "sumup-8794667002",
+      "company": "SumUp",
+      "companySlug": "sumup",
+      "title": "Brand Marketing Designer - (Fixed Contract 12 months)",
+      "titleKey": "brand marketing designer fixed contract 12 months",
+      "locations": [
+        "London, England, United Kingdom"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T12:10:54-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8794667002?gh_jid=8794667002"
+        }
+      ]
+    },
+    {
+      "id": "sumup-8630991002",
+      "company": "SumUp",
+      "companySlug": "sumup",
+      "title": "Marketing Designer for CRM",
+      "titleKey": "marketing designer for crm",
+      "locations": [
+        "Berlin, Germany"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T10:49:01-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8630991002?gh_jid=8630991002"
+        }
+      ]
+    },
+    {
+      "id": "sumup-8427124002",
+      "company": "SumUp",
+      "companySlug": "sumup",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "London, England, United Kingdom"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-27T14:35:00-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8427124002?gh_jid=8427124002"
+        }
+      ]
+    },
+    {
+      "id": "sumup-8637380002",
+      "company": "SumUp",
+      "companySlug": "sumup",
+      "title": "Senior Product Designer - POS",
+      "titleKey": "senior product designer pos",
+      "locations": [
+        "Berlin, Germany"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T03:02:18-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8637380002?gh_jid=8637380002"
+        }
+      ]
+    },
+    {
+      "id": "sumup-8768452002",
+      "company": "SumUp",
+      "companySlug": "sumup",
+      "title": "Senior Product Designer - Sell Online",
+      "titleKey": "senior product designer sell online",
+      "locations": [
+        "Warsaw, Poland",
+        "Berlin, Germany"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T03:02:05-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8768452002?gh_jid=8768452002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://sumup.com/careers/positions/8644926002?gh_jid=8644926002"
+        }
+      ]
+    },
+    {
+      "id": "spotify-9d1c90b5-a8a4-4218-b2f3-7bbaefae7fd1",
+      "company": "Spotify",
+      "companySlug": "spotify",
+      "title": "Senior Digital Learning Experience Designer - Learning & Inclusion",
+      "titleKey": "senior digital learning experience designer learning inclusion",
+      "locations": [
+        "New York, NY",
+        "London"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-17T11:58:04.283Z",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "lever",
+          "url": "https://jobs.lever.co/spotify/9d1c90b5-a8a4-4218-b2f3-7bbaefae7fd1"
+        },
+        {
+          "ats": "lever",
+          "url": "https://jobs.lever.co/spotify/7cf725bb-99c8-4717-b7e5-4f4708fa4169"
+        }
+      ]
+    },
+    {
+      "id": "spotify-f02fb195-ba10-40bd-a926-0318a34a7fae",
+      "company": "Spotify",
+      "companySlug": "spotify",
+      "title": "Staff Product Designer - Platform Design",
+      "titleKey": "staff product designer platform design",
+      "locations": [
+        "London"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T17:27:06.994Z",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "lever",
+          "url": "https://jobs.lever.co/spotify/f02fb195-ba10-40bd-a926-0318a34a7fae"
+        }
+      ]
+    },
+    {
+      "id": "tremendous-61534849-aa96-450b-b3a6-0ea9d14d8753",
+      "company": "Tremendous",
+      "companySlug": "tremendous",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$200K – $265K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-08-05T23:23:58.076+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/tremendous/61534849-aa96-450b-b3a6-0ea9d14d8753"
+        }
+      ]
+    },
+    {
+      "id": "tremendous-3ac0c612-6f73-4e07-ad29-9090cd7abcde",
+      "company": "Tremendous",
+      "companySlug": "tremendous",
+      "title": "Senior Product Designer, Foundations",
+      "titleKey": "senior product designer foundations",
+      "locations": [
+        "United States"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$200K – $265K • Offers Equity",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-09-18T21:44:26.941+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/tremendous/3ac0c612-6f73-4e07-ad29-9090cd7abcde"
+        }
+      ]
+    },
+    {
+      "id": "trustpilot-8156166",
+      "company": "Trustpilot",
+      "companySlug": "trustpilot",
+      "title": "Senior Quantitative UX Researcher",
+      "titleKey": "senior quantitative ux researcher",
+      "locations": [
+        "London",
+        "Edinburgh",
+        "Copenhagen"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-14T06:51:58-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://corporate.trustpilot.com/careers/job/8156166?gh_jid=8156166"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://corporate.trustpilot.com/careers/job/8200593?gh_jid=8200593"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://corporate.trustpilot.com/careers/job/8200590?gh_jid=8200590"
+        }
+      ]
+    },
+    {
+      "id": "tide-7731830003",
+      "company": "Tide",
+      "companySlug": "tide",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "Bulgaria",
+        "Lithuania",
+        "Serbia"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-23T03:41:11-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/tide/jobs/7731830003"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/tide/jobs/7788378003"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/tide/jobs/7779785003"
+        }
+      ]
+    },
+    {
+      "id": "tide-8006663003",
+      "company": "Tide",
+      "companySlug": "tide",
+      "title": "Werkstudent:in (m/w/d) – UX Copywriting",
+      "titleKey": "werkstudent in m w d ux copywriting",
+      "locations": [
+        "Berlin, Germany"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-29T05:36:59-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/tide/jobs/8006663003"
+        }
+      ]
+    },
+    {
+      "id": "twitch-8482393002",
+      "company": "Twitch",
+      "companySlug": "twitch",
+      "title": "Senior UX Designer",
+      "titleKey": "senior ux designer",
+      "locations": [
+        "New York City",
+        "San Francisco, CA",
+        "Los Angeles, CA"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-15T18:29:20-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/twitch/jobs/8482393002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/twitch/jobs/8482236002"
+        },
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/twitch/jobs/8482392002"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8130913",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Designer, Web Presence & Platform",
+      "titleKey": "designer web presence platform",
+      "locations": [
+        "US-Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8130913"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8155390",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Design Program Manager, Research Operations",
+      "titleKey": "design program manager research operations",
+      "locations": [
+        "US"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8155390"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8163193",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Design Recruiter",
+      "titleKey": "design recruiter",
+      "locations": [
+        "Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T15:48:39-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8163193"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7663023",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Connect Risk",
+      "titleKey": "product designer connect risk",
+      "locations": [
+        "Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:15:16-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7663023"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7980578",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer - Dashboard",
+      "titleKey": "product designer dashboard",
+      "locations": [
+        "US",
+        "Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:05-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7980578"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7983076",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Design Systems",
+      "titleKey": "product designer design systems",
+      "locations": [
+        "Spain"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:16:13-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7983076"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7861422",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Global",
+      "titleKey": "product designer global",
+      "locations": [
+        "Ireland"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:16:13-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7861422"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8164479",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Growth",
+      "titleKey": "product designer growth",
+      "locations": [
+        "New York, NY"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": {
+        "currency": "USD",
+        "low": 175200,
+        "high": 262800,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-10-22T09:17:08-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8164479"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7954207",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Internal Tools",
+      "titleKey": "product designer internal tools",
+      "locations": [
+        "US",
+        "Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:05-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7954207"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8304725",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Risk",
+      "titleKey": "product designer risk",
+      "locations": [
+        "US",
+        "Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:13-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8304725"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8282390",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Product Designer, Terminal",
+      "titleKey": "product designer terminal",
+      "locations": [
+        "US Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8282390"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8131129",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Senior Brand Designer, Experiential",
+      "titleKey": "senior brand designer experiential",
+      "locations": [
+        "US"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8131129"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8172672",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Senior Brand Designer, Link",
+      "titleKey": "senior brand designer link",
+      "locations": [
+        "US"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8172672"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7793636",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Senior Designer, Brand Advertising",
+      "titleKey": "senior designer brand advertising",
+      "locations": [
+        "US"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:04-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7793636"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8201702",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Staff Brand Designer, Creative Lab",
+      "titleKey": "staff brand designer creative lab",
+      "locations": [
+        "US"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-23T14:37:42-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8201702"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8268059",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Staff Product Designer, Checkout",
+      "titleKey": "staff product designer checkout",
+      "locations": [
+        "US",
+        "Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:12-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8268059"
+        }
+      ]
+    },
+    {
+      "id": "stripe-7202630",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Staff Product Designer, Link",
+      "titleKey": "staff product designer link",
+      "locations": [
+        "NYC"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:03-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=7202630"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8031782",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Staff Product Designer, Risk",
+      "titleKey": "staff product designer risk",
+      "locations": [
+        "US Remote"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:05-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8031782"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8127894",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Staff Program Manager, Event Design",
+      "titleKey": "staff program manager event design",
+      "locations": [
+        "US"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:07-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8127894"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8165259",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "UX Research Manager, Payments",
+      "titleKey": "ux research manager payments",
+      "locations": [
+        "Canada"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:15:17-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8165259"
+        }
+      ]
+    },
+    {
+      "id": "stripe-8275261",
+      "company": "Stripe",
+      "companySlug": "stripe",
+      "title": "Workplace Design Coordinator",
+      "titleKey": "workplace design coordinator",
+      "locations": [
+        "SF, NYC, SEA, TOR"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-22T09:17:12-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://stripe.com/jobs/search?gh_jid=8275261"
+        }
+      ]
+    },
+    {
+      "id": "vanta-19837d21-971e-4b9d-b078-320895fae28a",
+      "company": "Vanta",
+      "companySlug": "vanta",
+      "title": "Head of Design",
+      "titleKey": "head of design",
+      "locations": [
+        "Remote U.S."
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$365K – $513K • Offers Equity • Cash Range",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-07-06T21:11:35.974+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/vanta/19837d21-971e-4b9d-b078-320895fae28a"
+        }
+      ]
+    },
+    {
+      "id": "vanta-a795c135-48e4-46c8-96de-c7e71dcc50da",
+      "company": "Vanta",
+      "companySlug": "vanta",
+      "title": "Senior Systems Designer, EPD",
+      "titleKey": "senior systems designer epd",
+      "locations": [
+        "Remote U.S."
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$176K – $207K • Offers Equity • This role is also eligible for medical benefits, 401(k) plan, and other company perk programs.",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-08-21T20:45:55.995+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/vanta/a795c135-48e4-46c8-96de-c7e71dcc50da"
+        }
+      ]
+    },
+    {
+      "id": "vanta-6d6698d7-7272-4c2a-bc34-807dc269de43",
+      "company": "Vanta",
+      "companySlug": "vanta",
+      "title": "Director of Product Design",
+      "titleKey": "director of product design",
+      "locations": [
+        "Remote U.S."
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$275K – $323K • Offers Equity • This role is also eligible for medical benefits, 401(k) plan, and other company perk programs.",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-08-25T18:02:47.546+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/vanta/6d6698d7-7272-4c2a-bc34-807dc269de43"
+        }
+      ]
+    },
+    {
+      "id": "vanta-0e154a57-fc33-4cf7-95cc-0aa30e0bde90",
+      "company": "Vanta",
+      "companySlug": "vanta",
+      "title": "Senior Product Designer, Agent Experience",
+      "titleKey": "senior product designer agent experience",
+      "locations": [
+        "Remote U.S."
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$197K – $232K • Offers Equity • This role is also eligible for medical benefits, 401(k) plan, and other company perk programs.",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-09-18T17:08:17.112+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/vanta/0e154a57-fc33-4cf7-95cc-0aa30e0bde90"
+        }
+      ]
+    },
+    {
+      "id": "vanta-e74a395b-0ddd-49c0-8089-0a670a89810e",
+      "company": "Vanta",
+      "companySlug": "vanta",
+      "title": "Senior Product Designer, Risk Modeling",
+      "titleKey": "senior product designer risk modeling",
+      "locations": [
+        "Remote U.S."
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$197K – $232K • Offers Equity • This role is also eligible for medical benefits, 401(k) plan, and other company perk programs.",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-12T20:34:58.145+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/vanta/e74a395b-0ddd-49c0-8089-0a670a89810e"
+        }
+      ]
+    },
+    {
+      "id": "twilio-8204152",
+      "company": "Twilio",
+      "companySlug": "twilio",
+      "title": "Emerging Fraud Researcher",
+      "titleKey": "emerging fraud researcher",
+      "locations": [
+        "Remote - US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-14T13:21:55-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/twilio/jobs/8204152"
+        }
+      ]
+    },
+    {
+      "id": "twilio-8261442",
+      "company": "Twilio",
+      "companySlug": "twilio",
+      "title": "Senior Learning Experience Designer",
+      "titleKey": "senior learning experience designer",
+      "locations": [
+        "Remote - US"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-14T13:16:23-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/twilio/jobs/8261442"
+        }
+      ]
+    },
+    {
+      "id": "toast-8276266",
+      "company": "Toast",
+      "companySlug": "toast",
+      "title": "Brand Experience Designer, Consumer",
+      "titleKey": "brand experience designer consumer",
+      "locations": [
+        "Remote, USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T17:12:18-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.toasttab.com/jobs?gh_jid=8276266"
+        }
+      ]
+    },
+    {
+      "id": "toast-8281285",
+      "company": "Toast",
+      "companySlug": "toast",
+      "title": "Principal Product Designer, Onboarding",
+      "titleKey": "principal product designer onboarding",
+      "locations": [
+        "Remote, USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-20T12:25:26-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.toasttab.com/jobs?gh_jid=8281285"
+        }
+      ]
+    },
+    {
+      "id": "toast-8259363",
+      "company": "Toast",
+      "companySlug": "toast",
+      "title": "Product Designer",
+      "titleKey": "product designer",
+      "locations": [
+        "Chennai"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T06:22:43-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.toasttab.com/jobs?gh_jid=8259363"
+        }
+      ]
+    },
+    {
+      "id": "toast-8261298",
+      "company": "Toast",
+      "companySlug": "toast",
+      "title": "Senior Product Designer, Marketing Tools",
+      "titleKey": "senior product designer marketing tools",
+      "locations": [
+        "Remote, USA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-21T18:23:57-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.toasttab.com/jobs?gh_jid=8261298"
+        }
+      ]
+    },
+    {
+      "id": "toast-8276127",
+      "company": "Toast",
+      "companySlug": "toast",
+      "title": "Senior Product Designer – Toast Retail",
+      "titleKey": "senior product designer toast retail",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-13T06:25:56-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://careers.toasttab.com/jobs?gh_jid=8276127"
+        }
+      ]
+    },
+    {
+      "id": "vercel-6128387004",
+      "company": "Vercel",
+      "companySlug": "vercel",
+      "title": "Presentation Designer",
+      "titleKey": "presentation designer",
+      "locations": [
+        "Hybrid - San Francisco, New York City"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-20T15:53:53-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/vercel/jobs/6128387004"
+        }
+      ]
+    },
+    {
+      "id": "vercel-6160974004",
+      "company": "Vercel",
+      "companySlug": "vercel",
+      "title": "Product Designer, Marketplace",
+      "titleKey": "product designer marketplace",
+      "locations": [
+        "Hybrid - San Francisco"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-20T15:45:14-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/vercel/jobs/6160974004"
+        }
+      ]
+    },
+    {
+      "id": "vercel-5579560004",
+      "company": "Vercel",
+      "companySlug": "vercel",
+      "title": "Senior Brand Designer",
+      "titleKey": "senior brand designer",
+      "locations": [
+        "Hybrid - San Francisco, New York City"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": null,
+      "postedAt": "2026-10-20T15:54:21-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/vercel/jobs/5579560004"
+        }
+      ]
+    },
+    {
+      "id": "via-8772567002",
+      "company": "Via",
+      "companySlug": "via",
+      "title": "Algorithm Researcher",
+      "titleKey": "algorithm researcher",
+      "locations": [
+        "London"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-12T08:43:43-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/via/jobs/8772567002"
+        }
+      ]
+    },
+    {
+      "id": "via-8478199002",
+      "company": "Via",
+      "companySlug": "via",
+      "title": "Motion & AI Video Designer (Via, Remix, Citymapper)",
+      "titleKey": "motion ai video designer via remix citymapper",
+      "locations": [
+        "New York City"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-05-19T13:19:09-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/via/jobs/8478199002"
+        }
+      ]
+    },
+    {
+      "id": "via-8782310002",
+      "company": "Via",
+      "companySlug": "via",
+      "title": "Principal Product Designer, Transit Operations",
+      "titleKey": "principal product designer transit operations",
+      "locations": [
+        "New York City"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-14T10:29:32-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/via/jobs/8782310002"
+        }
+      ]
+    },
+    {
+      "id": "via-7896438002",
+      "company": "Via",
+      "companySlug": "via",
+      "title": "Senior Product Designer, Transit Operations",
+      "titleKey": "senior product designer transit operations",
+      "locations": [
+        "New York City"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-14T10:30:02-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/via/jobs/7896438002"
+        }
+      ]
+    },
+    {
+      "id": "verkada-5114867007",
+      "company": "Verkada",
+      "companySlug": "verkada",
+      "title": "Lead Product Designer",
+      "titleKey": "lead product designer",
+      "locations": [
+        "San Mateo, CA United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-28T18:36:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/verkada/jobs/5114867007"
+        }
+      ]
+    },
+    {
+      "id": "verkada-5050372007",
+      "company": "Verkada",
+      "companySlug": "verkada",
+      "title": "Lead Product Designer - Design Systems",
+      "titleKey": "lead product designer design systems",
+      "locations": [
+        "San Mateo, CA United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-28T18:36:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/verkada/jobs/5050372007"
+        }
+      ]
+    },
+    {
+      "id": "verkada-5193888007",
+      "company": "Verkada",
+      "companySlug": "verkada",
+      "title": "Product Designer",
+      "titleKey": "product designer",
+      "locations": [
+        "San Mateo, CA United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-14T19:04:29-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/verkada/jobs/5193888007"
+        }
+      ]
+    },
+    {
+      "id": "verkada-5267002007",
+      "company": "Verkada",
+      "companySlug": "verkada",
+      "title": "Researcher, Customer Experience",
+      "titleKey": "researcher customer experience",
+      "locations": [
+        "San Mateo, CA United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-19T13:33:41-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/verkada/jobs/5267002007"
+        }
+      ]
+    },
+    {
+      "id": "verkada-5164973007",
+      "company": "Verkada",
+      "companySlug": "verkada",
+      "title": "Senior Industrial Designer - Taiwan",
+      "titleKey": "senior industrial designer taiwan",
+      "locations": [
+        "Taipei, Taiwan"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-07T18:54:51-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/verkada/jobs/5164973007"
+        }
+      ]
+    },
+    {
+      "id": "verkada-5193871007",
+      "company": "Verkada",
+      "companySlug": "verkada",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "San Mateo, CA United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-09-28T18:36:46-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://job-boards.greenhouse.io/verkada/jobs/5193871007"
+        }
+      ]
+    },
+    {
+      "id": "zapier-c0582311-18cb-4415-9c86-79014f1b74f6",
+      "company": "Zapier",
+      "companySlug": "zapier",
+      "title": "Sr. Motion Designer",
+      "titleKey": "sr motion designer",
+      "locations": [
+        "EMEA"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "€92.6K – €139K • Offers Equity • Offers Bonus",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-10-02T17:54:13.428+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zapier/c0582311-18cb-4415-9c86-79014f1b74f6"
+        }
+      ]
+    },
+    {
+      "id": "zapier-b14ac81b-d94c-4a46-89a3-017f3d113517",
+      "company": "Zapier",
+      "companySlug": "zapier",
+      "title": "Growth Design Lead",
+      "titleKey": "growth design lead",
+      "locations": [
+        "NAMER"
+      ],
+      "remote": true,
+      "hybrid": false,
+      "pay": {
+        "note": "$191.5K – $287.3K • Offers Equity • Offers Bonus • Multiple Ranges",
+        "source": "stated by the employer"
+      },
+      "postedAt": "2026-09-16T03:28:24.462+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zapier/b14ac81b-d94c-4a46-89a3-017f3d113517"
+        }
+      ]
+    },
+    {
+      "id": "zopa-fc4c701a-2420-41fa-bd29-a10f2a3e6090",
+      "company": "Zopa",
+      "companySlug": "zopa",
+      "title": "Senior Motion Designer",
+      "titleKey": "senior motion designer",
+      "locations": [
+        "London"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-16T15:17:27.606Z",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "lever",
+          "url": "https://jobs.lever.co/zopa/fc4c701a-2420-41fa-bd29-a10f2a3e6090"
+        }
+      ]
+    },
+    {
+      "id": "zip-c6307162-44d9-47f3-a147-3adb39adc970",
+      "company": "Zip",
+      "companySlug": "zip",
+      "title": "Senior/Staff Product Designer",
+      "titleKey": "senior staff product designer",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "currency": "USD",
+        "low": 190000,
+        "high": 270000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-08T15:18:13.983+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zip/c6307162-44d9-47f3-a147-3adb39adc970"
+        }
+      ]
+    },
+    {
+      "id": "zip-a6fcfcad-7713-4393-a9c9-20748d58ceef",
+      "company": "Zip",
+      "companySlug": "zip",
+      "title": "Senior Product Designer, Global Payments",
+      "titleKey": "senior product designer global payments",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "currency": "USD",
+        "low": 160000,
+        "high": 220000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-07-15T17:13:16.219+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zip/a6fcfcad-7713-4393-a9c9-20748d58ceef"
+        }
+      ]
+    },
+    {
+      "id": "zip-39fb82c3-90bf-4fe2-b779-9a06ae3d3c99",
+      "company": "Zip",
+      "companySlug": "zip",
+      "title": "Staff Product Designer, AI Agents & Chat",
+      "titleKey": "staff product designer ai agents chat",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "currency": "USD",
+        "low": 220000,
+        "high": 270000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-08T15:24:23.871+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zip/39fb82c3-90bf-4fe2-b779-9a06ae3d3c99"
+        }
+      ]
+    },
+    {
+      "id": "zip-b138aa15-0197-4da3-bd86-b6636285d935",
+      "company": "Zip",
+      "companySlug": "zip",
+      "title": "Product Designer, Contract Orchestration",
+      "titleKey": "product designer contract orchestration",
+      "locations": [
+        "San Francisco"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "currency": "USD",
+        "low": 160000,
+        "high": 200000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-08T15:38:03.659+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zip/b138aa15-0197-4da3-bd86-b6636285d935"
+        }
+      ]
+    },
+    {
+      "id": "zip-2126ee19-3f24-42ff-99c4-b5d37db85806",
+      "company": "Zip",
+      "companySlug": "zip",
+      "title": "Senior Product Designer",
+      "titleKey": "senior product designer",
+      "locations": [
+        "New York City",
+        "Toronto"
+      ],
+      "remote": false,
+      "hybrid": true,
+      "pay": {
+        "currency": "USD",
+        "low": 190000,
+        "high": 222000,
+        "source": "parsed from the posting"
+      },
+      "postedAt": "2026-09-08T15:43:03.478+00:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zip/2126ee19-3f24-42ff-99c4-b5d37db85806"
+        },
+        {
+          "ats": "ashby",
+          "url": "https://jobs.ashbyhq.com/zip/4e316c9b-71a6-4b07-a643-6275beed80a3"
+        }
+      ]
+    },
+    {
+      "id": "zuora-8262227",
+      "company": "Zuora",
+      "companySlug": "zuora",
+      "title": "VP, Product Design",
+      "titleKey": "vp product design",
+      "locations": [
+        "Foster City, California, United States"
+      ],
+      "remote": false,
+      "hybrid": false,
+      "pay": null,
+      "postedAt": "2026-10-07T18:00:52-04:00",
+      "firstSeen": "2026-10-26T00:13:31.915Z",
+      "sources": [
+        {
+          "ats": "greenhouse",
+          "url": "https://boards.greenhouse.io/zuora/jobs/8262227?gh_jid=8262227"
+        }
+      ]
+    }
+  ]
+}

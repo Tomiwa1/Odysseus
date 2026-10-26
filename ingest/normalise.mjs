@@ -84,7 +84,7 @@ export function normalise({ company, ats, raw }) {
     titleKey: keyTitle(raw.title || ""),
     locations,
     remote: raw.remote === true || REMOTE.test(`${raw.title} ${raw.location}`),
-    hybrid: HYBRID.test(`${raw.title} ${raw.location}`),
+    hybrid: raw.hybrid === true || HYBRID.test(`${raw.title} ${raw.location}`),
     pay: raw.pay ? { note: raw.pay, source: "stated by the employer" } : readPay(blob),
     postedAt: raw.postedAt,
     /* every place this job was found, which is what lets the product say

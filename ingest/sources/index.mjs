@@ -56,14 +56,22 @@ export const ADAPTERS = {
       const j = await json(
         `https://api.ashbyhq.com/posting-api/job-board/${slug}?includeCompensation=true`
       );
+      /* Ashby's isRemote is unreliable: Plaid's "Product Designer -
+         Dashboard" is isRemote true at "San Francisco HQ". workplaceType
+         is the field that actually means it. */
       return (j.jobs || []).map((x) => ({
         sourceId: String(x.id),
         title: x.title,
-        location: x.location || "",
+        location: [x.location, ...(x.secondaryLocations || []).map((l) => l?.location || l)]
+          .filter(Boolean)
+          .join("; "),
         url: x.jobUrl,
         postedAt: x.publishedAt || null,
         body: x.descriptionPlain || "",
-        remote: x.isRemote === true,
+        remote: x.workplaceType
+          ? /remote/i.test(x.workplaceType)
+          : x.isRemote === true,
+        hybrid: /hybrid/i.test(x.workplaceType || ""),
         pay: x.compensation?.compensationTierSummary || null,
       }));
     },

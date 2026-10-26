@@ -21,15 +21,13 @@ const GROUP: Record<Kind, string> = {
   draft: "Ready to read",
 };
 
-const items: { id: string; kind: Kind; title: string; meta: string; why: string; cta: string }[] = [
-  {
-    id: "paystack",
-    kind: "match",
-    title: "Senior Product Designer",
-    meta: "Paystack · Lagos or remote",
-    why: "Closest thing to the onboarding work you did at Kuda. They asked for it by name.",
-    cta: "Look at it",
-  },
+export type Item = { id: string; kind: Kind; title: string; meta: string; why: string; cta: string };
+
+/* The matches arrive as props from the server, read out of the real
+   ingest. Everything else on this screen is pipeline and draft state,
+   which no job feed can know, so it stays mock until there is a user to
+   have any. */
+const standing: Item[] = [
   {
     id: "chidi",
     kind: "reply",
@@ -48,9 +46,14 @@ const items: { id: string; kind: Kind; title: string; meta: string; why: string;
   },
 ];
 
-const WORDS = ["That's today", "One thing", "Two things", "Three things"];
+/* The headline counts down, so it has to survive any number. It read
+   "." once real matches pushed the list past three. */
+const NUMBERS = ["no", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+const countdown = (n: number) =>
+  n === 0 ? "That's today" : `${NUMBERS[n] ?? n} thing${n === 1 ? "" : "s"}`;
 
-export default function Today() {
+export default function Today({ matches = [], read = "" }: { matches?: Item[]; read?: string }) {
+  const items = [...matches, ...standing];
   const [menu, setMenu] = useState(false);
   const [done, setDone] = useState<string[]>([]);
 
@@ -113,11 +116,11 @@ export default function Today() {
       <main className="flow-body">
         <div className="flow-inner t-inner">
           <p className="eyebrow">Thursday morning</p>
-          <h1 className="display t-h1">{WORDS[left.length]}.</h1>
+          <h1 className="display t-h1">{countdown(left.length)}.</h1>
           <p className="flow-sub t-sub">
             {finished
               ? "Nothing else needs you. The next search runs at six tomorrow."
-              : "Overnight it read 1,240 jobs and kept three. The rest never reached you."}
+              : read}
           </p>
 
           <Meter />
