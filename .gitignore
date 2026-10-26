@@ -14,3 +14,6 @@ tsconfig.tsbuildinfo
 # os
 .DS_Store
 *.log
+
+# ingest output: regenerate with `node ingest/run.mjs`
+ingest/store/

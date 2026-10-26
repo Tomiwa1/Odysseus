@@ -1,0 +1,51 @@
+/* The company list is the asset. The crawler is trivial; knowing which
+   companies are worth watching is not. Worldwide, Europe and the UK
+   weighted, plus remote-first companies that hire across borders. */
+export const COMPANIES = [
+  // UK and Ireland
+  "monzo", "starlingbank", "wise", "revolut", "tide", "thoughtmachine",
+  "octopusenergy", "deliveroo", "trustpilot", "onfido", "gocardless",
+  "checkout", "zopa", "cleo", "marshmallow", "lendable", "freetrade",
+  "moneybox", "curve", "wayve", "babylonhealth", "depop", "bulb",
+  "improbable", "snyk", "darktrace", "graphcore", "elvie", "farfetch",
+  "intercom", "workhuman", "flipdish", "stripe",
+  // Europe
+  "klarna", "spotify", "n26", "personio", "pleo", "qonto", "payfit",
+  "wolt", "bolt", "backbase", "adyen", "messagebird", "miro", "typeform",
+  "glovo", "cabify", "factorial", "jobandtalent", "contentful",
+  "celonis", "sennder", "forto", "taxfix", "raisin", "solarisbank",
+  "trade-republic", "scalable", "gorillas", "zalando", "hellofresh",
+  "getyourguide", "sumup", "mollie", "picnic", "remote", "docplanner",
+  "preply", "productboard", "rohlik", "vinted", "bolttech", "lightyear",
+  // North America
+  "figma", "notion", "airbnb", "dropbox", "asana", "gitlab", "hashicorp",
+  "cloudflare", "twilio", "robinhood", "coinbase", "doordash",
+  "instacart", "lyft", "pinterest", "reddit", "squarespace", "zapier",
+  "1password", "algolia", "amplitude", "benchling", "brex", "calendly",
+  "canva", "carta", "checkr", "chime", "circleci", "clickup",
+  "confluent", "databricks", "datadog", "discord", "docker", "duolingo",
+  "elastic", "faire", "fivetran", "flexport", "grammarly", "gusto",
+  "kraken", "linear", "loom", "mercury", "mural", "netlify", "okta",
+  "plaid", "postman", "quora", "samsara", "sentry", "shopify",
+  "smartsheet", "sourcegraph", "superhuman", "toast", "twitch", "udemy",
+  "unity", "upwork", "vercel", "vimeo", "wealthsimple", "webflow",
+  "whoop", "workato", "zendesk", "ramp", "vanta", "deel", "posthog",
+  "supabase", "replit", "retool", "census", "whatnot", "hex", "clay",
+  "airtable", "amplitudeinc", "attentive", "automattic", "bitly",
+  "box", "bubble", "cedar", "clearbit", "coda", "crossbeam", "customerio",
+  "dbtlabs", "descript", "dialpad", "drata", "equinix", "expel",
+  "fastly", "flatiron", "front", "gem", "getdbt", "github", "gong",
+  "grafana", "greenhouse", "guild", "handshake", "heap", "honeycomb",
+  "hopin", "ironclad", "jasper", "launchdarkly", "lattice", "lightspeed",
+  "lob", "lucid", "mixpanel", "modernhealth", "mongodb", "newfront",
+  "nylas", "olo", "ondeck", "outreach", "pagerduty", "pendo",
+  "pilot", "pollyex", "productplan", "pulley", "render", "rippling",
+  "scaleai", "segment", "semgrep", "sift", "snowflake", "sonder",
+  "splash", "sprig", "stord", "strava", "stytch", "temporal", "tempus",
+  "thirdlove", "tigera", "tinybird", "tremendous", "truework", "turing",
+  "vercelinc", "verkada", "via", "vouch", "warby", "wealthfront",
+  "wistia", "workramp", "writer", "zip", "zuora",
+  // Remote-first and global
+  "automattic", "doist", "gitpod", "hotjar", "invisible", "nuvei",
+  "oyster", "remotecom", "sourcegraph", "strapi", "toptal", "zapierinc",
+];
