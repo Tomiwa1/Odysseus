@@ -11,14 +11,57 @@
  *   node ingest/probe-sources.mjs
  */
 
+/* Worldwide, with Europe and the UK weighted, plus remote-first
+   companies that hire across borders. The first run was African fintech
+   only, which was an assumption carried over from the prototype's mock
+   data rather than anything about the product. */
 const COMPANIES = [
-  "paystack", "flutterwave", "moniepoint", "kuda", "piggyvest", "carbon",
-  "opay", "chippercash", "interswitch", "cowrywise", "mono", "okra",
-  "paga", "grey", "lemfi", "nomba", "brass", "raenest", "bumpa",
-  "termii", "edenlife", "heliumhealth", "reliancehealth", "mpharma",
-  "seamlesshr", "fincra", "klasha", "kippa", "palmpay", "risevest",
-  "bamboo", "thepeer", "anchor", "prospa", "sudo", "float", "vesti",
-  "yellowcard", "wave", "jumia", "andela", "sendwave", "bitnob",
+  // UK and Ireland
+  "monzo", "starlingbank", "wise", "revolut", "tide", "thoughtmachine",
+  "octopusenergy", "deliveroo", "trustpilot", "onfido", "gocardless",
+  "checkout", "zopa", "cleo", "marshmallow", "lendable", "freetrade",
+  "moneybox", "curve", "wayve", "babylonhealth", "depop", "bulb",
+  "improbable", "snyk", "darktrace", "graphcore", "elvie", "farfetch",
+  "intercom", "workhuman", "flipdish", "stripe",
+  // Europe
+  "klarna", "spotify", "n26", "personio", "pleo", "qonto", "payfit",
+  "wolt", "bolt", "backbase", "adyen", "messagebird", "miro", "typeform",
+  "glovo", "cabify", "factorial", "jobandtalent", "contentful",
+  "celonis", "sennder", "forto", "taxfix", "raisin", "solarisbank",
+  "trade-republic", "scalable", "gorillas", "zalando", "hellofresh",
+  "getyourguide", "sumup", "mollie", "picnic", "remote", "docplanner",
+  "preply", "productboard", "rohlik", "vinted", "bolttech", "lightyear",
+  // North America
+  "figma", "notion", "airbnb", "dropbox", "asana", "gitlab", "hashicorp",
+  "cloudflare", "twilio", "robinhood", "coinbase", "doordash",
+  "instacart", "lyft", "pinterest", "reddit", "squarespace", "zapier",
+  "1password", "algolia", "amplitude", "benchling", "brex", "calendly",
+  "canva", "carta", "checkr", "chime", "circleci", "clickup",
+  "confluent", "databricks", "datadog", "discord", "docker", "duolingo",
+  "elastic", "faire", "fivetran", "flexport", "grammarly", "gusto",
+  "kraken", "linear", "loom", "mercury", "mural", "netlify", "okta",
+  "plaid", "postman", "quora", "samsara", "sentry", "shopify",
+  "smartsheet", "sourcegraph", "superhuman", "toast", "twitch", "udemy",
+  "unity", "upwork", "vercel", "vimeo", "wealthsimple", "webflow",
+  "whoop", "workato", "zendesk", "ramp", "vanta", "deel", "posthog",
+  "supabase", "replit", "retool", "census", "whatnot", "hex", "clay",
+  "airtable", "amplitudeinc", "attentive", "automattic", "bitly",
+  "box", "bubble", "cedar", "clearbit", "coda", "crossbeam", "customerio",
+  "dbtlabs", "descript", "dialpad", "drata", "equinix", "expel",
+  "fastly", "flatiron", "front", "gem", "getdbt", "github", "gong",
+  "grafana", "greenhouse", "guild", "handshake", "heap", "honeycomb",
+  "hopin", "ironclad", "jasper", "launchdarkly", "lattice", "lightspeed",
+  "lob", "lucid", "mixpanel", "modernhealth", "mongodb", "newfront",
+  "nylas", "olo", "ondeck", "outreach", "pagerduty", "pendo",
+  "pilot", "pollyex", "productplan", "pulley", "render", "rippling",
+  "scaleai", "segment", "semgrep", "sift", "snowflake", "sonder",
+  "splash", "sprig", "stord", "strava", "stytch", "temporal", "tempus",
+  "thirdlove", "tigera", "tinybird", "tremendous", "truework", "turing",
+  "vercelinc", "verkada", "via", "vouch", "warby", "wealthfront",
+  "wistia", "workramp", "writer", "zip", "zuora",
+  // Remote-first and global
+  "automattic", "doist", "gitpod", "hotjar", "invisible", "nuvei",
+  "oyster", "remotecom", "sourcegraph", "strapi", "toptal", "zapierinc",
 ];
 
 const SOURCES = [
@@ -76,9 +119,10 @@ async function pool(items, size, fn) {
   return out;
 }
 
-const DESIGN = /\b(design|designer|ux|ui|product design|research)\b/i;
+const DESIGN = /\b(design|designer|ux|ui|researcher)\b/i;
+const NOT_DESIGN = /\b(engineer|engineering|sales|account|legal|finance|recruit)\b/i;
 
-const results = await pool(COMPANIES, 6, async (c) => {
+const results = await pool(COMPANIES, 10, async (c) => {
   for (const s of SOURCES) {
     const hit = await probe(c, s);
     if (hit) return { company: c, ...hit };
@@ -99,13 +143,17 @@ console.log(`\nBy ATS: ${JSON.stringify(byAts)}\n`);
 
 const allDesign = [];
 for (const r of live.sort((a, b) => b.n - a.n)) {
-  const d = r.titles.filter((t) => DESIGN.test(t));
+  const d = r.titles.filter((t) => DESIGN.test(t) && !NOT_DESIGN.test(t));
   allDesign.push(...d.map((t) => `${r.company}: ${t}`));
   console.log(`  ${r.company.padEnd(16)} ${String(r.n).padStart(4)} roles  ${String(d.length).padStart(2)} design  ${r.ats}`);
 }
 
-console.log(`\nDesign roles open right now: ${allDesign.length}`);
-for (const d of allDesign) console.log(`  ${d}`);
+/* the same role posted for three locations is one job, and the probe
+   found that on its first run, so count both numbers */
+const uniq = new Set(allDesign.map((d) => d.toLowerCase().replace(/\s+/g, " ").trim()));
+console.log(`\nDesign titles: ${allDesign.length}  |  unique after trivial dedupe: ${uniq.size}`);
+for (const d of [...uniq].slice(0, 40)) console.log(`  ${d}`);
+if (uniq.size > 40) console.log(`  ... and ${uniq.size - 40} more`);
 
 const misses = results.filter((r) => !r.ats).map((r) => r.company);
 if (misses.length) console.log(`\nNo public feed under that slug: ${misses.join(", ")}`);
