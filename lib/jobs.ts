@@ -22,6 +22,7 @@ export type Job = {
   hybrid: boolean;
   pay: Pay | null;
   postedAt: string | null;
+  requirements: string[];
   firstSeen: string;
   sources: { ats: string; url: string }[];
 };

@@ -28,6 +28,7 @@ const trimmed = jobs.map((j) => ({
   hybrid: j.hybrid,
   pay: j.pay,
   postedAt: j.postedAt,
+  requirements: j.requirements || [],
   firstSeen: j.firstSeen,
   /* every link, because the product promises to say where it found a job */
   sources: j.sources.map((s) => ({ ats: s.ats, url: s.url })),

@@ -18,32 +18,35 @@ type Verdict = "have" | "part" | "gap";
    trivia demoted to one line underneath. Pressed into the page rather
    than raised off it: the requirement cards below are the things you
    read, and this is the ground they sit on. */
-const pairs = [
-  { k: "Salary", v: "₦18m to ₦24m" },
-  { k: "Where", v: "Lagos or remote" },
-  { k: "Type", v: "Full time" },
-];
-
+export type JobHead = {
+  company: string; title: string; where: string; remote: boolean;
+  pay: string | null; ago: string; sources: { ats: string; url: string }[];
+};
+export type Fit = {
+  lines: { ask: string; verdict: Verdict; proof: string }[];
+  have: number; part: number; gaps: number; known: boolean; pct: number | null;
+};
 
 const MARK = { have: Check, part: Minus, gap: Question } as const;
 
-const reqs: { v: Verdict; ask: string; proof: string }[] = [
-  { v: "have", ask: "5+ years in product design", proof: "7 years across Kuda, Paga, and freelance before that." },
-  { v: "have", ask: "Fintech or payments", proof: "Kuda (banking) and Paga (payments), back to back." },
-  { v: "have", ask: "Owned onboarding or activation", proof: "You rebuilt Kuda's onboarding in 2023 and owned it end to end." },
-  { v: "have", ask: "Built a design system", proof: "Kuda's component library. You built it, and you maintained it for two years." },
-  { v: "have", ask: "Shipped at scale", proof: "400,000 people went through the flow you rebuilt." },
-  { v: "part", ask: "Research and usability testing", proof: "You ran usability tests at Kuda. Nothing on your CV about running research as a practice." },
-  { v: "gap", ask: "Figma variables and advanced prototyping", proof: "Not mentioned anywhere in what you gave us. If you've done it, it belongs on the CV." },
-  { v: "gap", ask: "Managed or mentored designers", proof: "Nothing in your history says you've led people." },
-];
+const ATS: Record<string, string> = {
+  greenhouse: "Greenhouse", lever: "Lever", ashby: "Ashby",
+  workable: "Workable", recruitee: "Recruitee", smartrecruiters: "SmartRecruiters",
+};
 
-export default function Job() {
+export default function Job({ job, fit }: { job: JobHead; fit: Fit }) {
   const [showHave, setShowHave] = useState(false);
   const [saved, setSaved] = useState(false);
 
-  const have = reqs.filter((r) => r.v === "have").length;
-  const pct = Math.round((have / reqs.length) * 100);
+  const reqs = fit.lines.map((l) => ({ v: l.verdict, ask: l.ask, proof: l.proof }));
+  const { have, part, gaps, pct } = fit;
+
+  /* the three facts anyone decides on, from what the employer published */
+  const pairs = [
+    { k: "Salary", v: job.pay ?? "Not published" },
+    { k: "Where", v: job.where },
+    { k: "Type", v: job.remote ? "Remote" : "On site" },
+  ];
 
   /* Five of the eight rows said "you have this" and read identically.
      They fold into one line that opens, so the three worth reading are
@@ -75,9 +78,11 @@ export default function Job() {
           </span>
         ))}
       </span>
+      {/* where it came from, named. The feed is the source of record, so
+          the screen says which one rather than a plausible-looking brand. */}
       <span className="j-tail">
         <Clock size={13} weight="fill" aria-hidden="true" />
-        Permanent · Posted 2 days ago on LinkedIn
+        Posted {job.ago} · Found on {ATS[job.sources[0]?.ats] ?? job.sources[0]?.ats ?? "a careers page"}
       </span>
     </div>
   );
@@ -102,50 +107,71 @@ export default function Job() {
 
       <main className="flow-body">
         <div className="flow-inner j-inner">
-          <p className="eyebrow">Paystack</p>
-          <h1 className="display j-h1">Senior Product Designer</h1>
+          <p className="eyebrow">{job.company}</p>
+          <h1 className="display j-h1">{job.title}</h1>
           <FactsBlock />
 
           {/* The dial never stands alone. The sentence beside it says the
               same thing in words, and the list underneath is what can
               actually be checked. */}
-          <div className="j-score">
-            <span className="j-ring" style={{ ["--p" as string]: `${pct}%` }} aria-hidden="true">
-              <b>{pct}%</b>
-            </span>
-            <span className="j-score-t">
-              <b>{have} of {reqs.length} things they asked for, you have done.</b>
-              <span>One you&apos;ve partly done. Two you haven&apos;t.</span>
-            </span>
-          </div>
-
-          <h2 className="j-sec">What they asked for</h2>
-          <button
-            className="j-fold"
-            type="button"
-            aria-expanded={showHave}
-            onClick={() => setShowHave((v) => !v)}
-          >
-            <span className="j-mark" aria-hidden="true"><Check size={13} weight="bold" /></span>
-            <span className="j-fold-t">
-              <b>Five of these you clearly have</b>
-              <span>{haveRows.map((r) => r.ask).join(" · ")}</span>
-            </span>
-            <CaretDown size={15} weight="bold" aria-hidden="true" data-open={showHave} />
-          </button>
-
-          <div className="fold" data-open={showHave}>
-            <div className="fold-in">
-              <ul className="j-reqs" style={{ paddingTop: 8 }}>
-                {haveRows.map((r) => <Row r={r} key={r.ask} />)}
-              </ul>
+          {fit.known ? (
+            <div className="j-score">
+              <span className="j-ring" style={{ ["--p" as string]: `${pct}%` }} aria-hidden="true">
+                <b>{pct}%</b>
+              </span>
+              <span className="j-score-t">
+                <b>{have} of {reqs.length} things they asked for, you have done.</b>
+                <span>
+                  {[part && `${part} partly`, gaps && `${gaps} not yet`]
+                    .filter(Boolean)
+                    .join(", ") || "Nothing missing."}
+                </span>
+              </span>
             </div>
-          </div>
+          ) : (
+            /* the parse found no requirements section. Saying so is the
+               honest failure; a score here would be invented. */
+            <div className="j-score">
+              <span className="j-score-t">
+                <b>They did not publish a requirements list.</b>
+                <span>Nothing to check this against, so nothing is claimed.</span>
+              </span>
+            </div>
+          )}
 
-          <p className="j-needs">The three worth reading</p>
-          <ul className="j-reqs">
-            {otherRows.map((r) => <Row r={r} key={r.ask} />)}
-          </ul>
+          {fit.known && (
+            <>
+            <h2 className="j-sec">What they asked for</h2>
+            <button
+              className="j-fold"
+              type="button"
+              aria-expanded={showHave}
+              onClick={() => setShowHave((v) => !v)}
+            >
+              <span className="j-mark" aria-hidden="true"><Check size={13} weight="bold" /></span>
+              <span className="j-fold-t">
+                <b>{have} of these you clearly have</b>
+                <span>{haveRows.map((r) => r.ask).join(" · ")}</span>
+              </span>
+              <CaretDown size={15} weight="bold" aria-hidden="true" data-open={showHave} />
+            </button>
+
+            <div className="fold" data-open={showHave}>
+              <div className="fold-in">
+                <ul className="j-reqs" style={{ paddingTop: 8 }}>
+                  {haveRows.map((r) => <Row r={r} key={r.ask} />)}
+                </ul>
+              </div>
+            </div>
+
+            <p className="j-needs">
+              {otherRows.length === 0 ? "Nothing else to read" : `The ${otherRows.length} worth reading`}
+            </p>
+            <ul className="j-reqs">
+              {otherRows.map((r) => <Row r={r} key={r.ask} />)}
+            </ul>
+            </>
+          )}
 
           {/* The sources contract: nothing drafted appears without the facts
               it was built from, named. */}

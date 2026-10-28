@@ -1,3 +1,4 @@
+import { extractRequirements } from "./requirements.mjs";
 /* One job shape, whatever feed it came from.
  *
  * Every field here is something a feed actually said. Nothing is guessed
@@ -57,7 +58,13 @@ export function readLocations(raw) {
   }
   if (open) out.push(open);
 
-  return out.map((s) => s.replace(/\s+/g, " ").trim()).filter(Boolean).slice(0, 6);
+  return out
+    .map((s) => s.replace(/\s+/g, " ").trim())
+    /* feeds append the employer to the place: "London, United Kingdom -
+       Deliveroo". The company is already on the screen. */
+    .map((s) => s.replace(/\s+[-–]\s+[A-Z][\w&. ]{1,24}$/, "").trim())
+    .filter(Boolean)
+    .slice(0, 6);
 }
 
 /* Titles carry location and noise that stop two copies of one job from
@@ -87,6 +94,10 @@ export function normalise({ company, ats, raw }) {
     hybrid: raw.hybrid === true || HYBRID.test(`${raw.title} ${raw.location}`),
     pay: raw.pay ? { note: raw.pay, source: "stated by the employer" } : readPay(blob),
     postedAt: raw.postedAt,
+    /* verbatim lines the employer wrote under a requirements heading.
+       Empty when the parse could not find one, which the screen says
+       out loud rather than filling in. */
+    requirements: extractRequirements(raw.body),
     /* every place this job was found, which is what lets the product say
        where it came from rather than asking to be trusted */
     sources: [{ ats, sourceId: raw.sourceId, url: raw.url, seenAt: new Date().toISOString() }],

@@ -1,4 +1,5 @@
 import type { Job } from "./jobs";
+import { readJob } from "./fit";
 
 /* Matching a job to what you said you want.
  *
@@ -109,12 +110,28 @@ export function match(job: Job, p: Prefs): { score: number; reasons: Reason[] } 
   return { score, reasons };
 }
 
-/* What a morning actually shows. Role is required; everything else ranks. */
+/* What a morning actually shows.
+ *
+ * Role is the only hard filter. After that the order is: how well you
+ * meet what they actually asked for, then your stated preferences, then
+ * recency.
+ *
+ * Fit leads because the first version ranked on preferences alone and
+ * put a Principal role at the top that the profile met 0 of 6 times.
+ * Every preference matched; every requirement did not. Three things a
+ * morning only works if they are three things worth reading. */
 export function pickForToday(jobs: Job[], p: Prefs, take = 3) {
   return jobs
-    .map((job) => ({ job, ...match(job, p) }))
+    .map((job) => {
+      const m = match(job, p);
+      const f = readJob(job);
+      return { job, ...m, fit: f.pct, known: f.known };
+    })
     .filter((m) => m.reasons[0].ok)
     .sort((a, b) => {
+      /* a role we cannot read is ranked below ones we can, never hidden */
+      if (a.known !== b.known) return a.known ? -1 : 1;
+      if (a.known && b.known && b.fit !== a.fit) return (b.fit ?? 0) - (a.fit ?? 0);
       if (b.score !== a.score) return b.score - a.score;
       const at = a.job.postedAt || a.job.firstSeen;
       const bt = b.job.postedAt || b.job.firstSeen;

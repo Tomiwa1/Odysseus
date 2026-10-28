@@ -43,6 +43,10 @@ export function dedupe(jobs) {
     }
     seen.remote = seen.remote || job.remote;
     seen.hybrid = seen.hybrid || job.hybrid;
+    /* keep whichever copy actually parsed requirements */
+    if (!seen.requirements?.length && job.requirements?.length) {
+      seen.requirements = job.requirements;
+    }
     /* a stated salary beats a parsed one, and something beats nothing */
     if (!seen.pay && job.pay) seen.pay = job.pay;
     /* keep the earliest posting date we saw */
