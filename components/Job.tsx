@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 import {
   CaretLeft, Check, Minus, Question, Clock, CaretDown,
@@ -19,7 +20,7 @@ type Verdict = "have" | "part" | "gap";
    than raised off it: the requirement cards below are the things you
    read, and this is the ground they sit on. */
 export type JobHead = {
-  company: string; title: string; where: string; remote: boolean;
+  id: string; company: string; title: string; where: string; remote: boolean;
   pay: string | null; ago: string; sources: { ats: string; url: string }[];
 };
 export type Fit = {
@@ -90,9 +91,9 @@ export default function Job({ job, fit }: { job: JobHead; fit: Fit }) {
   return (
     <div className="flow j-job">
       <header className="flow-top hdr3">
-        <button className="j-back" type="button" aria-label="Back to today">
+        <Link className="j-back" href="/today" aria-label="Back to today">
           <CaretLeft size={18} weight="bold" />
-        </button>
+        </Link>
         <Logo kind="letter" size={34} />
         <button
           className="j-save"
@@ -203,10 +204,10 @@ export default function Job({ job, fit }: { job: JobHead; fit: Fit }) {
           </p>
 
           <div className="flow-foot j-foot">
-            <button className="btn btn-primary" type="button">
+            <Link className="btn btn-primary" href={`/prepare/${encodeURIComponent(job.id)}`}>
               <PaperPlane size={17} weight="fill" aria-hidden="true" />
               Prepare application
-            </button>
+            </Link>
           </div>
         </div>
       </main>

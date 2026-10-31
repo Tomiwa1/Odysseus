@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 import Phoenix from "./Phoenix";
 import { NavBurger, NavDrawer } from "./Nav";
@@ -21,7 +22,7 @@ const GROUP: Record<Kind, string> = {
   draft: "Ready to read",
 };
 
-export type Item = { id: string; kind: Kind; title: string; meta: string; why: string; cta: string };
+export type Item = { id: string; kind: Kind; title: string; meta: string; why: string; cta: string; href?: string };
 
 /* The matches arrive as props from the server, read out of the real
    ingest. Everything else on this screen is pipeline and draft state,
@@ -80,10 +81,17 @@ export default function Today({ matches = [], read = "" }: { matches?: Item[]; r
         {!isDone && (
           <>
             <p className="t-why">{i.why}</p>
-            <button className="t-go" type="button" onClick={() => finish(i.id)}>
-              {i.cta}
-              <ArrowRight size={15} weight="bold" aria-hidden="true" />
-            </button>
+            {i.href ? (
+              <Link className="t-go" href={i.href} onClick={() => finish(i.id)}>
+                {i.cta}
+                <ArrowRight size={15} weight="bold" aria-hidden="true" />
+              </Link>
+            ) : (
+              <button className="t-go" type="button" onClick={() => finish(i.id)}>
+                {i.cta}
+                <ArrowRight size={15} weight="bold" aria-hidden="true" />
+              </button>
+            )}
           </>
         )}
       </article>

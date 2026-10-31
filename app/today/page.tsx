@@ -19,6 +19,7 @@ export default function TodayPage() {
          what the feed actually said */
       why: `${kept[0]}. ${kept.slice(1, 3).join(". ")}. Posted ${agoLabel(job)}.`,
       cta: "Look at it",
+      href: `/job/${encodeURIComponent(job.id)}`,
     };
   });
 

@@ -15,14 +15,24 @@ Port 3100. Registered in the workspace `.claude/launch.json` as `odysseus`.
 
 | Route | What it shows |
 | --- | --- |
-| `/` | Today — what needs the user, then the search funnel |
-| `/jobs` | The matched list |
-| `/jobs/[id]` | The match, requirement by requirement |
-| `/jobs/[id]/prepare` | Resume · Answers · Outreach |
-| `/pipeline` | Applications, waiting-on-you first, then the funnel |
-| `/profile` | Profile and the structured experience builder |
-| `/onboarding` | Upload, review what was read, fill one gap |
-| `/system` | Colour, type, controls, and the AI contract |
+| `/` | Landing |
+| `/start` | Upload a CV, review what was read (upload is faked) |
+| `/question` | The one gap worth asking about |
+| `/today` | Today: three real matches from the ingest, then mock replies and drafts |
+| `/job/[id]` | One real job, requirement by requirement |
+| `/job` | Redirects to the top match on Today |
+| `/prepare/[id]` | Resume · Answers · Outreach for one real job. Resume runs on rules; Answers and Outreach say drafting is not connected yet |
+| `/prepare` | Redirects to Prepare for the top match on Today |
+| `/pipeline` | Applications, waiting-on-you first, then the funnel (mock data) |
+| `/profile` | Profile and the structured experience builder (mock data) |
+| `/mobile` | Every screen inside an iPhone frame, at real size |
+
+Flow: Today → `/job/[id]` → `/prepare/[id]` → the employer's posting.
+`/jobs` (the full matched list) does not exist yet.
+
+The matcher, the requirement reader and Prepare's rules live in `lib/match.ts`,
+`lib/fit.ts` and `lib/prepare.ts`. The profile facts are in `lib/profile.ts`,
+and the master resume built from them is in `lib/resume.ts`.
 
 ## Rules for this project
 

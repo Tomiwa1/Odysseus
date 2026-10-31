@@ -1198,6 +1198,22 @@ input, textarea, select { font-size: 16px; }   /* anything smaller zooms iOS */
 
 .p-foot { margin-top: 16px; text-align: center; }
 
+/* the reordered bullets, in their new order, as they will read */
+.p-order {
+  margin: 12px 0 0; padding-left: 20px;
+  display: flex; flex-direction: column; gap: 7px;
+  font-size: 14.5px; line-height: 1.5; color: var(--ink-2);
+}
+.p-order li::marker { font-weight: 700; color: var(--ink-4); }
+
+/* a tab whose work is not connected yet says so, plainly */
+.p-pending {
+  margin: 0; padding: 16px 18px; border-radius: var(--r);
+  font-size: 14px; line-height: 1.55; color: var(--ink-3);
+  background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--line);
+}
+.p-prep .j-honest a { color: var(--brand-deep); font-weight: 600; text-decoration: underline; }
+
 /* ====================================================================
    Pipeline.
    The hardest screen emotionally: most of a search is silence, and

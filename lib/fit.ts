@@ -1,5 +1,5 @@
 import type { Job } from "./jobs";
-import { FACTS, GAPS, YEARS } from "./profile";
+import { FACTS, GAPS, YEARS, type Fact } from "./profile";
 
 /* How well you fit a role, requirement by requirement.
  *
@@ -41,6 +41,22 @@ function re(term: string) {
 function hits(text: string, f: { term: string; also?: string[] }) {
   if (re(f.term).test(text)) return f.term;
   return f.also?.find((a) => re(a).test(text)) ?? null;
+}
+
+/* Every profile fact a piece of text speaks to. Prepare uses this on
+   both sides: what a requirement asks for, and what the resume says. */
+export function factsIn(text: string): Fact[] {
+  return FACTS.filter((f) => hits(text, f));
+}
+
+/* The word as the employer wrote it, so a suggestion can use their
+   spelling: "prototyping", not the stem "prototyp". */
+export function wordIn(text: string, f: Fact): string | null {
+  for (const w of [f.term, ...(f.also ?? [])]) {
+    const m = new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\w-]*`, "i").exec(text);
+    if (m) return m[0];
+  }
+  return null;
 }
 
 export function readLine(ask: string): Line {
