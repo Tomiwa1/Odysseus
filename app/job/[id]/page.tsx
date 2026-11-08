@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import Job from "../../../components/Job";
 import { JOBS, payLabel, whereLabel, agoLabel } from "../../../lib/jobs";
 import { readJob } from "../../../lib/fit";
+import { applications } from "../../../lib/db/queries";
+import { currentUser } from "../../../lib/user";
+
+export const dynamic = "force-dynamic";
 
 /* One job, read for real: the employer's own requirement lines, each
    matched against a fact from the profile. All of it on the server, so
@@ -11,10 +15,13 @@ export default async function JobPage({ params }: { params: Promise<{ id: string
   const job = JOBS.find((j) => j.id === decodeURIComponent(id));
   if (!job) notFound();
 
+  const saved = applications(currentUser()).some((a) => a.jobId === job.id);
+
   return (
     <Job
       job={{
         id: job.id,
+        saved,
         company: job.company,
         title: job.title,
         where: whereLabel(job),

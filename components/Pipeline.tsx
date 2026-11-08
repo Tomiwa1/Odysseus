@@ -11,7 +11,7 @@ import { CaretDown, ArrowRight, Clock } from "./icons";
    hidden. Nothing here is a kanban board that implies you are not doing
    enough, and nothing that closed is swept out of sight. */
 
-type Stage = "applied" | "replied" | "interview" | "closed";
+type Stage = "saved" | "applied" | "replied" | "interview" | "closed";
 /* The card had four things in it: a container, a second container for an
    icon, the text, and an arrow. t-visual-noise-33 names that exactly:
    "avoid excessive containers... build hierarchy through proportion and
@@ -36,46 +36,23 @@ type Stage = "applied" | "replied" | "interview" | "closed";
    application. Nothing in the system knows that. Same rule as the rest
    of the product: never state what you cannot show. */
 const STAGES: Record<Stage, { label: string; step: number }> = {
+  saved: { label: "Saved", step: 0 },
   applied: { label: "Applied", step: 1 },
   replied: { label: "They replied", step: 2 },
   interview: { label: "Interview", step: 3 },
   closed: { label: "Closed", step: 4 },
 };
 
-type Row = {
+const HEAT = { warm: "Warm", cooling: "Cooling", cold: "Cold" } as const;
+
+export type Row = {
   id: string; org: string; role: string; stage: Stage;
   days: number; normal?: string; heat: "warm" | "cooling" | "cold";
   needs?: { what: string; act: string; from: string };
   closedWhy?: string;
 };
 
-const rows: Row[] = [
-  { id: "paystack", org: "Paystack", role: "Senior Product Designer", stage: "interview",
-    days: 2, normal: "They move fast. Two days is nothing.", heat: "warm",
-    needs: { what: "Interview Thursday, 10am. Nothing prepared yet.",
-             act: "Prepare for it", from: "From your calendar" } },
-  { id: "flutterwave", org: "Flutterwave", role: "Product Designer", stage: "replied",
-    days: 2, normal: "They replied. It is your turn.", heat: "warm",
-    needs: { what: "Chidi asked for your portfolio two days ago.",
-             act: "Reply to Chidi", from: "From your inbox" } },
-  /* applied, not replied: nine days of silence is not a review */
-  { id: "moniepoint", org: "Moniepoint", role: "Design Lead", stage: "applied",
-    days: 9, normal: "Most replies here come inside 10 days.", heat: "cooling" },
-  { id: "piggyvest", org: "PiggyVest", role: "Senior Designer", stage: "applied",
-    days: 4, normal: "Early. Nothing to read into.", heat: "warm" },
-  { id: "carbon", org: "Carbon", role: "Product Designer", stage: "applied",
-    days: 23, normal: "Past the point most people hear back.", heat: "cold" },
-  { id: "opay", org: "OPay", role: "Senior Product Designer", stage: "applied",
-    days: 31, normal: "Nothing has moved in a month.", heat: "cold" },
-  { id: "kuda", org: "Kuda", role: "Design Manager", stage: "closed",
-    days: 12, heat: "cold", closedWhy: "They wanted someone who has managed a team." },
-  { id: "chipper", org: "Chipper Cash", role: "Product Designer", stage: "closed",
-    days: 18, heat: "cold", closedWhy: "Role was filled internally." },
-];
-
-const HEAT = { warm: "Warm", cooling: "Cooling", cold: "Cold" } as const;
-
-export default function Pipeline() {
+export default function Pipeline({ rows }: { rows: Row[] }) {
   const [menu, setMenu] = useState(false);
   const [showClosed, setShowClosed] = useState(false);
 
@@ -83,6 +60,21 @@ export default function Pipeline() {
   const moving = rows.filter((r) => !r.needs && r.stage !== "closed" && r.heat !== "cold");
   const quiet = rows.filter((r) => !r.needs && r.stage !== "closed" && r.heat === "cold");
   const closed = rows.filter((r) => r.stage === "closed");
+
+  /* Every number here is counted, not written. The screen used to open
+     with "Two need you today" and "Eight applications out" whatever was
+     actually in it, which is the one thing a tracker cannot do. */
+  const live = rows.filter((r) => r.stage !== "closed").length;
+  const headline =
+    rows.length === 0
+      ? "Nothing in here yet."
+      : needs.length > 0
+        ? `${needs.length === 1 ? "One needs" : `${needs.length} need`} you today.`
+        : `${live} still open.`;
+  const subline =
+    rows.length === 0
+      ? "Save a role from Today and it will show up here, with how long it has been waiting."
+      : `${rows.length} ${rows.length === 1 ? "role" : "roles"} tracked. Most of a search is waiting, so this says how long you have waited and whether that is normal yet.`;
 
   const Marker = ({ r }: { r: Row }) => (
     <span className="pl-dot" data-stage={r.stage}>
@@ -128,13 +120,10 @@ export default function Pipeline() {
       <main className="flow-body">
         <div className="flow-inner j-inner">
           <p className="eyebrow">Your pipeline</p>
-          <h1 className="display pl-h1">Two need you today.</h1>
-          <p className="flow-sub p-sub">
-            Eight applications out. Most of a search is waiting, so this says how
-            long you have waited and whether that is normal yet.
-          </p>
+          <h1 className="display pl-h1">{headline}</h1>
+          <p className="flow-sub p-sub">{subline}</p>
 
-          <h2 className="j-sec">Waiting on you</h2>
+          {needs.length > 0 && <h2 className="j-sec">Waiting on you</h2>}
           <div className="pl-list">
             {needs.map((r) => (
               <article className="pl-row pl-row--needs" key={r.id}>
@@ -147,25 +136,35 @@ export default function Pipeline() {
             ))}
           </div>
 
-          <h2 className="j-sec">Still moving</h2>
-          <div className="pl-list">{moving.map((r) => <Item r={r} key={r.id} />)}</div>
+          {moving.length > 0 && (
+            <>
+              <h2 className="j-sec">Still moving</h2>
+              <div className="pl-list">{moving.map((r) => <Item r={r} key={r.id} />)}</div>
+            </>
+          )}
 
-          <h2 className="j-sec">Gone quiet</h2>
-          <div className="pl-list">{quiet.map((r) => <Item r={r} key={r.id} />)}</div>
-          <p className="pl-note">
-            Silence is not a no. It is also not a yes. These are the ones worth a
-            nudge, or worth letting go.
-          </p>
+          {quiet.length > 0 && (
+            <>
+              <h2 className="j-sec">Gone quiet</h2>
+              <div className="pl-list">{quiet.map((r) => <Item r={r} key={r.id} />)}</div>
+              <p className="pl-note">
+                Silence is not a no. It is also not a yes. These are the ones worth a
+                nudge, or worth letting go.
+              </p>
+            </>
+          )}
 
+          {closed.length > 0 && (
           <button
             className="pl-closed"
             type="button"
             aria-expanded={showClosed}
             onClick={() => setShowClosed((v) => !v)}
           >
-            <span>Two did not go anywhere</span>
+            <span>{closed.length} did not go anywhere</span>
             <CaretDown size={15} weight="bold" aria-hidden="true" data-open={showClosed} />
           </button>
+          )}
           <div className="fold" data-open={showClosed}>
             <div className="fold-in">
               <div className="pl-list" style={{ paddingTop: 8 }}>

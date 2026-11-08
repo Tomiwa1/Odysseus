@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { saveJob } from "../app/actions";
 import Link from "next/link";
 import Logo from "./Logo";
 import {
@@ -22,6 +23,7 @@ type Verdict = "have" | "part" | "gap";
 export type JobHead = {
   id: string; company: string; title: string; where: string; remote: boolean;
   pay: string | null; ago: string; sources: { ats: string; url: string }[];
+  saved: boolean;
 };
 export type Fit = {
   lines: { ask: string; verdict: Verdict; proof: string }[];
@@ -37,7 +39,10 @@ const ATS: Record<string, string> = {
 
 export default function Job({ job, fit }: { job: JobHead; fit: Fit }) {
   const [showHave, setShowHave] = useState(false);
-  const [saved, setSaved] = useState(false);
+  /* the stored value leads; the local one only covers the moment between
+     the tap and the server answering */
+  const [saved, setSaved] = useState(job.saved);
+  const [pending, start] = useTransition();
 
   const reqs = fit.lines.map((l) => ({ v: l.verdict, ask: l.ask, proof: l.proof }));
   const { have, part, gaps, pct } = fit;
@@ -100,7 +105,12 @@ export default function Job({ job, fit }: { job: JobHead; fit: Fit }) {
           type="button"
           aria-pressed={saved}
           aria-label={saved ? "Saved to your list" : "Save this role"}
-          onClick={() => setSaved((v) => !v)}
+          onClick={() => {
+            const next = !saved;
+            setSaved(next);
+            start(() => { saveJob(job.id, next); });
+          }}
+          data-pending={pending}
         >
           {saved ? "Saved" : "Save"}
         </button>
