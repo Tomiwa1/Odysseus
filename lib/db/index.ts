@@ -1,6 +1,7 @@
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { migrate } from "./migrate";
 
 /* Storage.
  *
@@ -25,6 +26,7 @@ export function db(): DatabaseSync {
   handle.exec("PRAGMA journal_mode = WAL");
   handle.exec("PRAGMA foreign_keys = ON");
   handle.exec(readFileSync(join(process.cwd(), "lib", "db", "schema.sql"), "utf8"));
+  migrate(handle);
   return handle;
 }
 

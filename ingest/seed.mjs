@@ -15,6 +15,13 @@ db.exec("PRAGMA journal_mode = WAL");
 db.exec("PRAGMA foreign_keys = ON");
 db.exec(await readFile("lib/db/schema.sql", "utf8"));
 
+/* same additive migration the app runs, so a database made before a
+   column existed is upgraded wherever it is opened from */
+for (const [table, column, def] of [["users", "password", "TEXT"]]) {
+  const has = db.prepare(`PRAGMA table_info(${table})`).all().some((c) => c.name === column);
+  if (!has) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${def}`);
+}
+
 const now = new Date().toISOString();
 const USER = "u_tomiwa";
 

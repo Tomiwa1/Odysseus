@@ -1,10 +1,14 @@
 import Today, { type Item } from "../../components/Today";
 import { JOBS, payLabel, whereLabel, agoLabel } from "../../lib/jobs";
 import { pickForToday, DEFAULT_PREFS } from "../../lib/match";
+import { requireUser } from "../../lib/user";
 
 /* The matching runs on the server, so the 266-job snapshot never ships
    to the browser. The screen receives three cards and nothing else. */
-export default function TodayPage() {
+export const dynamic = "force-dynamic";
+
+export default async function TodayPage() {
+  await requireUser();
   const picks = pickForToday(JOBS, DEFAULT_PREFS, 3);
 
   const matches: Item[] = picks.map(({ job, reasons }) => {

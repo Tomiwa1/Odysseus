@@ -1,6 +1,6 @@
 import Pipeline, { type Row } from "../../components/Pipeline";
 import { applications, job as findJob, daysSinceMoved } from "../../lib/db/queries";
-import { currentUser } from "../../lib/user";
+import { requireUser } from "../../lib/user";
 import { whereLabel } from "../../lib/jobs";
 
 export const dynamic = "force-dynamic";
@@ -30,8 +30,8 @@ function heatFor(stage: string, days: number): Row["heat"] {
   return "cold";
 }
 
-export default function PipelinePage() {
-  const u = currentUser();
+export default async function PipelinePage() {
+  const u = await requireUser();
 
   const rows: Row[] = applications(u).flatMap((a) => {
     const j = findJob(a.jobId);

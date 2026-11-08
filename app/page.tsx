@@ -13,7 +13,7 @@ export default function Landing() {
     <div className="page">
       <header className="top rise">
         <Logo kind="letter" size={44} />
-        <button className="btn btn-quiet btn-sm" type="button">Sign in</button>
+        <Link className="btn btn-quiet btn-sm" href="/signin">Sign in</Link>
       </header>
 
       <section className="hero">

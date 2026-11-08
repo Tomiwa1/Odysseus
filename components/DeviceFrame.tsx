@@ -14,6 +14,7 @@ const STATUS_H = 59;
 
 const screens: [string, string][] = [
   ["Landing", "/"],
+  ["Sign in", "/signin"],
   ["Upload CV", "/start"],
   ["Question", "/question"],
   ["Today", "/today"],

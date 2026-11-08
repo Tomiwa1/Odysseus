@@ -3,7 +3,7 @@ import Job from "../../../components/Job";
 import { JOBS, payLabel, whereLabel, agoLabel } from "../../../lib/jobs";
 import { readJob } from "../../../lib/fit";
 import { applications } from "../../../lib/db/queries";
-import { currentUser } from "../../../lib/user";
+import { requireUser } from "../../../lib/user";
 
 export const dynamic = "force-dynamic";
 
@@ -15,7 +15,7 @@ export default async function JobPage({ params }: { params: Promise<{ id: string
   const job = JOBS.find((j) => j.id === decodeURIComponent(id));
   if (!job) notFound();
 
-  const saved = applications(currentUser()).some((a) => a.jobId === job.id);
+  const saved = applications(await requireUser()).some((a) => a.jobId === job.id);
 
   return (
     <Job

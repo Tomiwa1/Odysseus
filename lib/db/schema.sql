@@ -12,8 +12,23 @@ CREATE TABLE IF NOT EXISTS users (
   id         TEXT PRIMARY KEY,
   email      TEXT UNIQUE NOT NULL,
   name       TEXT,
+  -- scrypt, salt and hash together. Null for the seeded account until a
+  -- password is set, which is why sign in refuses it rather than
+  -- treating "no password" as "any password".
+  password   TEXT,
   created_at TEXT NOT NULL
 );
+
+-- A session is a random token we never store in the clear: the cookie
+-- holds the token, the table holds its hash. A stolen database cannot
+-- be replayed as a login.
+CREATE TABLE IF NOT EXISTS sessions (
+  token_hash TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  created_at TEXT NOT NULL,
+  expires_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS sessions_user ON sessions(user_id);
 
 -- What the CV and the user gave us. Every fact names its source, so the
 -- product can keep saying where a claim came from.

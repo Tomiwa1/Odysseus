@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { currentUser } from "../lib/user";
+import { requireUser } from "../lib/user";
 import * as q from "../lib/db/queries";
 
 /* What the screens are allowed to change.
@@ -11,7 +11,7 @@ import * as q from "../lib/db/queries";
  * rather than a hopeful bit of local state. */
 
 export async function saveJob(jobId: string, saved: boolean) {
-  const u = currentUser();
+  const u = await requireUser();
   if (saved) q.setStage(u, jobId, "saved");
   else q.unsave(u, jobId);
   revalidatePath("/pipeline");
@@ -19,30 +19,30 @@ export async function saveJob(jobId: string, saved: boolean) {
 }
 
 export async function moveStage(jobId: string, stage: q.Stage, why?: string) {
-  q.setStage(currentUser(), jobId, stage, why);
+  q.setStage(await requireUser(), jobId, stage, why);
   revalidatePath("/pipeline");
   revalidatePath("/today");
 }
 
 export async function finishToday(kind: string, jobId: string | null) {
-  q.markDone(currentUser(), kind, jobId);
+  q.markDone(await requireUser(), kind, jobId);
   revalidatePath("/today");
 }
 
 export async function setPref(category: string, value: string, on: boolean) {
-  q.togglePref(currentUser(), category, value, on);
+  q.togglePref(await requireUser(), category, value, on);
   revalidatePath("/profile");
   revalidatePath("/today");
 }
 
 export async function setSkill(id: number, on: boolean) {
-  q.setFactActive(currentUser(), id, on);
+  q.setFactActive(await requireUser(), id, on);
   revalidatePath("/profile");
   revalidatePath("/job");
 }
 
 export async function setFloor(valueK: string) {
-  q.setSetting(currentUser(), "salary_floor_k", valueK);
+  q.setSetting(await requireUser(), "salary_floor_k", valueK);
   revalidatePath("/profile");
   revalidatePath("/today");
 }
