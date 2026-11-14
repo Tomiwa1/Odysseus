@@ -1,5 +1,5 @@
 import type { Job } from "./jobs";
-import { FACTS, GAPS, YEARS, type Fact } from "./profile";
+import { type Fact } from "./profile";
 
 /* How well you fit a role, requirement by requirement.
  *
@@ -28,6 +28,8 @@ const YEARS_RE = /(\d{1,2})\s*\+?\s*(?:-|–|to)?\s*(\d{1,2})?\s*\+?\s*years?/i;
    found it inside "standards that scale across teams" and told you a
    requirement about tooling was answered by 400,000 users. No trailing
    boundary, so "prototyp" still matches "prototyping". */
+export type Me = { facts: Fact[]; gaps: Fact[]; years: { value: number; proof: string } };
+
 const EDGE = new Map<string, RegExp>();
 function re(term: string) {
   let r = EDGE.get(term);
@@ -45,8 +47,8 @@ function hits(text: string, f: { term: string; also?: string[] }) {
 
 /* Every profile fact a piece of text speaks to. Prepare uses this on
    both sides: what a requirement asks for, and what the resume says. */
-export function factsIn(text: string): Fact[] {
-  return FACTS.filter((f) => hits(text, f));
+export function factsIn(text: string, me: Me): Fact[] {
+  return me.facts.filter((f) => hits(text, f));
 }
 
 /* The word as the employer wrote it, so a suggestion can use their
@@ -59,10 +61,11 @@ export function wordIn(text: string, f: Fact): string | null {
   return null;
 }
 
-export function readLine(ask: string): Line {
+export function readLine(ask: string, me: Me): Line {
   const text = ask.toLowerCase();
 
   /* a years requirement is the one thing we can compare numerically */
+  const { facts: FACTS, gaps: GAPS, years: YEARS } = me;
   const y = YEARS_RE.exec(text);
   if (y) {
     const asked = Number(y[1]);
@@ -91,8 +94,8 @@ export function readLine(ask: string): Line {
   return { ask, verdict: "have", proof: found.slice(0, 2).map((f) => f.proof).join(". ") };
 }
 
-export function readJob(job: Job) {
-  const lines = job.requirements.map(readLine);
+export function readJob(job: Job, me: Me) {
+  const lines = job.requirements.map((r) => readLine(r, me));
   const have = lines.filter((l) => l.verdict === "have").length;
   const part = lines.filter((l) => l.verdict === "part").length;
   const gaps = lines.filter((l) => l.verdict === "gap").length;

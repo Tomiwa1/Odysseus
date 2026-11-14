@@ -1,5 +1,5 @@
 import type { Job } from "./jobs";
-import { readJob } from "./fit";
+import { readJob, type Me } from "./fit";
 
 /* Matching a job to what you said you want.
  *
@@ -120,11 +120,11 @@ export function match(job: Job, p: Prefs): { score: number; reasons: Reason[] } 
  * put a Principal role at the top that the profile met 0 of 6 times.
  * Every preference matched; every requirement did not. Three things a
  * morning only works if they are three things worth reading. */
-export function pickForToday(jobs: Job[], p: Prefs, take = 3) {
+export function pickForToday(jobs: Job[], p: Prefs, me: Me, take = 3) {
   return jobs
     .map((job) => {
       const m = match(job, p);
-      const f = readJob(job);
+      const f = readJob(job, me);
       return { job, ...m, fit: f.pct, known: f.known };
     })
     .filter((m) => m.reasons[0].ok)

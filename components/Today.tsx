@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { finishToday } from "../app/actions";
 import Link from "next/link";
 import Logo from "./Logo";
 import Phoenix from "./Phoenix";
@@ -53,14 +54,24 @@ const NUMBERS = ["no", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "E
 const countdown = (n: number) =>
   n === 0 ? "That's today" : `${NUMBERS[n] ?? n} thing${n === 1 ? "" : "s"}`;
 
-export default function Today({ matches = [], read = "" }: { matches?: Item[]; read?: string }) {
+export default function Today({
+  matches = [], read = "", done: alreadyDone = [],
+}: { matches?: Item[]; read?: string; done?: string[] }) {
   const items = [...matches, ...standing];
   const [menu, setMenu] = useState(false);
-  const [done, setDone] = useState<string[]>([]);
+  /* What you dealt with today, read from storage. The list used to
+     reset on every page load, which made the one screen built around
+     finishing a day unable to remember that you had. */
+  const [done, setDone] = useState<string[]>(alreadyDone);
+  const [, start] = useTransition();
 
   const left = items.filter((i) => !done.includes(i.id));
   const finished = left.length === 0;
-  const finish = (id: string) => setDone((d) => (d.includes(id) ? d : [...d, id]));
+  const finish = (id: string, kind: string) => {
+    if (done.includes(id)) return;
+    setDone((d) => [...d, id]);
+    start(() => { finishToday(kind, id); });
+  };
 
   const Card = ({ i }: { i: (typeof items)[number] }) => {
     const Glyph = ICON[i.kind];
@@ -82,12 +93,12 @@ export default function Today({ matches = [], read = "" }: { matches?: Item[]; r
           <>
             <p className="t-why">{i.why}</p>
             {i.href ? (
-              <Link className="t-go" href={i.href} onClick={() => finish(i.id)}>
+              <Link className="t-go" href={i.href} onClick={() => finish(i.id, i.kind)}>
                 {i.cta}
                 <ArrowRight size={15} weight="bold" aria-hidden="true" />
               </Link>
             ) : (
-              <button className="t-go" type="button" onClick={() => finish(i.id)}>
+              <button className="t-go" type="button" onClick={() => finish(i.id, i.kind)}>
                 {i.cta}
                 <ArrowRight size={15} weight="bold" aria-hidden="true" />
               </button>

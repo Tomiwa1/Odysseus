@@ -1,6 +1,6 @@
 import type { Job } from "./jobs";
 import { FACTS, type Fact } from "./profile";
-import { readJob, factsIn, wordIn, type Verdict } from "./fit";
+import { readJob, type Me, factsIn, wordIn, type Verdict } from "./fit";
 import { RESUME, SKILLS, SKILL_TERMS, TITLE } from "./resume";
 import { YEARS } from "./profile";
 
@@ -29,8 +29,8 @@ export type Check = { verdict: Verdict; t: string; proof: string };
 
 const ASKED = (job: Job) => `What ${job.company} asked for`;
 
-export function prepare(job: Job) {
-  const fit = readJob(job);
+export function prepare(job: Job, me: Me) {
+  const fit = readJob(job, me);
 
   /* Where each fact first matters in their list. The employer leads with
      what they care about most, so an earlier line ranks higher. A line
@@ -40,7 +40,7 @@ export function prepare(job: Job) {
   const asked = new Map<string, { fact: Fact; word: string }>();
   fit.lines.forEach((l, i) => {
     if (l.verdict === "gap") return;
-    for (const f of factsIn(l.ask)) {
+    for (const f of factsIn(l.ask, me)) {
       if (!rank.has(f.term)) rank.set(f.term, i);
       if (SKILL_TERMS.includes(f.term) && !asked.has(f.term)) {
         asked.set(f.term, { fact: f, word: wordIn(l.ask, f) ?? f.term });
@@ -74,7 +74,7 @@ export function prepare(job: Job) {
 
   /* ---- their words, where the profile has them and the resume does not */
   const onResume = [TITLE, SKILLS.text, ...RESUME.flatMap((r) => r.bullets.map((b) => b.text))].join(" ");
-  const said = new Set(factsIn(onResume).map((f) => f.term));
+  const said = new Set(factsIn(onResume, me).map((f) => f.term));
   const missing = [...asked.values()].filter(({ fact }) => !said.has(fact.term));
 
   for (const { fact, word: raw } of missing) {

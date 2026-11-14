@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { setSkill, setPref, setFloor as saveFloor } from "../app/actions";
 import Logo from "./Logo";
 import { NavBurger, NavDrawer } from "./Nav";
 import {
@@ -19,10 +20,13 @@ import {
    what t-repeated-figures-20261004 warns about. Experience lives with
    the CV that produced it, not as a fourth editable list here. */
 
+/* None of these are connected. They showed "On" in green, which was a
+   drawing of a feature rather than a feature, on the one screen whose
+   job is to say exactly what the product is working from. */
 const accounts = [
-  { Ic: LinkedinLogo, t: "LinkedIn", s: "Your history and your headline", on: true },
-  { Ic: Envelope, t: "Gmail", s: "So replies from companies reach your pipeline", on: true },
-  { Ic: Calendar, t: "Calendar", s: "So interviews show up on Today", on: true },
+  { Ic: LinkedinLogo, t: "LinkedIn", s: "Your history and your headline" },
+  { Ic: Envelope, t: "Gmail", s: "So replies from companies reach your pipeline" },
+  { Ic: Calendar, t: "Calendar", s: "So interviews show up on Today" },
 ];
 
 /* What you are looking for. The fourth input, and the one the overnight
@@ -35,45 +39,64 @@ const accounts = [
 
    Same picker control as the skills, because it is the same gesture:
    nothing to add, nothing to delete, only on or off. */
-const WANT = {
-  "Roles": [
+/* The group names double as the stored category, so the screen and the
+   database cannot drift apart. */
+const WANT: Record<string, { cat: string; opts: string[] }> = {
+  "Roles": { cat: "role", opts: [
     "Product design", "Design systems", "Brand design", "UX research",
     "Design management", "Motion", "Front of house",
-  ],
-  "Seniority": ["Mid", "Senior", "Staff", "Lead", "Manager", "Head of"],
-  "Where": [
+  ] },
+  "Seniority": { cat: "seniority", opts: ["Mid", "Senior", "Staff", "Lead", "Manager", "Head of"] },
+  "Where": { cat: "place", opts: [
     "Remote worldwide", "Remote Europe", "United Kingdom", "Ireland",
     "Netherlands", "Germany", "Hybrid, London", "Will relocate",
-  ],
-  "Not for you": [
+  ] },
+  "Not for you": { cat: "avoid", opts: [
     "Agencies", "Crypto", "Gambling", "Defence", "Under 10 people", "On site five days",
-  ],
+  ] },
 };
-const WANT_ON = [
-  "Product design", "Design systems", "Senior", "Staff",
-  "Remote worldwide", "Remote Europe", "United Kingdom",
-  "Gambling", "On site five days",
-];
 
-/* One list, not two. Yours are on, the rest are off, and the whole set
-   is the same tap. Nothing is added or removed, only switched. */
-const allSkills = [
-  "Product design", "Design systems", "Onboarding", "Fintech", "Payments",
-  "Prototyping", "Usability testing", "Figma", "Design tokens",
-  "Research ops", "Motion", "Data viz", "Accessibility", "Workshops", "Mentoring",
-];
-const fromCv = allSkills.slice(0, 9);
+/* Skills the CV did not find, offered so the list can grow without a
+   text box. Switching one on is still a fact with a source: you said so. */
+const EXTRA = ["Research ops", "Motion", "Data viz", "Accessibility", "Workshops", "Mentoring"];
 
-export default function Profile() {
+export type Skill = { id: number; label: string; active: boolean };
+
+export default function Profile({
+  cv, skills, want: initialWant, floor: initialFloor,
+}: {
+  cv: { name: string; readOn: string; found: string } | null;
+  skills: Skill[];
+  want: Record<string, string[]>;
+  floor: string;
+}) {
   const [menu, setMenu] = useState(false);
-  const [have, setHave] = useState<string[]>(fromCv);
-  const [want, setWant] = useState<string[]>(WANT_ON);
+  const [pending, start] = useTransition();
 
-  const toggle = (s: string) =>
-    setHave((v) => (v.includes(s) ? v.filter((x) => x !== s) : [...v, s]));
-  const toggleWant = (s: string) =>
-    setWant((v) => (v.includes(s) ? v.filter((x) => x !== s) : [...v, s]));
-  const [floor, setFloor] = useState("85");
+  /* the stored values lead; local state only covers the moment between
+     the tap and the server answering */
+  const [have, setHave] = useState(() => skills.filter((s) => s.active).map((s) => s.label));
+  const [want, setWant] = useState<Record<string, string[]>>(initialWant);
+  const [floor, setFloorLocal] = useState(initialFloor);
+
+  const byLabel = new Map(skills.map((s) => [s.label, s]));
+  const allSkills = [...skills.map((s) => s.label), ...EXTRA.filter((e) => !byLabel.has(e))];
+
+  const toggle = (label: string) => {
+    const on = !have.includes(label);
+    setHave((v) => (on ? [...v, label] : v.filter((x) => x !== label)));
+    const row = byLabel.get(label);
+    if (row) start(() => { setSkill(row.id, on); });
+  };
+
+  const toggleWant = (cat: string, value: string) => {
+    const on = !(want[cat] ?? []).includes(value);
+    setWant((v) => ({
+      ...v,
+      [cat]: on ? [...(v[cat] ?? []), value] : (v[cat] ?? []).filter((x) => x !== value),
+    }));
+    start(() => { setPref(cat, value, on); });
+  };
 
   return (
     <div className="flow pr-prof" data-menu={menu}>
@@ -96,28 +119,25 @@ export default function Profile() {
           <div className="pr-cv">
             <span className="pr-cv-ic" aria-hidden="true"><FileText size={18} weight="fill" /></span>
             <span className="pr-cv-t">
-              <b>Tomiwa-Akinbode-2026.pdf</b>
-              <i>Read 3 October · 3 roles, 11 skills found</i>
+              <b>{cv?.name ?? "No CV yet"}</b>
+              <i>{cv ? `${cv.readOn} · ${cv.found}` : "Everything below was seeded, not read from a CV"}</i>
             </span>
             <button className="pr-ghost" type="button">
               <ArrowClockwise size={14} weight="bold" aria-hidden="true" />
-              Replace
+              {cv ? "Replace" : "Upload"}
             </button>
           </div>
 
           <h2 className="j-sec">Connected accounts</h2>
           <div className="pr-accts">
-            {accounts.map(({ Ic, t, s, on }) => (
+            {accounts.map(({ Ic, t, s }) => (
               <button className="pr-acct" type="button" key={t}>
                 <span className="pr-acct-ic" aria-hidden="true"><Ic size={17} weight="fill" /></span>
                 <span className="pr-acct-t">
                   <b>{t}</b>
                   <i>{s}</i>
                 </span>
-                <span className="pr-acct-on" data-on={on}>
-                  {on && <Check size={12} weight="bold" aria-hidden="true" />}
-                  {on ? "On" : "Off"}
-                </span>
+                <span className="pr-acct-on" data-on={false}>Connect</span>
                 <CaretRight size={15} weight="bold" aria-hidden="true" />
               </button>
             ))}
@@ -147,23 +167,26 @@ export default function Profile() {
           </p>
 
           <div className="pr-want">
-            {Object.entries(WANT).map(([group, opts]) => (
+            {Object.entries(WANT).map(([group, { cat, opts }]) => (
               <div className="pr-want-g" key={group}>
                 <h3 className="pr-want-h" data-no={group === "Not for you"}>{group}</h3>
                 <div className="pr-skills">
-                  {opts.map((o) => (
-                    <button
-                      className="pr-skill"
-                      type="button"
-                      key={o}
-                      data-no={group === "Not for you"}
-                      aria-pressed={want.includes(o)}
-                      onClick={() => toggleWant(o)}
-                    >
-                      {want.includes(o) && <Check size={11} weight="bold" aria-hidden="true" />}
-                      {o}
-                    </button>
-                  ))}
+                  {opts.map((o) => {
+                    const on = (want[cat] ?? []).includes(o);
+                    return (
+                      <button
+                        className="pr-skill"
+                        type="button"
+                        key={o}
+                        data-no={group === "Not for you"}
+                        aria-pressed={on}
+                        onClick={() => toggleWant(cat, o)}
+                      >
+                        {on && <Check size={11} weight="bold" aria-hidden="true" />}
+                        {o}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -176,7 +199,11 @@ export default function Profile() {
                   className="field pr-floor-f"
                   inputMode="numeric"
                   value={floor}
-                  onChange={(e) => setFloor(e.target.value.replace(/[^0-9]/g, ""))}
+                  onChange={(e) => {
+                    const v = e.target.value.replace(/[^0-9]/g, "");
+                    setFloorLocal(v);
+                    start(() => { saveFloor(v); });
+                  }}
                   aria-label="Salary floor, thousands"
                 />
                 <span className="pr-floor-k">thousand</span>
