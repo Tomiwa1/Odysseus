@@ -1661,3 +1661,37 @@ html, body { overflow-x: clip; }
 .si-swap button:hover { color: var(--brand-deep); }
 
 .si-note { margin-top: 26px; }
+
+/* ---- moving a job through the pipeline -------------------------------
+   The stage marker is the control, so there is no extra button to put
+   anywhere. The options open underneath the row they belong to.
+   -------------------------------------------------------------------- */
+.pl-dot {
+  border: 0; background: none; cursor: pointer; padding: 0;
+  transition: color var(--d-1) var(--ease);
+}
+.pl-dot svg[data-open] {
+  margin-left: 2px; color: var(--ink-4);
+  transition: transform var(--d-2) var(--ease);
+}
+.pl-dot svg[data-open="true"] { transform: rotate(180deg); }
+.pl-dot:hover { color: var(--ink); }
+
+.pl-stages {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--line);
+}
+.pl-stage {
+  display: inline-flex; align-items: center; gap: 5px;
+  min-height: 34px; padding: 0 12px; border: 0; cursor: pointer;
+  border-radius: var(--r-pill); font-size: 12.5px; font-weight: 600;
+  color: var(--ink-3); background: var(--paper-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: transform 90ms var(--ease), color var(--d-1) var(--ease),
+              background var(--d-1) var(--ease), box-shadow var(--d-1) var(--ease);
+}
+.pl-stage:active { transform: translateY(2px); }
+.pl-stage[aria-pressed="true"] {
+  color: var(--brand-deep); background: var(--brand-50);
+  box-shadow: inset 0 0 0 1.5px var(--brand);
+}

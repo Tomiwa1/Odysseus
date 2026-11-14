@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { moveStage } from "../app/actions";
 import Link from "next/link";
 import Logo from "./Logo";
 import {
@@ -53,6 +54,7 @@ export default function Prepare({
 }) {
   const [tab, setTab] = useState<Tab>("resume");
   const [ok, setOk] = useState<string[]>([]);
+  const [, start] = useTransition();
 
   const { pieces } = prep;
   const left = pieces.filter((p) => !ok.includes(p.id)).length;
@@ -199,7 +201,17 @@ export default function Prepare({
                 {left > 0 ? `${left} left to check` : "No application link found"}
               </button>
             ) : (
-              <a className="btn btn-primary" href={prep.url} target="_blank" rel="noopener noreferrer">
+              /* Opening the posting is the moment the job stops being
+                 saved and starts being applied for. Recording it here
+                 means Pipeline is right without anyone remembering to
+                 tell it. Odysseus still submits nothing. */
+              <a
+                className="btn btn-primary"
+                href={prep.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => { start(() => { moveStage(job.id, "applied"); }); }}
+              >
                 Open the application
               </a>
             )}

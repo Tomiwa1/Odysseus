@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { moveStage } from "../app/actions";
 import Logo from "./Logo";
 import { NavBurger, NavDrawer } from "./Nav";
-import { CaretDown, ArrowRight, Clock } from "./icons";
+import { CaretDown, ArrowRight, Clock, Check } from "./icons";
 
 /* Pipeline.
    This is where a job search feels worst: most of it is silence, and
@@ -55,6 +56,8 @@ export type Row = {
 export default function Pipeline({ rows }: { rows: Row[] }) {
   const [menu, setMenu] = useState(false);
   const [showClosed, setShowClosed] = useState(false);
+  const [editing, setEditing] = useState<string | null>(null);
+  const [, start] = useTransition();
 
   const needs = rows.filter((r) => r.needs);
   const moving = rows.filter((r) => !r.needs && r.stage !== "closed" && r.heat !== "cold");
@@ -76,11 +79,60 @@ export default function Pipeline({ rows }: { rows: Row[] }) {
       ? "Save a role from Today and it will show up here, with how long it has been waiting."
       : `${rows.length} ${rows.length === 1 ? "role" : "roles"} tracked. Most of a search is waiting, so this says how long you have waited and whether that is normal yet.`;
 
-  const Marker = ({ r }: { r: Row }) => (
-    <span className="pl-dot" data-stage={r.stage}>
-      <i aria-hidden="true" />
-      {STAGES[r.stage].label}
-    </span>
+  /* The stage marker is the control.
+   *
+   * It already sits on every row saying where a job is, so making it the
+   * thing you tap to change that adds no furniture, which is what
+   * t-visual-noise-33 asks for. A separate "Move" button would be a
+   * second container doing the same job. */
+  const Marker = ({ r }: { r: Row }) => {
+    const open = editing === r.id;
+    return (
+      <button
+        className="pl-dot"
+        type="button"
+        data-stage={r.stage}
+        aria-expanded={open}
+        aria-label={`${STAGES[r.stage].label}. Change where this is.`}
+        onClick={() => setEditing(open ? null : r.id)}
+      >
+        <i aria-hidden="true" />
+        {STAGES[r.stage].label}
+        <CaretDown size={12} weight="bold" aria-hidden="true" data-open={open} />
+      </button>
+    );
+  };
+
+  /* Only what the system can observe, same vocabulary as the labels.
+     Closed asks why, because Pipeline shows that reason back and a
+     closed row with no reason teaches nothing. */
+  const Stages = ({ r }: { r: Row }) => (
+    <div className="fold" data-open={editing === r.id}>
+      <div className="fold-in">
+        <div className="pl-stages">
+          {(Object.keys(STAGES) as Stage[]).map((k) => (
+            <button
+              key={k}
+              type="button"
+              className="pl-stage"
+              aria-pressed={k === r.stage}
+              onClick={() => {
+                setEditing(null);
+                if (k === r.stage) return;
+                const why =
+                  k === "closed"
+                    ? window.prompt("What happened? This shows on the closed list.") ?? undefined
+                    : undefined;
+                start(() => { moveStage(r.id, k, why); });
+              }}
+            >
+              {k === r.stage && <Check size={11} weight="bold" aria-hidden="true" />}
+              {STAGES[k].label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 
   /* One quiet line: the feeling, then the number, then the reason on a
@@ -106,6 +158,7 @@ export default function Pipeline({ rows }: { rows: Row[] }) {
         <Marker r={r} />
       </div>
       {r.closedWhy ? <p className="pl-why">{r.closedWhy}</p> : <Wait r={r} />}
+      <Stages r={r} />
     </article>
   );
 
