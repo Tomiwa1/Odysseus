@@ -30,12 +30,12 @@ export async function signIn(_prev: unknown, form: FormData) {
   const password = String(form.get("password") ?? "");
   if (!email || !password) return { error: "Both fields, please." };
 
-  const account = accountByEmail(email);
+  const account = await accountByEmail(email);
   /* an account with no password set cannot be signed into, rather than
      "no password" quietly meaning "any password" */
   if (!account || !verifyPassword(password, account.password)) return { error: SAME };
 
-  const { token, expires } = createSession(account.id);
+  const { token, expires } = await createSession(account.id);
   setCookie(token, expires, await cookies());
   redirect("/today");
 }
@@ -47,17 +47,17 @@ export async function signUp(_prev: unknown, form: FormData) {
 
   if (!email.includes("@")) return { error: "That does not look like an email address." };
   if (password.length < 8) return { error: "Eight characters or more, please." };
-  if (accountByEmail(email)) return { error: "There is already an account with that email." };
+  if (await accountByEmail(email)) return { error: "There is already an account with that email." };
 
-  const account = createAccount(email, name, password);
-  const { token, expires } = createSession(account.id);
+  const account = await createAccount(email, name, password);
+  const { token, expires } = await createSession(account.id);
   setCookie(token, expires, await cookies());
   redirect("/start");
 }
 
 export async function signOut() {
   const jar = await cookies();
-  endSession(jar.get(COOKIE)?.value);
+  await endSession(jar.get(COOKIE)?.value);
   jar.delete(COOKIE);
   redirect("/");
 }

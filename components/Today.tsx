@@ -65,17 +65,26 @@ export default function Today({
   const [done, setDone] = useState<string[]>(alreadyDone);
   const [, start] = useTransition();
 
-  const left = items.filter((i) => !done.includes(i.id));
+  /* What a finished card is called in storage.
+   *
+   * A match is a real job, so it is remembered by its job id. The two
+   * standing cards are not jobs, and sending their names where a job id
+   * belongs broke the foreign key, which left the screen showing a card
+   * as done that nothing had recorded. They are remembered by kind
+   * instead, which is what the table holds when there is no job. */
+  const mark = (i: Item) => (i.href ? i.id : i.kind);
+
+  const left = items.filter((i) => !done.includes(mark(i)));
   const finished = left.length === 0;
-  const finish = (id: string, kind: string) => {
-    if (done.includes(id)) return;
-    setDone((d) => [...d, id]);
-    start(() => { finishToday(kind, id); });
+  const finish = (i: Item) => {
+    if (done.includes(mark(i))) return;
+    setDone((d) => [...d, mark(i)]);
+    start(() => { finishToday(i.kind, i.href ? i.id : null); });
   };
 
   const Card = ({ i }: { i: (typeof items)[number] }) => {
     const Glyph = ICON[i.kind];
-    const isDone = done.includes(i.id);
+    const isDone = done.includes(mark(i));
 
     return (
       <article className="t-card" data-kind={i.kind} data-done={isDone}>
@@ -93,12 +102,12 @@ export default function Today({
           <>
             <p className="t-why">{i.why}</p>
             {i.href ? (
-              <Link className="t-go" href={i.href} onClick={() => finish(i.id, i.kind)}>
+              <Link className="t-go" href={i.href} onClick={() => finish(i)}>
                 {i.cta}
                 <ArrowRight size={15} weight="bold" aria-hidden="true" />
               </Link>
             ) : (
-              <button className="t-go" type="button" onClick={() => finish(i.id, i.kind)}>
+              <button className="t-go" type="button" onClick={() => finish(i)}>
                 {i.cta}
                 <ArrowRight size={15} weight="bold" aria-hidden="true" />
               </button>
@@ -115,7 +124,7 @@ export default function Today({
     finished ? null : (
       <div className="t-meter">
         <span className="t-dots" aria-hidden="true">
-          {items.map((i) => <i key={i.id} data-on={done.includes(i.id)} />)}
+          {items.map((i) => <i key={i.id} data-on={done.includes(mark(i))} />)}
         </span>
         <span className="t-count">{done.length} of {items.length} done</span>
       </div>

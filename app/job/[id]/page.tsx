@@ -13,12 +13,12 @@ export const dynamic = "force-dynamic";
    neither the snapshot nor the matcher ships to the browser. */
 export default async function JobPage({ params }: { params: Promise<{ id: string }> }) {
   const u = await requireUser();
-  const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
+  const me = { facts: await myFacts(u), gaps: myGaps(), years: await myYears(u) };
   const { id } = await params;
-  const job = jobs().find((j) => j.id === decodeURIComponent(id));
+  const job = (await jobs()).find((j) => j.id === decodeURIComponent(id));
   if (!job) notFound();
 
-  const saved = applications(u).some((a) => a.jobId === job.id);
+  const saved = (await applications(u)).some((a) => a.jobId === job.id);
 
   return (
     <Job

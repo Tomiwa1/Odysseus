@@ -15,9 +15,6 @@ tsconfig.tsbuildinfo
 .DS_Store
 *.log
 
-# ingest output: regenerate with `node ingest/run.mjs`
-ingest/store/
-
-# the database is generated: node ingest/seed.mjs
+# the database is generated: node ingest/seed.mjs, then node ingest/run.mjs
 data/*.db
 data/*.db-*

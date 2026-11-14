@@ -50,26 +50,36 @@ export async function uploadCv(form: FormData): Promise<CvResult> {
     };
   }
 
-  const handle = db();
+  const handle = await db();
   const t = now();
 
-  handle.exec("BEGIN");
+  /* One transaction: a CV either replaces the last one's facts entirely
+     or changes nothing. A half-written profile would claim some facts
+     from the new document and some from the old. */
+  const tx = await handle.transaction("write");
   try {
     /* only the previous CV's facts go; anything you added by hand stays */
-    handle.prepare(`DELETE FROM facts WHERE user_id = ? AND source = 'cv'`).run(user);
+    await tx.execute({
+      sql: `DELETE FROM facts WHERE user_id = ? AND source = 'cv'`,
+      args: [user],
+    });
 
-    const insert = handle.prepare(
+    const sql =
       `INSERT INTO facts (user_id, kind, term, label, proof, source, active, created_at)
-       VALUES (?, ?, ?, ?, ?, 'cv', 1, ?)`
-    );
-    for (const f of facts) insert.run(user, f.kind, f.term, f.label, f.proof, t);
-    if (years != null) {
-      insert.run(user, "years", String(years), `${years} years`,
-        `${years} years, read from the dates on your CV`, t);
+       VALUES (?, ?, ?, ?, ?, 'cv', 1, ?)`;
+    for (const f of facts) {
+      await tx.execute({ sql, args: [user, f.kind, f.term, f.label, f.proof, t] });
     }
-    handle.exec("COMMIT");
+    if (years != null) {
+      await tx.execute({
+        sql,
+        args: [user, "years", String(years), `${years} years`,
+               `${years} years, read from the dates on your CV`, t],
+      });
+    }
+    await tx.commit();
   } catch (e) {
-    handle.exec("ROLLBACK");
+    await tx.rollback();
     throw e;
   }
 

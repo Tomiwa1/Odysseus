@@ -1,34 +1,67 @@
-import { DatabaseSync } from "node:sqlite";
+import { createClient, type Client } from "@libsql/client";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { migrate } from "./migrate";
 
 /* Storage.
  *
- * SQLite, through Node's own built-in driver, so there is no dependency
- * and no service to sign up for. The whole database is one file.
+ * libSQL, which is SQLite. That matters: the same SQL, the same schema
+ * and the same file run in development and in production, so deploying
+ * is a URL rather than a dialect rewrite and a migration.
  *
- * This is the right choice while there is one user and one machine. It
- * is the wrong choice the moment this deploys to a serverless host,
- * because the filesystem there is not durable. Everything above this
- * file goes through the functions in queries.ts, so swapping the driver
- * for Postgres or Turso later means changing this file and that one,
- * not the screens.
+ *   no DATABASE_URL   file:data/odysseus.db, a file on this machine
+ *   file:...          any other local file
+ *   libsql://...      a hosted database, with DATABASE_TOKEN
+ *
+ * The price is that every query is async. node:sqlite is synchronous and
+ * a hosted database cannot be, so the choice was between a sync local
+ * database that can never deploy and an async one that can.
  */
 
-const FILE = process.env.ODYSSEUS_DB ?? join(process.cwd(), "data", "odysseus.db");
+const url = process.env.DATABASE_URL ?? `file:${join(process.cwd(), "data", "odysseus.db")}`;
+const authToken = process.env.DATABASE_TOKEN;
 
-let handle: DatabaseSync | null = null;
+let client: Client | null = null;
+let ready: Promise<Client> | null = null;
 
-export function db(): DatabaseSync {
-  if (handle) return handle;
-  handle = new DatabaseSync(FILE);
-  handle.exec("PRAGMA journal_mode = WAL");
-  handle.exec("PRAGMA foreign_keys = ON");
-  handle.exec(readFileSync(join(process.cwd(), "lib", "db", "schema.sql"), "utf8"));
-  migrate(handle);
-  return handle;
+async function open(): Promise<Client> {
+  const c = createClient(authToken ? { url, authToken } : { url });
+  /* a local file wants WAL; a hosted database manages its own journal */
+  if (url.startsWith("file:")) {
+    await c.execute("PRAGMA journal_mode = WAL");
+    await c.execute("PRAGMA foreign_keys = ON");
+  }
+  const schema = readFileSync(join(process.cwd(), "lib", "db", "schema.sql"), "utf8");
+  /* executeMultiple takes the whole file; statements are split by the
+     driver rather than by a regex of mine that would break on a
+     semicolon inside a string */
+  await c.executeMultiple(schema);
+  await migrate(c);
+  client = c;
+  return c;
+}
+
+export function db(): Promise<Client> {
+  if (client) return Promise.resolve(client);
+  ready ??= open();
+  return ready;
 }
 
 export const now = () => new Date().toISOString();
 export const today = () => new Date().toISOString().slice(0, 10);
+
+/* Small helpers so every query below reads the same way. */
+export async function all<T = Record<string, unknown>>(sql: string, args: unknown[] = []) {
+  const c = await db();
+  const r = await c.execute({ sql, args: args as never });
+  return r.rows as unknown as T[];
+}
+
+export async function one<T = Record<string, unknown>>(sql: string, args: unknown[] = []) {
+  return (await all<T>(sql, args))[0] ?? null;
+}
+
+export async function run(sql: string, args: unknown[] = []) {
+  const c = await db();
+  return c.execute({ sql, args: args as never });
+}

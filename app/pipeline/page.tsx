@@ -33,11 +33,15 @@ function heatFor(stage: string, days: number): Row["heat"] {
 export default async function PipelinePage() {
   const u = await requireUser();
 
-  const rows: Row[] = applications(u).flatMap((a) => {
-    const j = findJob(a.jobId);
-    if (!j) return [];
-    const days = daysSinceMoved(a.id) ?? 0;
-    return [{
+  /* one await per application rather than a flatMap over promises: the
+     job and the elapsed time both come from storage now */
+  const rows: Row[] = (
+    await Promise.all(
+      (await applications(u)).map(async (a) => {
+        const j = await findJob(a.jobId);
+        if (!j) return null;
+        const days = (await daysSinceMoved(a.id)) ?? 0;
+        const row: Row = {
       id: a.jobId,
       org: j.company,
       role: j.title,
@@ -50,9 +54,12 @@ export default async function PipelinePage() {
       needs: a.stage === "replied"
         ? { what: `They replied about ${j.title}.`, act: "Reply", from: "" }
         : undefined,
-      closedWhy: a.closedWhy ?? undefined,
-    }];
-  });
+          closedWhy: a.closedWhy ?? undefined,
+        };
+        return row;
+      })
+    )
+  ).filter((r) => r !== null);
 
   return <Pipeline rows={rows} />;
 }

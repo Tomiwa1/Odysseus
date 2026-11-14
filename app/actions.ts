@@ -8,41 +8,46 @@ import * as q from "../lib/db/queries";
  *
  * Every one of these writes and then tells Next to re-render the pages
  * that read it, so what you see after a tap is what is actually stored
- * rather than a hopeful bit of local state. */
+ * rather than a hopeful bit of local state.
+ *
+ * Every write is awaited before the revalidate. Firing one off and
+ * re-rendering immediately raced the write, and a write that then
+ * failed went nowhere except an unhandled rejection in the log, which
+ * is the one way this screen can lie about what it stored. */
 
 export async function saveJob(jobId: string, saved: boolean) {
   const u = await requireUser();
-  if (saved) q.setStage(u, jobId, "saved");
-  else q.unsave(u, jobId);
+  if (saved) await q.setStage(u, jobId, "saved");
+  else await q.unsave(u, jobId);
   revalidatePath("/pipeline");
   revalidatePath("/job");
 }
 
 export async function moveStage(jobId: string, stage: q.Stage, why?: string) {
-  q.setStage(await requireUser(), jobId, stage, why);
+  await q.setStage(await requireUser(), jobId, stage, why);
   revalidatePath("/pipeline");
   revalidatePath("/today");
 }
 
 export async function finishToday(kind: string, jobId: string | null) {
-  q.markDone(await requireUser(), kind, jobId);
+  await q.markDone(await requireUser(), kind, jobId);
   revalidatePath("/today");
 }
 
 export async function setPref(category: string, value: string, on: boolean) {
-  q.togglePref(await requireUser(), category, value, on);
+  await q.togglePref(await requireUser(), category, value, on);
   revalidatePath("/profile");
   revalidatePath("/today");
 }
 
 export async function setSkill(id: number, on: boolean) {
-  q.setFactActive(await requireUser(), id, on);
+  await q.setFactActive(await requireUser(), id, on);
   revalidatePath("/profile");
   revalidatePath("/job");
 }
 
 export async function setFloor(valueK: string) {
-  q.setSetting(await requireUser(), "salary_floor_k", valueK);
+  await q.setSetting(await requireUser(), "salary_floor_k", valueK);
   revalidatePath("/profile");
   revalidatePath("/today");
 }

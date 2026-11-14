@@ -1,5 +1,5 @@
 import { scryptSync, randomBytes, timingSafeEqual, createHash } from "node:crypto";
-import { db, now } from "./db/index";
+import { one, run, now } from "./db/index";
 
 /* Sign in, with nothing to sign up for.
  *
@@ -35,61 +35,58 @@ export function verifyPassword(password: string, stored: string | null): boolean
 
 const tokenHash = (token: string) => createHash("sha256").update(token).digest("hex");
 
-export function createSession(userId: string): { token: string; expires: Date } {
+export async function createSession(userId: string): Promise<{ token: string; expires: Date }> {
   const token = randomBytes(32).toString("base64url");
   const expires = new Date(Date.now() + SESSION_DAYS * 86_400_000);
-  db()
-    .prepare(`INSERT INTO sessions (token_hash, user_id, created_at, expires_at) VALUES (?, ?, ?, ?)`)
-    .run(tokenHash(token), userId, now(), expires.toISOString());
+  await run(
+    `INSERT INTO sessions (token_hash, user_id, created_at, expires_at) VALUES (?, ?, ?, ?)`,
+    [tokenHash(token), userId, now(), expires.toISOString()]
+  );
   return { token, expires };
 }
 
-export function userIdForToken(token: string | undefined): string | null {
+export async function userIdForToken(token: string | undefined): Promise<string | null> {
   if (!token) return null;
-  const row = db()
-    .prepare(`SELECT user_id, expires_at FROM sessions WHERE token_hash = ?`)
-    .get(tokenHash(token)) as { user_id: string; expires_at: string } | undefined;
+  const row = await one<{ user_id: string; expires_at: string }>(
+    `SELECT user_id, expires_at FROM sessions WHERE token_hash = ?`, [tokenHash(token)]);
   if (!row) return null;
+  /* an expired session is deleted on sight rather than left to rot */
   if (new Date(row.expires_at).getTime() < Date.now()) {
-    db().prepare(`DELETE FROM sessions WHERE token_hash = ?`).run(tokenHash(token));
+    await run(`DELETE FROM sessions WHERE token_hash = ?`, [tokenHash(token)]);
     return null;
   }
   return row.user_id;
 }
 
-export function endSession(token: string | undefined) {
-  if (token) db().prepare(`DELETE FROM sessions WHERE token_hash = ?`).run(tokenHash(token));
+export async function endSession(token: string | undefined) {
+  if (token) await run(`DELETE FROM sessions WHERE token_hash = ?`, [tokenHash(token)]);
 }
 
 /* ---- accounts -------------------------------------------------------- */
 
 export type Account = { id: string; email: string; name: string | null };
 
-export function accountByEmail(email: string): (Account & { password: string | null }) | null {
-  const row = db()
-    .prepare(`SELECT id, email, name, password FROM users WHERE email = ?`)
-    .get(email.trim().toLowerCase()) as
-    | { id: string; email: string; name: string | null; password: string | null }
-    | undefined;
-  return row ?? null;
+export async function accountByEmail(email: string) {
+  return one<Account & { password: string | null }>(
+    `SELECT id, email, name, password FROM users WHERE email = ?`,
+    [email.trim().toLowerCase()]
+  );
 }
 
-export function accountById(id: string): Account | null {
-  const row = db()
-    .prepare(`SELECT id, email, name FROM users WHERE id = ?`)
-    .get(id) as Account | undefined;
-  return row ?? null;
+export async function accountById(id: string) {
+  return one<Account>(`SELECT id, email, name FROM users WHERE id = ?`, [id]);
 }
 
-export function createAccount(email: string, name: string, password: string): Account {
+export async function createAccount(email: string, name: string, password: string): Promise<Account> {
   const clean = email.trim().toLowerCase();
   const id = `u_${randomBytes(8).toString("hex")}`;
-  db()
-    .prepare(`INSERT INTO users (id, email, name, password, created_at) VALUES (?, ?, ?, ?, ?)`)
-    .run(id, clean, name.trim() || null, hashPassword(password), now());
+  await run(
+    `INSERT INTO users (id, email, name, password, created_at) VALUES (?, ?, ?, ?, ?)`,
+    [id, clean, name.trim() || null, hashPassword(password), now()]
+  );
   return { id, email: clean, name: name.trim() || null };
 }
 
-export function setPassword(userId: string, password: string) {
-  db().prepare(`UPDATE users SET password = ? WHERE id = ?`).run(hashPassword(password), userId);
+export async function setPassword(userId: string, password: string) {
+  await run(`UPDATE users SET password = ? WHERE id = ?`, [hashPassword(password), userId]);
 }

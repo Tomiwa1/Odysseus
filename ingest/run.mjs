@@ -9,13 +9,12 @@
  * run, so a role that stops appearing in a feed can be noticed later.
  */
 import { readFile } from "node:fs/promises";
-import { DatabaseSync } from "node:sqlite";
+import { open, count, one, DB_URL } from "./db.mjs";
 import { ADAPTERS } from "./sources/index.mjs";
 import { normalise } from "./normalise.mjs";
 import { dedupe } from "./dedupe.mjs";
 
 const HERE = new URL(".", import.meta.url);
-const DB = process.env.ODYSSEUS_DB ?? "data/odysseus.db";
 const DESIGN = /\b(design|designer|ux|researcher)\b/i;
 const NOT_DESIGN = /\b(engineer|engineering|sales|account executive|legal|finance|recruit|construction|facilit)\b/i;
 
@@ -54,16 +53,9 @@ if (onlyDesign) {
 
 const { jobs, merged } = dedupe(all);
 
-const db = new DatabaseSync(DB);
-db.exec("PRAGMA journal_mode = WAL");
-db.exec("PRAGMA foreign_keys = ON");
-db.exec(await readFile("lib/db/schema.sql", "utf8"));
-for (const [table, column, def] of [["users", "password", "TEXT"]]) {
-  const has = db.prepare(`PRAGMA table_info(${table})`).all().some((c) => c.name === column);
-  if (!has) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${def}`);
-}
+const db = await open();
 
-const before = db.prepare("SELECT COUNT(*) AS n FROM jobs").get().n;
+const before = await count(db, "SELECT COUNT(*) AS n FROM jobs");
 const t = new Date().toISOString();
 
 /* Update first, insert only if nothing was there.
@@ -72,55 +64,56 @@ const t = new Date().toISOString();
  * on the primary key and on the (company, title) dedupe key, and the
  * clause only takes one target, so the other raises. Explicit is both
  * correct and readable. */
-const update = db.prepare(
-  `UPDATE jobs SET
+const UPDATE = `UPDATE jobs SET
      title = ?, locations = ?, remote = ?, hybrid = ?,
      pay = COALESCE(?, pay),
      requirements = CASE WHEN json_array_length(?) > 0 THEN ? ELSE requirements END,
      posted_at = COALESCE(posted_at, ?),
      last_seen = ?
-   WHERE company_slug = ? AND title_key = ?`
-);
-const insert = db.prepare(
-  `INSERT INTO jobs (id, company, company_slug, title, title_key, locations,
+   WHERE company_slug = ? AND title_key = ?`;
+const INSERT = `INSERT INTO jobs (id, company, company_slug, title, title_key, locations,
                      remote, hybrid, pay, requirements, posted_at, first_seen, last_seen)
-   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
-);
-const addSource = db.prepare(
-  `INSERT OR IGNORE INTO job_sources (job_id, ats, url) VALUES (?, ?, ?)`
-);
-const findId = db.prepare(`SELECT id FROM jobs WHERE company_slug = ? AND title_key = ?`);
+   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+const ADD_SOURCE = `INSERT OR IGNORE INTO job_sources (job_id, ats, url) VALUES (?, ?, ?)`;
+const FIND_ID = `SELECT id FROM jobs WHERE company_slug = ? AND title_key = ?`;
 
-db.exec("BEGIN");
+const tx = await db.transaction("write");
 try {
   for (const j of jobs) {
     const locations = JSON.stringify(j.locations);
     const pay = j.pay ? JSON.stringify(j.pay) : null;
     const reqs = JSON.stringify(j.requirements ?? []);
 
-    const changed = update.run(
-      j.title, locations, j.remote ? 1 : 0, j.hybrid ? 1 : 0,
-      pay, reqs, reqs, j.postedAt, t,
-      j.companySlug, j.titleKey
-    ).changes;
+    const changed = await tx.execute({
+      sql: UPDATE,
+      args: [
+        j.title, locations, j.remote ? 1 : 0, j.hybrid ? 1 : 0,
+        pay, reqs, reqs, j.postedAt, t,
+        j.companySlug, j.titleKey,
+      ],
+    });
 
-    if (changed === 0) {
-      insert.run(
-        j.id, j.company, j.companySlug, j.title, j.titleKey, locations,
-        j.remote ? 1 : 0, j.hybrid ? 1 : 0, pay, reqs, j.postedAt, t, t
-      );
+    if (Number(changed.rowsAffected) === 0) {
+      await tx.execute({
+        sql: INSERT,
+        args: [
+          j.id, j.company, j.companySlug, j.title, j.titleKey, locations,
+          j.remote ? 1 : 0, j.hybrid ? 1 : 0, pay, reqs, j.postedAt, t, t,
+        ],
+      });
     }
 
-    const row = findId.get(j.companySlug, j.titleKey);
-    for (const src of j.sources) addSource.run(row.id, src.ats, src.url);
+    const found = await tx.execute({ sql: FIND_ID, args: [j.companySlug, j.titleKey] });
+    const id = found.rows[0].id;
+    for (const src of j.sources) await tx.execute({ sql: ADD_SOURCE, args: [id, src.ats, src.url] });
   }
-  db.exec("COMMIT");
+  await tx.commit();
 } catch (e) {
-  db.exec("ROLLBACK");
+  await tx.rollback();
   throw e;
 }
 
-const after = db.prepare("SELECT COUNT(*) AS n FROM jobs").get().n;
+const after = await count(db, "SELECT COUNT(*) AS n FROM jobs");
 const withPay = jobs.filter((j) => j.pay).length;
 const remote = jobs.filter((j) => j.remote).length;
 const withReqs = jobs.filter((j) => j.requirements?.length).length;
@@ -132,4 +125,4 @@ console.log(`Stored         ${jobs.length} jobs   (${after - before} new)`);
 console.log(`With a salary  ${withPay}  (${Math.round((withPay / jobs.length) * 100)}%)`);
 console.log(`Remote         ${remote}  (${Math.round((remote / jobs.length) * 100)}%)`);
 console.log(`Requirements   ${withReqs}  (${Math.round((withReqs / jobs.length) * 100)}%)`);
-console.log(`\n-> ${DB}`);
+console.log(`\n-> ${DB_URL}`);

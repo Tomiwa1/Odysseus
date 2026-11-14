@@ -11,9 +11,9 @@ export const dynamic = "force-dynamic";
    the pieces to review and nothing else. */
 export default async function PreparePage({ params }: { params: Promise<{ id: string }> }) {
   const u = await requireUser();
-  const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
+  const me = { facts: await myFacts(u), gaps: myGaps(), years: await myYears(u) };
   const { id } = await params;
-  const job = jobs().find((j) => j.id === decodeURIComponent(id));
+  const job = (await jobs()).find((j) => j.id === decodeURIComponent(id));
   if (!job) notFound();
 
   return (

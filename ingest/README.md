@@ -34,12 +34,13 @@ sources/index.mjs  one adapter per ATS, fetch only, no interpretation
 normalise.mjs      one job shape from four feeds
 dedupe.mjs         one record per job, every source link kept
 run.mjs            orchestrates, stores, reports
+db.mjs             opens the same database the app uses
 ```
 
 ## Last full run
 
-195 feeds, **13,992 postings**, 298 design titles, 32 duplicates merged,
-**266 jobs stored**. 13% publish a salary, 33% are remote.
+224 feeds, **13,996 postings**, 286 design titles, 32 duplicates merged,
+**254 jobs stored**. 14% publish a salary, 26% are remote.
 
 ## The rules it follows
 

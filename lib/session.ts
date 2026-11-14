@@ -7,7 +7,7 @@ export const COOKIE = "odysseus_session";
    needs a user has to deal with that rather than assume one. */
 export async function currentAccount(): Promise<Account | null> {
   const jar = await cookies();
-  const id = userIdForToken(jar.get(COOKIE)?.value);
+  const id = await userIdForToken(jar.get(COOKIE)?.value);
   return id ? accountById(id) : null;
 }
 

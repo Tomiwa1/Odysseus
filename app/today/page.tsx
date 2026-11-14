@@ -11,8 +11,8 @@ export const dynamic = "force-dynamic";
 
 export default async function TodayPage() {
   const u = await requireUser();
-  const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
-  const picks = pickForToday(jobs(), myPrefs(u), me, 3);
+  const me = { facts: await myFacts(u), gaps: myGaps(), years: await myYears(u) };
+  const picks = pickForToday(await jobs(), await myPrefs(u), me, 3);
 
   const matches: Item[] = picks.map(({ job, reasons }) => {
     const kept = reasons.filter((r) => r.ok).map((r) => r.why);
@@ -30,7 +30,7 @@ export default async function TodayPage() {
     };
   });
 
-  const read = `Overnight it read ${jobs().length.toLocaleString()} roles and kept ${picks.length}. The rest never reached you.`;
+  const read = `Overnight it read ${(await jobs()).length.toLocaleString()} roles and kept ${picks.length}. The rest never reached you.`;
 
-  return <Today matches={matches} read={read} done={doneToday(u)} />;
+  return <Today matches={matches} read={read} done={await doneToday(u)} />;
 }

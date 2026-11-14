@@ -14,8 +14,8 @@ import type { Prefs } from "./match";
  * Off means "do not match me on this", and a half-weight is a different
  * promise from the one the control makes. */
 
-export function myFacts(userId: string): Fact[] {
-  return facts(userId, true).map((f) => ({
+export async function myFacts(userId: string): Promise<Fact[]> {
+  return (await facts(userId, true)).map((f) => ({
     term: f.term,
     proof: f.proof,
   }));
@@ -27,15 +27,15 @@ export function myGaps(): Fact[] {
   return GAPS;
 }
 
-export function myYears(userId: string) {
-  const row = facts(userId, true).find((f) => f.kind === "years");
+export async function myYears(userId: string) {
+  const row = (await facts(userId, true)).find((f) => f.kind === "years");
   const value = row ? Number(row.term) : YEARS.value;
   return { value: Number.isFinite(value) ? value : YEARS.value, proof: row?.proof ?? YEARS.proof };
 }
 
-export function myPrefs(userId: string): Prefs {
-  const p = prefs(userId);
-  const floorRaw = setting(userId, "salary_floor_k");
+export async function myPrefs(userId: string): Promise<Prefs> {
+  const p = await prefs(userId);
+  const floorRaw = await setting(userId, "salary_floor_k");
   const floor = floorRaw ? Number(floorRaw) : null;
   return {
     roles: p.role ?? [],

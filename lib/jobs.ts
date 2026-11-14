@@ -30,8 +30,8 @@ export type Job = {
   sources: { ats: string; url: string }[];
 };
 
-export function jobs(): Job[] {
-  return allJobs() as unknown as Job[];
+export async function jobs(): Promise<Job[]> {
+  return (await allJobs()) as unknown as Job[];
 }
 
 export function payLabel(pay: Pay | null): string | null {

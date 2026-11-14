@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export default async function TopPrepare() {
   const u = await requireUser();
-  const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
-  const job = pickForToday(jobs(), myPrefs(u), me, 1)[0]?.job ?? jobs()[0];
+  const me = { facts: await myFacts(u), gaps: myGaps(), years: await myYears(u) };
+  const job = pickForToday(await jobs(), await myPrefs(u), me, 1)[0]?.job ?? (await jobs())[0];
   redirect(`/prepare/${encodeURIComponent(job.id)}`);
 }

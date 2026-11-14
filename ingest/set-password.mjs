@@ -7,9 +7,8 @@
  * Nothing is printed back.
  */
 import { createInterface } from "node:readline";
-import { DatabaseSync } from "node:sqlite";
 import { scryptSync, randomBytes } from "node:crypto";
-import { readFile } from "node:fs/promises";
+import { open, all, one } from "./db.mjs";
 
 const email = (process.argv[2] ?? "").trim().toLowerCase();
 if (!email) {
@@ -17,19 +16,12 @@ if (!email) {
   process.exit(1);
 }
 
-const db = new DatabaseSync(process.env.ODYSSEUS_DB ?? "data/odysseus.db");
-db.exec(await readFile("lib/db/schema.sql", "utf8"));
+const db = await open();
 
-/* same additive migration the app runs, so a database made before a
-   column existed is upgraded wherever it is opened from */
-for (const [table, column, def] of [["users", "password", "TEXT"]]) {
-  const has = db.prepare(`PRAGMA table_info(${table})`).all().some((c) => c.name === column);
-  if (!has) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${def}`);
-}
-
-const user = db.prepare("SELECT id, name FROM users WHERE email = ?").get(email);
+const user = await one(db, "SELECT id, name FROM users WHERE email = ?", [email]);
 if (!user) {
-  console.error(`No account with that email. Accounts: ${db.prepare("SELECT email FROM users").all().map((r) => r.email).join(", ") || "none"}`);
+  const known = (await all(db, "SELECT email FROM users")).map((r) => r.email).join(", ");
+  console.error(`No account with that email. Accounts: ${known || "none"}`);
   process.exit(1);
 }
 
@@ -62,7 +54,9 @@ if (pw !== again) { console.error("Those did not match."); process.exit(1); }
 
 const salt = randomBytes(16);
 const hash = scryptSync(pw, salt, 64, { N: 16_384, r: 8, p: 1 });
-db.prepare("UPDATE users SET password = ? WHERE id = ?")
-  .run(`${salt.toString("hex")}:${hash.toString("hex")}`, user.id);
+await db.execute({
+  sql: "UPDATE users SET password = ? WHERE id = ?",
+  args: [`${salt.toString("hex")}:${hash.toString("hex")}`, user.id],
+});
 
 console.log(`Password set for ${user.name ?? email}. Sign in at /signin`);
