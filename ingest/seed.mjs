@@ -75,39 +75,13 @@ if (prefCount === 0) {
   ).run(USER);
 }
 
-/* Jobs */
-const snap = JSON.parse(await readFile("data/jobs.json", "utf8"));
-const upsert = db.prepare(
-  `INSERT INTO jobs (id, company, company_slug, title, title_key, locations,
-                     remote, hybrid, pay, requirements, posted_at, first_seen, last_seen)
-   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-   ON CONFLICT(company_slug, title_key) DO UPDATE SET
-     title = excluded.title, locations = excluded.locations,
-     remote = excluded.remote, hybrid = excluded.hybrid,
-     pay = COALESCE(excluded.pay, jobs.pay),
-     requirements = CASE WHEN json_array_length(excluded.requirements) > 0
-       THEN excluded.requirements ELSE jobs.requirements END,
-     posted_at = COALESCE(jobs.posted_at, excluded.posted_at),
-     last_seen = excluded.last_seen`
-);
-const src = db.prepare(`INSERT OR IGNORE INTO job_sources (job_id, ats, url) VALUES (?, ?, ?)`);
-const findId = db.prepare(`SELECT id FROM jobs WHERE company_slug = ? AND title_key = ?`);
-
-for (const j of snap.jobs) {
-  upsert.run(
-    j.id, j.company, j.companySlug, j.title, j.titleKey,
-    JSON.stringify(j.locations ?? []), j.remote ? 1 : 0, j.hybrid ? 1 : 0,
-    j.pay ? JSON.stringify(j.pay) : null, JSON.stringify(j.requirements ?? []),
-    j.postedAt ?? null, j.firstSeen ?? now, now
-  );
-  const id = findId.get(j.companySlug, j.titleKey).id;
-  for (const s of j.sources ?? []) src.run(id, s.ats, s.url);
-}
+/* Jobs are not seeded any more. ingest/run.mjs owns them and writes
+   straight to this database, so there is one path in and no snapshot to
+   fall out of date. */
 
 const n = (q) => db.prepare(q).get().n;
 console.log(`users        ${n("SELECT COUNT(*) AS n FROM users")}`);
 console.log(`facts        ${n("SELECT COUNT(*) AS n FROM facts")}`);
 console.log(`preferences  ${n("SELECT COUNT(*) AS n FROM prefs")}`);
-console.log(`jobs         ${n("SELECT COUNT(*) AS n FROM jobs")}`);
-console.log(`job sources  ${n("SELECT COUNT(*) AS n FROM job_sources")}`);
+console.log(`jobs         ${n("SELECT COUNT(*) AS n FROM jobs")}  (run ingest/run.mjs to fill)`);
 console.log(`\n-> ${FILE}`);

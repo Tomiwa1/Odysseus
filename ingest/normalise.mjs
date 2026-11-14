@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { extractRequirements } from "./requirements.mjs";
 /* One job shape, whatever feed it came from.
  *
@@ -80,11 +81,21 @@ export function keyTitle(title) {
     .trim();
 }
 
+export function jobId(companySlug, titleKey) {
+  return createHash("sha1").update(`${companySlug}::${titleKey}`).digest("hex").slice(0, 24);
+}
+
 export function normalise({ company, ats, raw }) {
   const locations = readLocations(raw.location);
   const blob = `${raw.title} ${raw.location} ${String(raw.body).slice(0, 4000)}`;
 
   return {
+    /* The id is derived from the same pair that decides whether two
+       postings are one job, so the primary key and the dedupe key can
+       never disagree. It used to come from the first feed's own id,
+       which drifts when a title changes, and then an insert would clash
+       on the key without clashing on the title. */
+    id: jobId(company.slug, keyTitle(raw.title || "")),
     company: company.name,
     companySlug: company.slug,
     title: String(raw.title || "").trim(),

@@ -1,5 +1,5 @@
 import Today, { type Item } from "../../components/Today";
-import { JOBS, payLabel, whereLabel, agoLabel } from "../../lib/jobs";
+import { jobs, payLabel, whereLabel, agoLabel } from "../../lib/jobs";
 import { pickForToday } from "../../lib/match";
 import { myFacts, myGaps, myYears, myPrefs } from "../../lib/me";
 import { requireUser } from "../../lib/user";
@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 export default async function TodayPage() {
   const u = await requireUser();
   const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
-  const picks = pickForToday(JOBS, myPrefs(u), me, 3);
+  const picks = pickForToday(jobs(), myPrefs(u), me, 3);
 
   const matches: Item[] = picks.map(({ job, reasons }) => {
     const kept = reasons.filter((r) => r.ok).map((r) => r.why);
@@ -30,7 +30,7 @@ export default async function TodayPage() {
     };
   });
 
-  const read = `Overnight it read ${JOBS.length.toLocaleString()} roles and kept ${picks.length}. The rest never reached you.`;
+  const read = `Overnight it read ${jobs().length.toLocaleString()} roles and kept ${picks.length}. The rest never reached you.`;
 
   return <Today matches={matches} read={read} done={doneToday(u)} />;
 }

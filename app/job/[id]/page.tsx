@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Job from "../../../components/Job";
-import { JOBS, payLabel, whereLabel, agoLabel } from "../../../lib/jobs";
+import { jobs, payLabel, whereLabel, agoLabel } from "../../../lib/jobs";
 import { readJob } from "../../../lib/fit";
 import { applications } from "../../../lib/db/queries";
 import { myFacts, myGaps, myYears, myPrefs } from "../../../lib/me";
@@ -15,7 +15,7 @@ export default async function JobPage({ params }: { params: Promise<{ id: string
   const u = await requireUser();
   const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
   const { id } = await params;
-  const job = JOBS.find((j) => j.id === decodeURIComponent(id));
+  const job = jobs().find((j) => j.id === decodeURIComponent(id));
   if (!job) notFound();
 
   const saved = applications(u).some((a) => a.jobId === job.id);

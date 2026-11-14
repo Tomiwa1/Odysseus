@@ -1,11 +1,14 @@
-import snapshot from "../data/jobs.json";
+import { allJobs, type StoredJob } from "./db/queries";
 
-/* The real jobs, from ingest/. Regenerate with:
-     node ingest/run.mjs --design && node ingest/snapshot.mjs
-
-   Every field here is something a feed actually said. pay is null when
-   the employer did not publish one, which is most of the time (13% do),
-   and the screens have to say that rather than hide the job or guess. */
+/* The jobs, read from the database.
+ *
+ * They used to come from a committed JSON snapshot while the database
+ * held a copy of the same rows. Two homes for one thing, so a scheduled
+ * ingest would have updated one and left the screens reading the other.
+ * There is one home now, and the snapshot is gone.
+ *
+ * Server only. Every caller is a server component, which is what keeps
+ * a few hundred postings out of the browser. */
 
 export type Pay =
   | { note: string; source: string }
@@ -21,20 +24,20 @@ export type Job = {
   remote: boolean;
   hybrid: boolean;
   pay: Pay | null;
-  postedAt: string | null;
   requirements: string[];
+  postedAt: string | null;
   firstSeen: string;
   sources: { ats: string; url: string }[];
 };
 
-export const JOBS = snapshot.jobs as Job[];
-export const RAN_AT = snapshot.ranAt as string;
+export function jobs(): Job[] {
+  return allJobs() as unknown as Job[];
+}
 
 export function payLabel(pay: Pay | null): string | null {
   if (!pay) return null;
   if ("note" in pay) return pay.note;
-  const fmt = (n: number) =>
-    n >= 1000 ? `${Math.round(n / 1000)}K` : String(n);
+  const fmt = (n: number) => (n >= 1000 ? `${Math.round(n / 1000)}K` : String(n));
   const sym = { GBP: "£", USD: "$", EUR: "€" }[pay.currency ?? ""] ?? "";
   return `${sym}${fmt(pay.low)} to ${sym}${fmt(pay.high)}`;
 }

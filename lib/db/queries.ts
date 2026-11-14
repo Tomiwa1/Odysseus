@@ -120,8 +120,23 @@ function hydrate(r: Record<string, unknown>): StoredJob {
   };
 }
 
+/* Jobs still on offer.
+ *
+ * The table accumulates: a job stays after it vanishes from its feed,
+ * which is right, because an application still points at it. But a role
+ * nobody has seen in days is probably filled, and putting it in front of
+ * someone as this morning's work wastes their morning.
+ *
+ * last_seen moves on every ingest run, so staleness is measured rather
+ * than guessed. Seven days is two missed runs plus room for a feed
+ * hiccup, so a job does not vanish because one fetch timed out. */
+const STALE_DAYS = 7;
+
 export function allJobs(): StoredJob[] {
-  const rows = db().prepare(`SELECT * FROM jobs`).all() as Record<string, unknown>[];
+  const cutoff = new Date(Date.now() - STALE_DAYS * 86_400_000).toISOString();
+  const rows = db()
+    .prepare(`SELECT * FROM jobs WHERE last_seen >= ?`)
+    .all(cutoff) as Record<string, unknown>[];
   const jobs = rows.map(hydrate);
   const srcs = db()
     .prepare(`SELECT job_id, ats, url FROM job_sources`)

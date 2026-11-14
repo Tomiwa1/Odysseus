@@ -5,10 +5,25 @@ to be read by the company's own careers page.
 
 ```bash
 node ingest/discover.mjs      # which ATS each company is on -> companies.json
-node ingest/run.mjs           # fetch, normalise, dedupe -> store/jobs.json
-node ingest/run.mjs --design  # design titles only
+node ingest/run.mjs --design  # fetch, normalise, dedupe -> the database
 node ingest/probe-sources.mjs # the viability measurement, see findings.md
+./ingest/daily.sh             # both of the above, logged. What the schedule runs.
 ```
+
+## Running it every morning
+
+```bash
+cp ingest/com.odysseus.ingest.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.odysseus.ingest.plist
+```
+
+06:00 daily. launchd starts a missed run when the machine wakes, so a
+closed laptop at six does not mean a day without jobs. Output goes to
+`data/ingest.log`.
+
+A hosted schedule is a different problem and belongs with the deploy:
+223 feeds take minutes, and serverless functions are killed long before
+that. It wants a worker or a scheduled container, not a cron route.
 
 ## Shape
 

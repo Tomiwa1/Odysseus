@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Prepare from "../../../components/Prepare";
-import { JOBS } from "../../../lib/jobs";
+import { jobs } from "../../../lib/jobs";
 import { prepare } from "../../../lib/prepare";
 import { myFacts, myGaps, myYears, myPrefs } from "../../../lib/me";
 import { requireUser } from "../../../lib/user";
@@ -13,7 +13,7 @@ export default async function PreparePage({ params }: { params: Promise<{ id: st
   const u = await requireUser();
   const me = { facts: myFacts(u), gaps: myGaps(), years: myYears(u) };
   const { id } = await params;
-  const job = JOBS.find((j) => j.id === decodeURIComponent(id));
+  const job = jobs().find((j) => j.id === decodeURIComponent(id));
   if (!job) notFound();
 
   return (

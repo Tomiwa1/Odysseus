@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Runs the ingest at 06:00 every day.
+
+    cp ingest/com.odysseus.ingest.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.odysseus.ingest.plist
+
+  Edit WorkingDirectory below if the project moves. launchd starts a
+  missed run when the machine wakes, so a closed laptop at six does not
+  mean a day without jobs.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.odysseus.ingest</string>
+  <key>ProgramArguments</key>
+  <array><string>/bin/bash</string><string>ingest/daily.sh</string></array>
+  <key>WorkingDirectory</key>
+  <string>/Users/Oluwatomiwa/Documents/xxDesignsxx- Tomiwa/odysseus</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer></dict>
+  <key>RunAtLoad</key><false/>
+  <key>StandardErrorPath</key><string>/tmp/odysseus-ingest.err</string>
+</dict>
+</plist>

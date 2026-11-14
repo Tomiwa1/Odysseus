@@ -745,6 +745,11 @@
     "name": "Remote"
   },
   {
+    "slug": "remotecom",
+    "ats": "greenhouse",
+    "name": "Remotecom"
+  },
+  {
     "slug": "render",
     "ats": "ashby",
     "name": "Render"
