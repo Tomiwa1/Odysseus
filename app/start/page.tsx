@@ -1,5 +1,9 @@
 import Start from "../../components/Start";
+import { requireUser } from "../../lib/user";
 
-export default function StartPage() {
+export const dynamic = "force-dynamic";
+
+export default async function StartPage() {
+  await requireUser();
   return <Start />;
 }
