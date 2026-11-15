@@ -9,7 +9,12 @@
     "dev": "next dev -p 3100",
     "build": "next build",
     "start": "next start -p 3100",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "seed": "node --env-file-if-exists=.env ingest/seed.mjs",
+    "ingest": "node --env-file-if-exists=.env ingest/run.mjs",
+    "ingest:design": "node --env-file-if-exists=.env ingest/run.mjs --design",
+    "discover": "node --env-file-if-exists=.env ingest/discover.mjs",
+    "password": "node --env-file-if-exists=.env ingest/set-password.mjs"
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",

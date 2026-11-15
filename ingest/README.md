@@ -37,6 +37,16 @@ run.mjs            orchestrates, stores, reports
 db.mjs             opens the same database the app uses
 ```
 
+Run these through npm, not node, so they read `.env` and write to the
+same database the site does:
+
+```
+npm run seed          schema, profile, preferences
+npm run ingest        every feed
+npm run ingest:design design titles only
+npm run password      set an account password
+```
+
 ## Last full run
 
 224 feeds, **13,996 postings**, 286 design titles, 32 duplicates merged,
