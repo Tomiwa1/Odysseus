@@ -87,6 +87,37 @@ export async function createAccount(email: string, name: string, password: strin
   return { id, email: clean, name: name.trim() || null };
 }
 
+/* Find the account this Google user owns, or make one.
+ *
+ * Matched on the subject id first, because an address can change hands
+ * at a workplace and the id cannot. An existing account with the same
+ * address is linked rather than duplicated, so signing up with Google
+ * after using a password lands in the same place instead of quietly
+ * starting a second, empty profile. */
+export async function accountForGoogle(g: {
+  sub: string;
+  email: string;
+  name: string | null;
+}): Promise<{ account: Account; isNew: boolean }> {
+  const bySub = await one<Account>(
+    `SELECT id, email, name FROM users WHERE google_id = ?`, [g.sub]);
+  if (bySub) return { account: bySub, isNew: false };
+
+  const byEmail = await one<Account>(
+    `SELECT id, email, name FROM users WHERE email = ?`, [g.email]);
+  if (byEmail) {
+    await run(`UPDATE users SET google_id = ? WHERE id = ?`, [g.sub, byEmail.id]);
+    return { account: byEmail, isNew: false };
+  }
+
+  const id = `u_${randomBytes(8).toString("hex")}`;
+  await run(
+    `INSERT INTO users (id, email, name, google_id, created_at) VALUES (?, ?, ?, ?, ?)`,
+    [id, g.email, g.name, g.sub, now()]
+  );
+  return { account: { id, email: g.email, name: g.name }, isNew: true };
+}
+
 export async function setPassword(userId: string, password: string) {
   await run(`UPDATE users SET password = ? WHERE id = ?`, [hashPassword(password), userId]);
 }

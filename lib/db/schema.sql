@@ -16,6 +16,9 @@ CREATE TABLE IF NOT EXISTS users (
   -- password is set, which is why sign in refuses it rather than
   -- treating "no password" as "any password".
   password   TEXT,
+  -- Google's subject id, which never changes even if the address does.
+  -- Null for an account that has only ever used a password.
+  google_id  TEXT,
   created_at TEXT NOT NULL
 );
 

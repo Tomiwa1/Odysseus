@@ -1652,6 +1652,22 @@ html, body { overflow-x: clip; }
 
 .si-form .btn { margin-top: 4px; }
 
+/* Google sits above the form and the divider separates the two routes
+   rather than decorating the gap, so the line stops at the word. */
+.si-google {
+  margin-top: 28px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  text-decoration: none;
+}
+.si-or {
+  display: flex; align-items: center; gap: 14px;
+  margin: 18px 0 0; color: var(--ink-4);
+  font-size: 12.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+}
+.si-or::before, .si-or::after {
+  content: ""; flex: 1; height: 1px; background: var(--line);
+}
+
 .si-swap { margin: 20px 0 0; font-size: 14.5px; color: var(--ink-3); }
 .si-swap button {
   border: 0; background: none; cursor: pointer; padding: 0;
