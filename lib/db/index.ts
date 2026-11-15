@@ -18,8 +18,15 @@ import { migrate } from "./migrate";
  * database that can never deploy and an async one that can.
  */
 
-const url = process.env.DATABASE_URL ?? `file:${join(process.cwd(), "data", "odysseus.db")}`;
-const authToken = process.env.DATABASE_TOKEN;
+/* Two names for the same two values. Setting them by hand gives the
+   first pair; installing the database as a Vercel integration injects
+   the second, and a deploy that silently fell back to a local file
+   would fail on a read only filesystem with nothing explaining why. */
+const url =
+  process.env.DATABASE_URL ??
+  process.env.TURSO_DATABASE_URL ??
+  `file:${join(process.cwd(), "data", "odysseus.db")}`;
+const authToken = process.env.DATABASE_TOKEN ?? process.env.TURSO_AUTH_TOKEN;
 
 let client: Client | null = null;
 let ready: Promise<Client> | null = null;

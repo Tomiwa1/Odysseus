@@ -18,10 +18,11 @@ const COLUMNS = JSON.parse(await readFile("lib/db/columns.json", "utf8"));
 
 export const DB_URL =
   process.env.DATABASE_URL ??
+  process.env.TURSO_DATABASE_URL ??
   `file:${process.env.ODYSSEUS_DB ?? join(process.cwd(), "data", "odysseus.db")}`;
 
 export async function open() {
-  const token = process.env.DATABASE_TOKEN;
+  const token = process.env.DATABASE_TOKEN ?? process.env.TURSO_AUTH_TOKEN;
   const c = createClient(token ? { url: DB_URL, authToken: token } : { url: DB_URL });
   if (DB_URL.startsWith("file:")) {
     await c.execute("PRAGMA journal_mode = WAL");
