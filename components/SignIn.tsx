@@ -17,6 +17,11 @@ import { signIn, signUp } from "../app/auth-actions";
  * that job hunting does not have to feel like filing a tax return. */
 export default function SignIn() {
   const [mode, setMode] = useState<"in" | "up">("in");
+  /* React clears an uncontrolled form once a server action returns, so
+     a rejected sign in threw away the address as well as the password.
+     Retyping an email to find out a password was wrong is a punishment
+     for the wrong mistake, so the address is held here. */
+  const [email, setEmail] = useState("");
   const action = mode === "in" ? signIn : signUp;
   const [state, submit, pending] = useActionState(action, null as { error?: string } | null);
 
@@ -55,6 +60,8 @@ export default function SignIn() {
                 required
                 autoComplete="email"
                 placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
 
