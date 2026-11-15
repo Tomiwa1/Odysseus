@@ -3,7 +3,7 @@ import { jobs, payLabel, whereLabel, agoLabel } from "../../lib/jobs";
 import { pickForToday } from "../../lib/match";
 import { myFacts, myGaps, myYears, myPrefs } from "../../lib/me";
 import { requireUser } from "../../lib/user";
-import { doneToday } from "../../lib/db/queries";
+import { doneToday, streak } from "../../lib/db/queries";
 
 /* The matching runs on the server, so the 266-job snapshot never ships
    to the browser. The screen receives three cards and nothing else. */
@@ -32,5 +32,18 @@ export default async function TodayPage() {
 
   const read = `Overnight it read ${(await jobs()).length.toLocaleString()} roles and kept ${picks.length}. The rest never reached you.`;
 
-  return <Today matches={matches} read={read} done={await doneToday(u)} />;
+  /* The day and the streak are read here rather than written into the
+     screen. Both used to be fixed strings, so the page said Thursday on
+     a Sunday and claimed six mornings it had never counted. */
+  const day = new Date().toLocaleDateString("en-GB", { weekday: "long" });
+
+  return (
+    <Today
+      matches={matches}
+      read={read}
+      done={await doneToday(u)}
+      day={day}
+      streak={await streak(u)}
+    />
+  );
 }

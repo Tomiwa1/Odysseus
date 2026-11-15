@@ -239,3 +239,36 @@ export async function doneToday(userId: string): Promise<string[]> {
   );
   return rows.map((r) => r.job_id ?? r.kind);
 }
+
+/* Mornings in a row, counted rather than claimed.
+ *
+ * A day counts when something on it was actually finished. Today is
+ * allowed to be empty without breaking the run, because the morning is
+ * not over yet; any earlier gap ends it. */
+export async function streak(userId: string): Promise<number> {
+  const days = (
+    await all<{ day: string }>(
+      `SELECT DISTINCT day FROM today
+       WHERE user_id = ? AND done_at IS NOT NULL
+       ORDER BY day DESC`,
+      [userId]
+    )
+  ).map((r) => r.day);
+  if (days.length === 0) return 0;
+
+  const asDay = (d: Date) => d.toISOString().slice(0, 10);
+  const back = (n: number) => {
+    const d = new Date(`${today()}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() - n);
+    return asDay(d);
+  };
+
+  let run = 0;
+  /* start at today if it already has something, otherwise at yesterday */
+  let step = days[0] === today() ? 0 : 1;
+  while (days.includes(back(step))) {
+    run++;
+    step++;
+  }
+  return run;
+}

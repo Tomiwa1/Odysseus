@@ -55,8 +55,8 @@ const countdown = (n: number) =>
   n === 0 ? "That's today" : `${NUMBERS[n] ?? n} thing${n === 1 ? "" : "s"}`;
 
 export default function Today({
-  matches = [], read = "", done: alreadyDone = [],
-}: { matches?: Item[]; read?: string; done?: string[] }) {
+  matches = [], read = "", done: alreadyDone = [], day = "", streak = 0,
+}: { matches?: Item[]; read?: string; done?: string[]; day?: string; streak?: number }) {
   const items = [...matches, ...standing];
   const [menu, setMenu] = useState(false);
   /* What you dealt with today, read from storage. The list used to
@@ -135,15 +135,20 @@ export default function Today({
       <header className="flow-top hdr3">
         <NavBurger open={menu} onToggle={() => setMenu((v) => !v)} />
         <Logo kind="letter" size={40} />
-        <span className="t-streak" title="Six mornings in a row">
-          <Streak size={15} weight="fill" aria-hidden="true" />
-          6
-        </span>
+        {streak > 0 && (
+          <span
+            className="t-streak"
+            title={`${streak} morning${streak === 1 ? "" : "s"} in a row`}
+          >
+            <Streak size={15} weight="fill" aria-hidden="true" />
+            {streak}
+          </span>
+        )}
       </header>
 
       <main className="flow-body">
         <div className="flow-inner t-inner">
-          <p className="eyebrow">Thursday morning</p>
+          <p className="eyebrow">{day} morning</p>
           <h1 className="display t-h1">{countdown(left.length)}.</h1>
           <p className="flow-sub t-sub">
             {finished

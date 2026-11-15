@@ -26,22 +26,47 @@ if (!user) {
 }
 
 const rl = createInterface({ input: process.stdin, output: process.stdout, terminal: true });
+/* Anything left over after a line, kept for the next prompt.
+ *
+ * A terminal delivers one keystroke per event, but a piped answer
+ * arrives in one lump holding both lines. Comparing the whole lump to
+ * "\n" matched nothing, so the prompt waited forever for an answer it
+ * had already been handed. */
+let pending = "";
+
 const ask = (q) =>
   new Promise((res) => {
     process.stdout.write(q);
     rl.input.setRawMode?.(true);
     let buf = "";
-    const onData = (ch) => {
-      const c = ch.toString();
-      if (c === "\n" || c === "\r" || c === "\u0004") {
-        rl.input.setRawMode?.(false);
-        rl.input.off("data", onData);
-        process.stdout.write("\n");
-        res(buf);
-      } else if (c === "\u0003") { process.exit(1); }
-      else if (c === "\u007f") { buf = buf.slice(0, -1); }
-      else buf += c;
+
+    /* true once a full line has been read; whatever followed it is
+       parked in `pending` rather than thrown away */
+    const take = (text) => {
+      for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (c === "\n" || c === "\r" || c === "\u0004") {
+          pending = text.slice(i + 1);
+          return true;
+        }
+        if (c === "\u0003") process.exit(1);
+        else if (c === "\u007f") buf = buf.slice(0, -1);
+        else buf += c;
+      }
+      return false;
     };
+
+    const onData = (chunk) => { if (take(chunk.toString())) finish(); };
+    const finish = () => {
+      rl.input.setRawMode?.(false);
+      rl.input.off("data", onData);
+      process.stdout.write("\n");
+      res(buf);
+    };
+
+    const carried = pending;
+    pending = "";
+    if (carried && take(carried)) return finish();
     rl.input.on("data", onData);
   });
 
